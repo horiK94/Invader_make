@@ -1,0 +1,60 @@
+version: '2'
+services:
+  # dataコンテナ
+  datastore:
+    build: ./datastore
+
+  # nginx 1.11.5
+  nginx: 
+    build: ./nginx
+    ports: 
+      - "8080:80"
+    links: 
+      - php
+    volumes_from:
+      - datastore
+
+  # php:7.1-fpm
+  php: 
+    build: ./php
+    # 別コンテナのエイリアスを設定 （リンク）
+    links:
+      - dbserver
+      - redis
+      - memcached
+    # [ホスト]：[コンテナ] ホストのディレクトリ以下をコンテナのパスにマウント
+    volumes:
+      - ./php/:/var/www/html/
+
+  dbserver:
+      build: ./mysql
+      ports:
+      - 3306:3306
+      hostname: dbserver
+      environment:
+          MYSQL_DATABASE: order
+          MYSQL_ROOT_PASSWORD: password
+
+  # memcached
+  memcached:
+    image: memcached:1.4.32
+    expose:
+      - '11211'
+
+  # phpmyadmin
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:4.6.4-1
+    ports:
+      - "8888:80"
+    links:
+      - mariadb
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=mariadb
+      - PMA_USER=root
+      - PMA_PASSWORD=password
+
+  jenkins:
+    image: 'jenkins:lts'
+    ports:
+      - "8081:8081"

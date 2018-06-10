@@ -8,6 +8,7 @@ public class Test : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		fade.FadeIn (10);
+		Debug.Log ("hgoehoge");
 	}
 	
 	// Update is called once per frame

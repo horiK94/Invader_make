@@ -28,6 +28,11 @@ public class Fade : MonoBehaviour
 {
 	IFade fade;
 
+	void Awake()
+	{
+		DontDestroyOnLoad (gameObject);
+	}
+
 	void Start ()
 	{
 		Init ();

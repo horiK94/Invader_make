@@ -4,9 +4,5 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameProcessManager : MonoBehaviour {
-	ISceneState nowScene;
 
-	void LoadScene()
-	{
-	}
 }
