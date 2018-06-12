@@ -13,8 +13,8 @@ public class TitleSceneState : SceneState {
 	public override void LoadedScene()
 	{
 		GameObject gb = Instantiate (title) as GameObject;
-		Title t = gb.AddComponent<Title> ();
-		t.onEnterKeyDown = this.LoadNextScene;
+		TitleView t = gb.AddComponent<TitleView> ();
+		t.OnEnterKeyDown = this.LoadNextScene;
 	}
 
 	public override void RemoveSceneBefore()
