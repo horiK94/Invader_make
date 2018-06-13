@@ -1,16 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerHealth : MonoBehaviour {
+	UnityAction onDeath = null;
 
-	// Use this for initialization
-	void Start () {
-		
+	public void SetDeathAction(UnityAction onDeath){
+		this.onDeath = onDeath;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	void OnCollisionEnter(Collision other)
+	{
+		if (true) {		//TODO 弾なら~といった実装をする
+			this.onDeath();
+			//TODO 発散するアニメーション
+		}
 	}
 }
