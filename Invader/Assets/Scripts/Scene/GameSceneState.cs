@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameState : SceneState {
+public class GameSceneState : SceneState {
 	void Awake()
 	{
 		sceneTitle = "Game";
