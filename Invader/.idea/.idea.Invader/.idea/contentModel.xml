@@ -5,6 +5,7 @@
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets/Bullet.cs" t="Include" />
+      <e p="Assets/EnemyHealth.cs" t="Include" />
       <e p="Assets/Fade" t="Include">
         <e p="Materials" t="Include">
           <e p="UI-Fade-Alpha.shader" t="Include" />

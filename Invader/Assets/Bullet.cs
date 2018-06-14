@@ -7,14 +7,17 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float bulletHeight;
     [SerializeField] private float speed;
     private float maxWorldPosY;
+    private Rigidbody rigid;
+    
     void Start()
     {
         maxWorldPosY = Camera.main.ViewportToWorldPoint(new Vector3(0, 1, transform.position.z - Camera.main.transform.position.z)).y - bulletHeight;
+        rigid = GetComponent<Rigidbody>();
     }
 
     void Update()
     {
-        transform.position += new Vector3(0, speed * Time.deltaTime, 0);
+        rigid.position += new Vector3(0, speed * Time.deltaTime, 0);
         if (transform.position.y > maxWorldPosY)
         {
             // TODO 壊れるアニメーション
