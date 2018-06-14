@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/Library/Caches/Rider2018.1/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_Invader.-662710722.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets/Bullet.cs" t="Include" />
+      <e p="Assets/Fade" t="Include">
+        <e p="Materials" t="Include">
+          <e p="UI-Fade-Alpha.shader" t="Include" />
+          <e p="UI-Fade-Cutout.shader" t="Include" />
+          <e p="UI-Mask.shader" t="Include" />
+        </e>
+        <e p="rule1080p" t="Include">
+          <e p="readme.txt" t="Include" />
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Fade.cs" t="Include" />
+          <e p="FadeImage.cs" t="Include" />
+          <e p="FadeUI.cs" t="Include" />
+          <e p="IFade.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Assets/Scripts" t="Include">
+        <e p="Player" t="Include">
+          <e p="PlayerController.cs" t="Include" />
+          <e p="PlayerHealth.cs" t="Include" />
+          <e p="PlayerMover.cs" t="Include" />
+          <e p="PlayerShot.cs" t="Include" />
+        </e>
+        <e p="Scene" t="Include">
+          <e p="GameSceneState.cs" t="Include" />
+          <e p="ISceneState.cs" t="Include" />
+          <e p="SceneProcessManager.cs" t="Include" />
+          <e p="SceneState.cs" t="Include" />
+          <e p="TitleSceneState.cs" t="Include" />
+          <e p="TitleView.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Assets/Test" t="Include">
+        <e p="Test.cs" t="Include" />
+      </e>
+      <e p="Invader.sln" t="IncludeFlat" />
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>
