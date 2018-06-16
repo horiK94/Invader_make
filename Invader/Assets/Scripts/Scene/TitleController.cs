@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class TitleView : MonoBehaviour {
+public class TitleController : MonoBehaviour {
 	UnityAction onEnterKeyDown = null;
 	public UnityAction OnEnterKeyDown
 	{
@@ -17,7 +17,7 @@ public class TitleView : MonoBehaviour {
 	
 	void Update()
 	{
-		if (Input.GetKeyDown (KeyCode.Return)) {
+		if (Input.GetKeyDown(KeyCode.Space)) {
 			OnEnterKeyDown ();
 		}
 	}

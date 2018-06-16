@@ -5,6 +5,7 @@
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets/Bullet.cs" t="Include" />
+      <e p="Assets/EnemyController.cs" t="Include" />
       <e p="Assets/EnemyHealth.cs" t="Include" />
       <e p="Assets/Fade" t="Include">
         <e p="Materials" t="Include">
@@ -34,8 +35,8 @@
           <e p="ISceneState.cs" t="Include" />
           <e p="SceneProcessManager.cs" t="Include" />
           <e p="SceneState.cs" t="Include" />
+          <e p="TitleController.cs" t="Include" />
           <e p="TitleSceneState.cs" t="Include" />
-          <e p="TitleView.cs" t="Include" />
         </e>
       </e>
       <e p="Assets/Test" t="Include">

@@ -6,10 +6,8 @@ public class PlayerShot : MonoBehaviour {
 	[SerializeField]GameObject bullet;
 	[SerializeField] private Transform muzzleTransform;
 
-	void Update()
+	public void Shot()
 	{
-		if (Input.GetKeyDown(KeyCode.Space)) {
-			Instantiate (bullet, muzzleTransform.position, Quaternion.identity);		// TODO objectpoolを使用する
-		}
+		Instantiate (bullet, muzzleTransform.position, Quaternion.identity);		// TODO objectpoolを使用する
 	}
 }

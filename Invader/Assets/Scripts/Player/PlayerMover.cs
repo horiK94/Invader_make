@@ -4,18 +4,10 @@ using UnityEngine;
 
 public class PlayerMover : MonoBehaviour {
 	[SerializeField] float speed = 10;
-	[SerializeField] float playerWidth = 4;
-	float maxWorldPosX = 0;
 
-	void Awake()
+	public void Move(float amount, float limitWorldPosX)
 	{
-		maxWorldPosX = Camera.main.ViewportToWorldPoint(new Vector3(1, 0, transform.position.z - Camera.main.transform.position.z)).x - playerWidth;
-	}
-
-	void Update()
-	{
-		float h = Input.GetAxis ("Horizontal");
-		float posX = Mathf.Clamp (transform.position.x + h * speed * Time.deltaTime, -maxWorldPosX, maxWorldPosX);
+		float posX = Mathf.Clamp(transform.position.x + amount * speed * Time.deltaTime, -limitWorldPosX, limitWorldPosX);
 		transform.position = new Vector3 (posX, transform.position.y, transform.position.z);
 	}
 }

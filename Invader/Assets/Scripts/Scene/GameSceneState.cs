@@ -6,6 +6,7 @@ public class GameSceneState : SceneState {
 	void Awake()
 	{
 		sceneTitle = "Game";
+		Debug.Log("Game");
 	}
 
 	public override void LoadedScene()
