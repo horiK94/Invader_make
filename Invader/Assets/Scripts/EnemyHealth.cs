@@ -7,7 +7,7 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private int startHp = 1;
     private int hp = 1;
 
-    private void Awake()
+    protected void Awake()
     {
         hp = startHp;
     }
@@ -22,13 +22,13 @@ public class EnemyHealth : MonoBehaviour
         return hp <= 0;
     }
 
-    void Death()
+    protected virtual void Death()
     {
         // TODO 死んだ処理
         Debug.Log("<EnemyHealth> Death");
     }
     
-    private void OnTriggerEnter(Collider other)
+    protected void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<Bullet>() != null)
         {

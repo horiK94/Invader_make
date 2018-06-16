@@ -47,6 +47,7 @@
         <e p="Test.cs" t="Include" />
       </e>
       <e p="Assets/UFOController.cs" t="Include" />
+      <e p="Assets/UFOHealth.cs" t="Include" />
       <e p="Assets/UFOMover.cs" t="Include" />
       <e p="Invader.sln" t="IncludeFlat" />
       <e p="Library" t="ExcludeRecursive" />

@@ -4,15 +4,10 @@
     <list default="true" id="2956f5a3-3e93-4b74-b8e6-f4eb5d81684d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Invader/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Invader/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Invader/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Invader/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bullet.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnemyController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnemyController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnemyHealth.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnemyHealth.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ufo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ufo.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerShot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerShot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyHealth.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,19 +36,54 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UFOMover.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UFOMover.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/UFOMover.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+            <state relative-caret-position="495">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
               <folding>
-                <marker date="1529151012341" expanded="false" signature="6:104" ph="..." />
-                <marker date="1529151012341" expanded="true" signature="143:964" ph="{...}" />
-                <marker date="1529151012341" expanded="true" signature="398:608" ph="{...}" />
-                <marker date="1529151012341" expanded="true" signature="440:581" ph="{...}" />
-                <marker date="1529151012341" expanded="true" signature="635:962" ph="{...}" />
-                <marker date="1529151012341" expanded="true" signature="788:838" ph="{...}" />
-                <marker date="1529151012341" expanded="true" signature="906:956" ph="{...}" />
+                <marker date="1529151030937" expanded="false" signature="6:104" ph="..." />
+                <marker date="1529151030937" expanded="true" signature="143:943" ph="{...}" />
+                <marker date="1529151030937" expanded="true" signature="398:587" ph="{...}" />
+                <marker date="1529151030937" expanded="true" signature="440:581" ph="{...}" />
+                <marker date="1529151030937" expanded="true" signature="614:941" ph="{...}" />
+                <marker date="1529151030937" expanded="true" signature="767:817" ph="{...}" />
+                <marker date="1529151030937" expanded="true" signature="885:935" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UFOHealth.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/UFOHealth.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <marker date="1529151842875" expanded="false" signature="6:78" ph="..." />
+                <marker date="1529151842875" expanded="true" signature="116:424" ph="{...}" />
+                <marker date="1529151842875" expanded="true" signature="202:323" ph="{...}" />
+                <marker date="1529151842875" expanded="true" signature="374:422" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EnemyHealth.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/EnemyHealth.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+              <folding>
+                <marker date="1529151586397" expanded="false" signature="6:78" ph="..." />
+                <marker date="1529151586397" expanded="true" signature="120:714" ph="{...}" />
+                <marker date="1529151586397" expanded="true" signature="220:254" ph="{...}" />
+                <marker date="1529151586397" expanded="true" signature="277:303" ph="{...}" />
+                <marker date="1529151586397" expanded="true" signature="322:358" ph="{...}" />
+                <marker date="1529151586397" expanded="true" signature="394:470" ph="{...}" />
+                <marker date="1529151586397" expanded="true" signature="525:712" ph="{...}" />
+                <marker date="1529151586397" expanded="true" signature="581:706" ph="{...}" />
+                <marker date="1529151586397" expanded="true" signature="643:696" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -70,16 +100,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/UFOController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UFOController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/EnemyShot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyLineInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerMover.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerShot.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/UFOMover.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UFOMover.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scene/SceneProcessManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UFOHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scene/TitleController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scene/GameSceneState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scene/TitleSceneState.cs" root0="FORCE_HIGHLIGHTING" />
@@ -103,6 +135,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/UFOController.cs" />
         <option value="$PROJECT_DIR$/Assets/UFOMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyHealth.cs" />
+        <option value="$PROJECT_DIR$/Assets/UFOHealth.cs" />
       </list>
     </option>
   </component>
@@ -196,12 +230,12 @@
       <updated>1528988159910</updated>
       <workItem from="1528988167370" duration="5296000" />
       <workItem from="1529083785107" duration="10345000" />
-      <workItem from="1529150756346" duration="159000" />
+      <workItem from="1529150756346" duration="931000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15800000" />
+    <option name="totallyTimeSpent" value="16572000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -270,13 +304,13 @@
         <state relative-caret-position="420">
           <caret line="28" selection-start-line="28" selection-end-line="28" />
           <folding>
-            <marker date="1529151012341" expanded="false" signature="6:104" ph="..." />
-            <marker date="1529151012341" expanded="true" signature="143:964" ph="{...}" />
-            <marker date="1529151012341" expanded="true" signature="398:608" ph="{...}" />
-            <marker date="1529151012341" expanded="true" signature="440:581" ph="{...}" />
-            <marker date="1529151012341" expanded="true" signature="635:962" ph="{...}" />
-            <marker date="1529151012341" expanded="true" signature="788:838" ph="{...}" />
-            <marker date="1529151012341" expanded="true" signature="906:956" ph="{...}" />
+            <marker date="1529151030937" expanded="false" signature="6:104" ph="..." />
+            <marker date="1529151030937" expanded="true" signature="143:943" ph="{...}" />
+            <marker date="1529151030937" expanded="true" signature="398:587" ph="{...}" />
+            <marker date="1529151030937" expanded="true" signature="440:581" ph="{...}" />
+            <marker date="1529151030937" expanded="true" signature="614:941" ph="{...}" />
+            <marker date="1529151030937" expanded="true" signature="767:817" ph="{...}" />
+            <marker date="1529151030937" expanded="true" signature="885:935" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -416,16 +450,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/UFOMover.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+        <state relative-caret-position="495">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
           <folding>
-            <marker date="1529151012341" expanded="false" signature="6:104" ph="..." />
-            <marker date="1529151012341" expanded="true" signature="143:964" ph="{...}" />
-            <marker date="1529151012341" expanded="true" signature="398:608" ph="{...}" />
-            <marker date="1529151012341" expanded="true" signature="440:581" ph="{...}" />
-            <marker date="1529151012341" expanded="true" signature="635:962" ph="{...}" />
-            <marker date="1529151012341" expanded="true" signature="788:838" ph="{...}" />
-            <marker date="1529151012341" expanded="true" signature="906:956" ph="{...}" />
+            <marker date="1529151030937" expanded="false" signature="6:104" ph="..." />
+            <marker date="1529151030937" expanded="true" signature="143:943" ph="{...}" />
+            <marker date="1529151030937" expanded="true" signature="398:587" ph="{...}" />
+            <marker date="1529151030937" expanded="true" signature="440:581" ph="{...}" />
+            <marker date="1529151030937" expanded="true" signature="614:941" ph="{...}" />
+            <marker date="1529151030937" expanded="true" signature="767:817" ph="{...}" />
+            <marker date="1529151030937" expanded="true" signature="885:935" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/EnemyHealth.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding>
+            <marker date="1529151586397" expanded="false" signature="6:78" ph="..." />
+            <marker date="1529151586397" expanded="true" signature="120:714" ph="{...}" />
+            <marker date="1529151586397" expanded="true" signature="220:254" ph="{...}" />
+            <marker date="1529151586397" expanded="true" signature="277:303" ph="{...}" />
+            <marker date="1529151586397" expanded="true" signature="322:358" ph="{...}" />
+            <marker date="1529151586397" expanded="true" signature="394:470" ph="{...}" />
+            <marker date="1529151586397" expanded="true" signature="525:712" ph="{...}" />
+            <marker date="1529151586397" expanded="true" signature="581:706" ph="{...}" />
+            <marker date="1529151586397" expanded="true" signature="643:696" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/UFOHealth.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <marker date="1529151842875" expanded="false" signature="6:78" ph="..." />
+            <marker date="1529151842875" expanded="true" signature="116:424" ph="{...}" />
+            <marker date="1529151842875" expanded="true" signature="202:323" ph="{...}" />
+            <marker date="1529151842875" expanded="true" signature="374:422" ph="{...}" />
           </folding>
         </state>
       </provider>

@@ -729,4 +729,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletHeight: 0
-  speed: 5
+  speed: 10
