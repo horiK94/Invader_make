@@ -9,7 +9,10 @@ public class PlayerShot : MonoBehaviour {
 
 	void Awake()
 	{
-		bullet = Instantiate(bulletPrefab);
+		if (bullet == null)
+		{
+			bullet = Instantiate(bulletPrefab);
+		}
 	}
 
 	public void Shot()

@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour {
 
 	private float maxLimitPosX = 0;
 
-
 	private GameObject player;
 	private PlayerMover playerMover;
 	private PlayerHealth playerHealth;

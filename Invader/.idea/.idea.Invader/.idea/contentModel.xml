@@ -4,9 +4,7 @@
     <e p="$USER_HOME$/Library/Caches/Rider2018.1/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_Invader.-662710722.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
-      <e p="Assets/Bullet.cs" t="Include" />
-      <e p="Assets/EnemyController.cs" t="Include" />
-      <e p="Assets/EnemyHealth.cs" t="Include" />
+      <e p="Assets/EnemyShot.cs" t="Include" />
       <e p="Assets/Fade" t="Include">
         <e p="Materials" t="Include">
           <e p="UI-Fade-Alpha.shader" t="Include" />
@@ -24,6 +22,12 @@
         </e>
       </e>
       <e p="Assets/Scripts" t="Include">
+        <e p="Bullet.cs" t="Include" />
+        <e p="Enemy" t="Include">
+          <e p="EnemyLineInfo.cs" t="Include" />
+        </e>
+        <e p="EnemyController.cs" t="Include" />
+        <e p="EnemyHealth.cs" t="Include" />
         <e p="Player" t="Include">
           <e p="PlayerController.cs" t="Include" />
           <e p="PlayerHealth.cs" t="Include" />
@@ -42,6 +46,8 @@
       <e p="Assets/Test" t="Include">
         <e p="Test.cs" t="Include" />
       </e>
+      <e p="Assets/UFOController.cs" t="Include" />
+      <e p="Assets/UFOMover.cs" t="Include" />
       <e p="Invader.sln" t="IncludeFlat" />
       <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
