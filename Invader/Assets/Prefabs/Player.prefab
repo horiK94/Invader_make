@@ -252,7 +252,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8ce9f38d93b24382949a2716fb0ea02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1310090085526672, guid: 460bf3c5a54094935b5c63bf0f7bf3f8, type: 2}
+  bulletPrefab: {fileID: 1310090085526672, guid: 460bf3c5a54094935b5c63bf0f7bf3f8,
+    type: 2}
   muzzleTransform: {fileID: 4280917840356772}
 --- !u!114 &114140136469370126
 MonoBehaviour:
@@ -266,7 +267,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  playerWidth: 1
 --- !u!114 &114949245153204366
 MonoBehaviour:
   m_ObjectHideFlags: 1

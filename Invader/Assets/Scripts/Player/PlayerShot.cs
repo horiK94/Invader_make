@@ -3,11 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerShot : MonoBehaviour {
-	[SerializeField]GameObject bullet;
+	[SerializeField]GameObject bulletPrefab;
 	[SerializeField] private Transform muzzleTransform;
+	private GameObject bullet;
+
+	void Awake()
+	{
+		bullet = Instantiate(bulletPrefab);
+	}
 
 	public void Shot()
 	{
-		Instantiate (bullet, muzzleTransform.position, Quaternion.identity);		// TODO objectpoolを使用する
+		if (!bullet.activeSelf)
+		{
+			bullet.SetActive(true);
+			bullet.transform.position = muzzleTransform.position;
+		}
 	}
 }

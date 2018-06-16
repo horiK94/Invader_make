@@ -21,7 +21,7 @@ public class Bullet : MonoBehaviour
         if (transform.position.y > maxWorldPosY)
         {
             // TODO 壊れるアニメーション
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }
