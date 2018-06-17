@@ -9,8 +9,9 @@ public class UFOController : MonoBehaviour
     [SerializeField] private GameObject ufoPrefab;
     private GameObject ufo = null;
     private UFOMover ufoMover;
-    [SerializeField]private float ufoWidth;
+    [SerializeField] private float ufoWidth;
     [SerializeField] private float ufoStartPosY;
+    [SerializeField] private float interval = 25;
     private float cornerPosX;
 
     void Awake()
@@ -43,5 +44,5 @@ public class UFOController : MonoBehaviour
             ufo.SetActive(false);
         });
         ufo.SetActive(true);
-    }  
+    }
 }
