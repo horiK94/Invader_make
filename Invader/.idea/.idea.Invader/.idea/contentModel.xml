@@ -22,6 +22,7 @@
           <e p="IFade.cs" t="Include" />
         </e>
       </e>
+      <e p="Assets/GameController.cs" t="Include" />
       <e p="Assets/Scripts" t="Include">
         <e p="Bullet.cs" t="Include" />
         <e p="Enemy" t="Include">

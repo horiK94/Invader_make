@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 public class UFOController : MonoBehaviour
@@ -9,10 +10,18 @@ public class UFOController : MonoBehaviour
     [SerializeField] private GameObject ufoPrefab;
     private GameObject ufo = null;
     private UFOMover ufoMover;
+    private UFOHealth ufoHelath;
     [SerializeField] private float ufoWidth;
     [SerializeField] private float ufoStartPosY;
     [SerializeField] private float interval = 25;
     private float cornerPosX;
+    private UnityAction<int> onAddScore;
+
+    public UnityAction<int> OnAddScore
+    {
+        get { return onAddScore; }
+        set { onAddScore = value; }
+    }
 
     void Awake()
     {
@@ -22,13 +31,29 @@ public class UFOController : MonoBehaviour
         }
 
         ufoMover = ufo.GetComponent<UFOMover>();
+        ufoHelath = ufo.GetComponent<UFOHealth>();
         cornerPosX = Camera.main.ViewportToWorldPoint(new Vector3(1, 0, ufo.transform.position.z - Camera.main.transform.position.z)).x;
-        Debug.Log(ufoMover);
     }
 
     private void Start()
     {
-        ActiveUfo();
+        ufoHelath.OnAddScore = this.OnAddScore;
+
+        StartCoroutine(Move());
+    }
+
+    IEnumerator Move()
+    {
+        while (true)        //TODO Enemyが一定数数以下になった場合に、bool変数でwhileを抜けるようにしても良いかも
+        {
+            if (ufo.activeSelf)
+            {
+                yield return null;
+                continue;
+            }
+            yield return new WaitForSeconds(interval);
+            ActiveUfo();
+        }
     }
 
     public void ActiveUfo()

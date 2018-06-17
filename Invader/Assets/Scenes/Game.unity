@@ -478,6 +478,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1709882543}
+  - component: {fileID: 1709882544}
   m_Layer: 0
   m_Name: Controllers
   m_TagString: Untagged
@@ -500,6 +501,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1709882544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1709882542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 908ba262438c148ba8d3d6606e250345, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 0}
+  enemyController: {fileID: 0}
 --- !u!1 &1900366184
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,7 +557,7 @@ MonoBehaviour:
   ufoPrefab: {fileID: 1795739305026786, guid: e6e9cf000248944e6807bb44b1b9e58f, type: 2}
   ufoWidth: 1
   ufoStartPosY: 5.3
-  interval: 25
+  interval: 5
 --- !u!1 &1908278082
 GameObject:
   m_ObjectHideFlags: 0
