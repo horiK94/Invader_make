@@ -153,7 +153,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1737805775779070, guid: d824ec203d45141a3b43d7350adeff8c, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d824ec203d45141a3b43d7350adeff8c, type: 2}
@@ -197,6 +197,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1795739305026786, guid: e6e9cf000248944e6807bb44b1b9e58f, type: 2}
+      propertyPath: m_Name
+      value: Ufo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6e9cf000248944e6807bb44b1b9e58f, type: 2}
   m_IsPrefabParent: 0
@@ -208,6 +212,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 638240404}
+  - component: {fileID: 638240405}
   m_Layer: 0
   m_Name: EnemyController
   m_TagString: Untagged
@@ -229,6 +234,28 @@ Transform:
   m_Father: {fileID: 1709882543}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &638240405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 638240403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebe6806eb788e41e5b0acbcf0e0c94a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ufoAppearanceProbability: 0.01
+  enemyWidth: 11
+  enemyHeight: 5
+  enemyLineInfo:
+  - prefab: {fileID: 1737805775779070, guid: d824ec203d45141a3b43d7350adeff8c, type: 2}
+    highestLine: 2
+  - prefab: {fileID: 1846952996983310, guid: 1cd98e709df3c43b4bd4fe43214176cd, type: 2}
+    highestLine: 4
+  - prefab: {fileID: 1920738810988986, guid: 883ada7ea96d44fbab8bd6b505c21915, type: 2}
+    highestLine: 5
+  ufo: {fileID: 1900366186}
 --- !u!1001 &816905278
 Prefab:
   m_ObjectHideFlags: 0

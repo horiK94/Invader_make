@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using UnityEditor.iOS.Xcode;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
@@ -9,9 +10,9 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float ufoAppearanceProbability = 0.01f;
     [SerializeField] private int enemyWidth = 11;
     [SerializeField] private int enemyHeight = 5;
-    [SerializeField] private Transform enemyParent;
     [SerializeField] private EnemyLineInfo[] enemyLineInfo;
-    [SerializeField] private GameObject ufo;
+    [SerializeField] private UFOController ufo;
+    private Transform enemyParent = null;
 
     private GameObject[,] enemy;
     private int resultEnemy;
@@ -31,7 +32,7 @@ public class EnemyController : MonoBehaviour
 
     void SortEnemyPrefab()
     {
-        Array.Sort(enemyLineInfo);
+        Array.Sort(enemyLineInfo, (x, y) => { return x.HighestLine - y.HighestLine; });
         if (enemyLineInfo[enemyLineInfo.Length - 1].HighestLine != enemyHeight)
         {
             Debug.LogError("enemyLineInfo[enemyLineInfo.Length - 1].HighestLine != enemyHeightとなっています");
@@ -40,6 +41,8 @@ public class EnemyController : MonoBehaviour
 
     private void Create()
     {
+        enemyParent = new GameObject("Enemys").transform;
+        
         EnemyLineInfo[] line = new EnemyLineInfo[enemyHeight];
 
         for (int i = 0; i < enemyHeight; i++)
@@ -52,7 +55,8 @@ public class EnemyController : MonoBehaviour
         {
             for (int j = 0; j < enemyHeight; j++)
             {
-                enemy[i, j] = line[j].Prefab;
+                enemy[i, j] = Instantiate(line[j].Prefab);
+                enemy[i, j].transform.parent = enemyParent;
             }
         }
     }
@@ -69,6 +73,4 @@ public class EnemyController : MonoBehaviour
         }
         return null;
     }
-    
-    
 }
