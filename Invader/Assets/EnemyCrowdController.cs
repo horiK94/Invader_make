@@ -10,13 +10,13 @@ public class EnemyCrowdController : MonoBehaviour {
     private Transform enemyParent = null;
     [SerializeField] private int ufoPopMinEnemyNum = 8;        //ufoを出現させるのに必要なEnemyの最低数 TODO: これ以下になったらUfoの生成を止める
 
-    private GameObject[,] enemy;
+    private EnemyColumnController[] enemyColumn;
     private int resultEnemy;
 
     private void Awake()
     {
-        enemy = new GameObject[enemyWidth, enemyHeight];
-        resultEnemy = enemyWidth * enemyHeight;
+        enemyColumn = new EnemyColumnController[enemyWidth];
+        resultEnemy = enemyWidth * enemyHeight;        //各変数で値を確認するかデリゲートで死んだことを受け取る方方法でも良いかもしれない
         SortEnemyPrefab();
         Create();
     }
@@ -32,36 +32,22 @@ public class EnemyCrowdController : MonoBehaviour {
 
     private void Create()
     {
-        enemyParent = new GameObject("Enemys").transform;
-        
-        EnemyLineInfo[] line = new EnemyLineInfo[enemyHeight];
-
-        for (int i = 0; i < enemyHeight; i++)
-        {
-            int lineNumber = i + 1;
-            line[i] = FindEnemyInfo(lineNumber);
-        }
+        enemyParent = new GameObject("Enemys").transform; 
 
         for (int i = 0; i < enemyWidth; i++)
         {
-            for (int j = 0; j < enemyHeight; j++)
-            {
-                enemy[i, j] = Instantiate(line[j].Prefab);
-                enemy[i, j].transform.parent = enemyParent;
-            }
+            int lineNumber = i + 1;
+            GameObject column = new GameObject("Enemy" + lineNumber + "ColumnController");
+            column.transform.parent = transform;
+            column.AddComponent<EnemyColumnController>();
+            column.GetComponent<EnemyColumnController>().Create(lineNumber, enemyHeight, enemyLineInfo, enemyParent);
         }
     }
 
-    EnemyLineInfo FindEnemyInfo(int line)
+    private void Show()
     {
-        for (int j = 0; j < enemyLineInfo.Length; j++)
-        {
-            int lowerLine = j == 0 ? 1 : enemyLineInfo[j - 1].HighestLine + 1;
-            if (line >= lowerLine && line <= enemyLineInfo[j].HighestLine)
-            {
-                return  enemyLineInfo[j];
-            }
-        }
-        return null;
+        
     }
+
+
 }

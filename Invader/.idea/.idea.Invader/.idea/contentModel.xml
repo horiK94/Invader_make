@@ -4,6 +4,7 @@
     <e p="$USER_HOME$/Library/Caches/Rider2018.1/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_Invader.-662710722.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets/EnemyColumnController.cs" t="Include" />
       <e p="Assets/EnemyCrowdController.cs" t="Include" />
       <e p="Assets/EnemyShot.cs" t="Include" />
       <e p="Assets/Fade" t="Include">
