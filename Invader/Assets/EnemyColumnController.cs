@@ -50,4 +50,9 @@ public class EnemyColumnController : MonoBehaviour
         }
         return null;
     }
+
+    public void Shot()
+    {
+        Debug.Log("Shot");
+    }
 }

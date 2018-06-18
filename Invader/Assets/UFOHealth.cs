@@ -16,7 +16,7 @@ public class UFOHealth : EnemyHealth
     
     protected override void Death()
     {
-        int point = points[Random.Range(0, 5)];
+        int point = points[Random.Range(0, 4)];
         onAddScore(point);
     }
 

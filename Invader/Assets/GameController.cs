@@ -8,19 +8,12 @@ public class GameController : MonoBehaviour
     [SerializeField] private PlayerController playerController;
     [SerializeField] private EnemyController enemyController;
     // TODO UIControllerの追加
-    private UnityAction<int> onAddScore;
-
-    public UnityAction<int> OnAddScore
-    {
-        get { return onAddScore; }
-        set { onAddScore = value; }
-    }
 
     private void Awake()
     {
-        OnAddScore = (score) =>
+        enemyController.OnAddScore = (score) =>
         {
-            //TODO UIControlllerに伝達
+            Debug.Log("Score is " + score);
         };
     }
 }

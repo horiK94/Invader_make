@@ -344,6 +344,8 @@ MonoBehaviour:
   - prefab: {fileID: 1920738810988986, guid: 883ada7ea96d44fbab8bd6b505c21915, type: 2}
     highestLine: 5
   ufoPopMinEnemyNum: 0
+  startWaitTime: 2.5
+  shotInterval: 1
 --- !u!1001 &1183180324
 Prefab:
   m_ObjectHideFlags: 0
@@ -512,8 +514,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908ba262438c148ba8d3d6606e250345, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
-  enemyController: {fileID: 0}
+  playerController: {fileID: 1908278084}
+  enemyController: {fileID: 638240405}
 --- !u!1 &1900366184
 GameObject:
   m_ObjectHideFlags: 0

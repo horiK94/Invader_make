@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using Random = UnityEngine.Random;
 
 public class EnemyCrowdController : MonoBehaviour {
     [SerializeField] private int enemyWidth = 11;
@@ -9,16 +10,19 @@ public class EnemyCrowdController : MonoBehaviour {
     [SerializeField] private EnemyLineInfo[] enemyLineInfo;
     private Transform enemyParent = null;
     [SerializeField] private int ufoPopMinEnemyNum = 8;        //ufoを出現させるのに必要なEnemyの最低数 TODO: これ以下になったらUfoの生成を止める
+    [SerializeField] private float startWaitTime = 2.5f;
+    [SerializeField] private float shotInterval = 1;
 
-    private EnemyColumnController[] enemyColumn;
+    private List<EnemyColumnController> enemyColumn;
     private int resultEnemy;
 
     private void Awake()
     {
-        enemyColumn = new EnemyColumnController[enemyWidth];
+        enemyColumn = new List<EnemyColumnController>(enemyWidth);
         resultEnemy = enemyWidth * enemyHeight;        //各変数で値を確認するかデリゲートで死んだことを受け取る方方法でも良いかもしれない
         SortEnemyPrefab();
         Create();
+        
     }
 
     void SortEnemyPrefab()
@@ -44,10 +48,14 @@ public class EnemyCrowdController : MonoBehaviour {
         }
     }
 
-    private void Show()
+    IEnumerator Shot()
     {
-        
+        yield return new WaitForSeconds(startWaitTime);
+        while (true)
+        {
+            int r = Random.Range(0, enemyColumn.Count);
+            enemyColumn[r].Shot();
+            yield return new WaitForSeconds(shotInterval);
+        }
     }
-
-
 }
