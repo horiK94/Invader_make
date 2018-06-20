@@ -12,9 +12,10 @@ public class PlayerHealth : MonoBehaviour {
 
 	void OnCollisionEnter(Collision other)
 	{
-		if (true) {		//TODO 弾なら~といった実装をする
+		if (other.gameObject.GetComponent<Bullet>() != null) {		//TODO 弾なら~といった実装をする
 			this.onDeath();
 			//TODO 発散するアニメーション
+			gameObject.SetActive(false);
 		}
 	}
 }

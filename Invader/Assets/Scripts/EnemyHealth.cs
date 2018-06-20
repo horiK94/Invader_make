@@ -41,6 +41,7 @@ public class EnemyHealth : MonoBehaviour
         // TODO 死んだ処理
         Debug.Log("<EnemyHealth> Death");
         OnAddScore(point);
+        gameObject.SetActive(false);
     }
     
     protected void OnTriggerEnter(Collider other)

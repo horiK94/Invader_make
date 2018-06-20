@@ -11,6 +11,7 @@ public class UFOHealth : EnemyHealth
     {
         int point = points[Random.Range(0, 4)];
         onAddScore(point);
+        gameObject.SetActive(false);
     }
 
     protected void OnTriggerEnter(Collider other)
