@@ -8,11 +8,20 @@ public class EnemyColumnController : MonoBehaviour
     private int columnId;
     private UnityAction<int> onAddScore;
     private GameObject[] enemy;
+    private int remainEnemy;
 
     public UnityAction<int> OnAddScore
     {
         get { return onAddScore; }
         set { onAddScore = value; }
+    }
+
+    private UnityAction onDeath;
+
+    public UnityAction OnDeath
+    {
+        get { return onDeath; }
+        set { onDeath = value; }
     }
 
     public void Create(int columnId, int enemyHeight, EnemyLineInfo[] lineInfo, Transform enemyColumnParent)
@@ -39,6 +48,14 @@ public class EnemyColumnController : MonoBehaviour
             EnemyHealth health = enemy[i].GetComponent<EnemyHealth>();
             health.Point = line[i].Point;
             health.OnAddScore = this.OnAddScore;
+            health.OnDeath += () =>
+            {
+                remainEnemy--;
+                if (remainEnemy <= 0)
+                {
+                    this.OnDeath();
+                }
+            };
         }
     }
     

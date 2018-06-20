@@ -23,6 +23,14 @@ public class UFOController : MonoBehaviour
         set { onAddScore = value; }
     }
 
+    private UnityAction onDeath;
+
+    public UnityAction OnDeath
+    {
+        get { return onDeath; }
+        set { onDeath = value; }
+    }
+
     void Awake()
     {
         if (ufo == null)
@@ -38,7 +46,7 @@ public class UFOController : MonoBehaviour
     private void Start()
     {
         ufoHelath.OnAddScore = this.OnAddScore;
-
+        ufoHelath.OnDeath += () => { this.OnDeath(); };
         StartCoroutine(Move());
     }
 

@@ -15,7 +15,7 @@ public class EnemyCrowdController : MonoBehaviour {
     [SerializeField] private float shotInterval = 1;
 
     private List<EnemyColumnController> enemyColumn;
-    private int resultEnemy;
+    private int remainColumn = 0;
     private UnityAction<int> onAddScore = null;
 
     public UnityAction<int> OnAddScore
@@ -24,10 +24,18 @@ public class EnemyCrowdController : MonoBehaviour {
         set { onAddScore = value; }
     }
 
+    private UnityAction onDeath = null;
+
+    public UnityAction OnDeath
+    {
+        get { return onDeath; }
+        set { onDeath = value; }
+    }
+
     private void OnEnable()
     {
         enemyColumn = new List<EnemyColumnController>(enemyWidth);
-        resultEnemy = enemyWidth * enemyHeight;        //各変数で値を確認するかデリゲートで死んだことを受け取る方方法でも良いかもしれない
+        remainColumn = enemyWidth;
         SortEnemyPrefab();
         Create();
         
@@ -54,6 +62,14 @@ public class EnemyCrowdController : MonoBehaviour {
             column.AddComponent<EnemyColumnController>();
             EnemyColumnController controller = column.GetComponent<EnemyColumnController>();
             controller.OnAddScore = this.OnAddScore;
+            controller.OnDeath += () =>
+            {
+                remainColumn--;
+                if (remainColumn <= 0)
+                {
+                    OnDeath();
+                }
+            };
             controller.Create(lineNumber, enemyHeight, enemyLineInfo, enemyParent);
         }
     }

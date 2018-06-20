@@ -15,6 +15,11 @@ public class GameController : MonoBehaviour
         {
             Debug.Log("Score is " + score);
         };
+        enemyController.OnDeath = () =>
+        {
+            //Sceneの切り替え
+            //UIの表示
+        };
         enemyController.enabled = true;
         playerController.enabled = true;
     }

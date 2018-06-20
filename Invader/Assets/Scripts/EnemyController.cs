@@ -18,11 +18,20 @@ public class EnemyController : MonoBehaviour
         set { onAddScore = value; }
     }
 
+    private UnityAction onDeath;
+
+    public UnityAction OnDeath
+    {
+        get { return onDeath; }
+        set { onDeath = value; }
+    }
+
     void Start()
     {
         ufoController.OnAddScore = this.OnAddScore;
         enemyCrowdController.OnAddScore = this.OnAddScore;
         enemyCrowdController.enabled = true;
         ufoController.enabled = true;
+        enemyCrowdController.OnDeath += () => { OnDeath(); };
     }
 }

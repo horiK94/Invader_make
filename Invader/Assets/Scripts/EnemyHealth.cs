@@ -21,6 +21,14 @@ public class EnemyHealth : MonoBehaviour
         set { onAddScore = value; }
     }
 
+    protected UnityAction onDeath;
+
+    public UnityAction OnDeath
+    {
+        get { return onDeath; }
+        set { onDeath = value; }
+    }
+
     protected void Awake()
     {
         hp = startHp;
@@ -41,6 +49,7 @@ public class EnemyHealth : MonoBehaviour
         // TODO 死んだ処理
         Debug.Log("<EnemyHealth> Death");
         OnAddScore(point);
+        OnDeath();
         gameObject.SetActive(false);
     }
     
