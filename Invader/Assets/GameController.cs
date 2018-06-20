@@ -15,5 +15,7 @@ public class GameController : MonoBehaviour
         {
             Debug.Log("Score is " + score);
         };
+        enemyController.enabled = true;
+        playerController.enabled = true;
     }
 }

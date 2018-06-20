@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 public class EnemyCrowdController : MonoBehaviour {
@@ -15,8 +16,15 @@ public class EnemyCrowdController : MonoBehaviour {
 
     private List<EnemyColumnController> enemyColumn;
     private int resultEnemy;
+    private UnityAction<int> onAddScore = null;
 
-    private void Awake()
+    public UnityAction<int> OnAddScore
+    {
+        get { return onAddScore; }
+        set { onAddScore = value; }
+    }
+
+    private void OnEnable()
     {
         enemyColumn = new List<EnemyColumnController>(enemyWidth);
         resultEnemy = enemyWidth * enemyHeight;        //各変数で値を確認するかデリゲートで死んだことを受け取る方方法でも良いかもしれない
@@ -44,7 +52,9 @@ public class EnemyCrowdController : MonoBehaviour {
             GameObject column = new GameObject("Enemy" + lineNumber + "ColumnController");
             column.transform.parent = transform;
             column.AddComponent<EnemyColumnController>();
-            column.GetComponent<EnemyColumnController>().Create(lineNumber, enemyHeight, enemyLineInfo, enemyParent);
+            EnemyColumnController controller = column.GetComponent<EnemyColumnController>();
+            controller.OnAddScore = this.OnAddScore;
+            controller.Create(lineNumber, enemyHeight, enemyLineInfo, enemyParent);
         }
     }
 

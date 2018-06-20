@@ -14,4 +14,7 @@ public class EnemyLineInfo
 
     [SerializeField] private int highestLine; // prefabのenemyがいる最高段
     public int HighestLine => highestLine;
+
+    [SerializeField] private int point;
+    public int Point => point;
 }

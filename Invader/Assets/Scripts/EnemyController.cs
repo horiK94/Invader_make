@@ -18,14 +18,11 @@ public class EnemyController : MonoBehaviour
         set { onAddScore = value; }
     }
 
-    void Awake()
-    {
-        enemyCrowdController.enabled = true;
-        ufoController.enabled = true;
-    }
-
     void Start()
     {
         ufoController.OnAddScore = this.OnAddScore;
+        enemyCrowdController.OnAddScore = this.OnAddScore;
+        enemyCrowdController.enabled = true;
+        ufoController.enabled = true;
     }
 }

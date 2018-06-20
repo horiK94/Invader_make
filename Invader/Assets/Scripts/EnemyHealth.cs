@@ -1,11 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private int startHp = 1;
     private int hp = 1;
+    protected UnityAction<int> onAddScore;
+    private int point;
+    public int Point
+    {
+        get { return point; }
+        set { point = value; }
+    }
+
+    public UnityAction<int> OnAddScore
+    {
+        get { return onAddScore; }
+        set { onAddScore = value; }
+    }
 
     protected void Awake()
     {
@@ -26,6 +40,7 @@ public class EnemyHealth : MonoBehaviour
     {
         // TODO 死んだ処理
         Debug.Log("<EnemyHealth> Death");
+        OnAddScore(point);
     }
     
     protected void OnTriggerEnter(Collider other)

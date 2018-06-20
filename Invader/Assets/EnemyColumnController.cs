@@ -35,6 +35,10 @@ public class EnemyColumnController : MonoBehaviour
         {
             enemy[i] = Instantiate(line[i].Prefab);
             enemy[i].transform.parent = enemyColumnObj;
+            
+            EnemyHealth health = enemy[i].GetComponent<EnemyHealth>();
+            health.Point = line[i].Point;
+            health.OnAddScore = this.OnAddScore;
         }
     }
     
