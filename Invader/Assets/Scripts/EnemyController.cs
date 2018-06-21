@@ -10,28 +10,13 @@ public class EnemyController : MonoBehaviour
 {
     [SerializeField] private EnemyCrowdController enemyCrowdController;
     [SerializeField] private UFOController ufoController;
-    private UnityAction<int> onAddScore;
-
-    public UnityAction<int> OnAddScore
+    
+    public void BootUp(UnityAction<int> _onAddScore, UnityAction _onDeath)
     {
-        get { return onAddScore; }
-        set { onAddScore = value; }
-    }
-
-    private UnityAction onDeath;
-
-    public UnityAction OnDeath
-    {
-        get { return onDeath; }
-        set { onDeath = value; }
-    }
-
-    void Start()
-    {
-        ufoController.OnAddScore = this.OnAddScore;
-        enemyCrowdController.OnAddScore = this.OnAddScore;
-        enemyCrowdController.enabled = true;
+        ufoController.BootUp(_onAddScore, _onDeath);
+        enemyCrowdController.BootUp(_onAddScore, _onDeath);
+        Debug.Log(_onDeath != null);
         ufoController.enabled = true;
-        enemyCrowdController.OnDeath += () => { OnDeath(); };
+        enemyCrowdController.enabled = true;
     }
 }

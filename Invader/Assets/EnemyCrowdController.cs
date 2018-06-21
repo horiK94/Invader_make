@@ -18,27 +18,17 @@ public class EnemyCrowdController : MonoBehaviour {
     private int remainColumn = 0;
     private UnityAction<int> onAddScore = null;
 
-    public UnityAction<int> OnAddScore
-    {
-        get { return onAddScore; }
-        set { onAddScore = value; }
-    }
-
     private UnityAction onDeath = null;
 
-    public UnityAction OnDeath
+    public void BootUp(UnityAction<int> _onAddScore, UnityAction _onDeath)
     {
-        get { return onDeath; }
-        set { onDeath = value; }
-    }
-
-    private void OnEnable()
-    {
+        this.onAddScore = _onAddScore;
+        this.onDeath = _onDeath;
+        
         enemyColumn = new List<EnemyColumnController>(enemyWidth);
         remainColumn = enemyWidth;
         SortEnemyPrefab();
         Create();
-        
     }
 
     void SortEnemyPrefab()
@@ -53,6 +43,9 @@ public class EnemyCrowdController : MonoBehaviour {
     private void Create()
     {
         enemyParent = new GameObject("Enemys").transform; 
+        
+        // 位置の決定
+        
 
         for (int i = 0; i < enemyWidth; i++)
         {
@@ -61,16 +54,14 @@ public class EnemyCrowdController : MonoBehaviour {
             column.transform.parent = transform;
             column.AddComponent<EnemyColumnController>();
             EnemyColumnController controller = column.GetComponent<EnemyColumnController>();
-            controller.OnAddScore = this.OnAddScore;
-            controller.OnDeath += () =>
-            {
-                remainColumn--;
-                if (remainColumn <= 0)
+            controller.Create(lineNumber, enemyHeight, enemyLineInfo, enemyParent, onAddScore, () =>
                 {
-                    OnDeath();
-                }
-            };
-            controller.Create(lineNumber, enemyHeight, enemyLineInfo, enemyParent);
+                    remainColumn--;
+                    if (remainColumn <= 0)
+                    {
+                        // OnDeath();
+                    }
+                });
         }
     }
 

@@ -43,10 +43,11 @@ public class UFOController : MonoBehaviour
         cornerPosX = Camera.main.ViewportToWorldPoint(new Vector3(1, 0, ufo.transform.position.z - Camera.main.transform.position.z)).x;
     }
 
-    private void Start()
+    public void BootUp(UnityAction<int> _onAddScore, UnityAction _onDeath)
     {
-        ufoHelath.OnAddScore = this.OnAddScore;
-        ufoHelath.OnDeath += () => { this.OnDeath(); };
+        ufoHelath.OnAddScore　=　_onAddScore;
+        Debug.Log(this.onDeath == null);
+        ufoHelath.OnDeath += _onDeath;
         StartCoroutine(Move());
     }
 

@@ -7,14 +7,9 @@ public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private int startHp = 1;
     private int hp = 1;
-    protected UnityAction<int> onAddScore;
     private int point;
-    public int Point
-    {
-        get { return point; }
-        set { point = value; }
-    }
 
+    protected UnityAction<int> onAddScore;
     public UnityAction<int> OnAddScore
     {
         get { return onAddScore; }
@@ -22,7 +17,6 @@ public class EnemyHealth : MonoBehaviour
     }
 
     protected UnityAction onDeath;
-
     public UnityAction OnDeath
     {
         get { return onDeath; }
@@ -32,6 +26,13 @@ public class EnemyHealth : MonoBehaviour
     protected void Awake()
     {
         hp = startHp;
+    }
+
+    public void BootUp(int point, UnityAction<int> _onAddScore, UnityAction _onDeath)
+    {
+        Debug.Log("BootUP" + _onAddScore);
+        this.onAddScore = _onAddScore;
+        this.onDeath = _onDeath;
     }
 
     void DecreaseHp()

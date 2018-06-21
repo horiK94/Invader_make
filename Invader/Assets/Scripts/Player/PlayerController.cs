@@ -7,6 +7,13 @@ public class PlayerController : MonoBehaviour {
 	[SerializeField]Vector3 startPos;
 	[SerializeField] private float playerWidth = 4;
 
+	private float maxScreenPosX;
+
+	public float MaxScreenPosX
+	{
+		get { return maxScreenPosX; }
+		set { maxScreenPosX = value; }
+	}
 	private float maxLimitPosX = 0;
 
 	private GameObject player;
