@@ -13,17 +13,21 @@ public class EnemyCrowdController : MonoBehaviour {
     [SerializeField] private int ufoPopMinEnemyNum = 8;        //ufoを出現させるのに必要なEnemyの最低数 TODO: これ以下になったらUfoの生成を止める
     [SerializeField] private float startWaitTime = 2.5f;
     [SerializeField] private float shotInterval = 1;
+    [SerializeField] private Transform enemyUnderTransform;
 
     private List<EnemyColumnController> enemyColumn;
     private int remainColumn = 0;
     private UnityAction<int> onAddScore = null;
 
     private UnityAction onDeath = null;
+    private Vector2 maxPos, minPos;
 
-    public void BootUp(UnityAction<int> _onAddScore, UnityAction _onDeath)
+    public void BootUp(UnityAction<int> _onAddScore, UnityAction _onDeath, Vector2 _maxPos, Vector2 _minPos)
     {
         this.onAddScore = _onAddScore;
         this.onDeath = _onDeath;
+        this.maxPos = _maxPos;
+        this.minPos = _minPos;
         
         enemyColumn = new List<EnemyColumnController>(enemyWidth);
         remainColumn = enemyWidth;
@@ -62,7 +66,15 @@ public class EnemyCrowdController : MonoBehaviour {
                         // OnDeath();
                     }
                 });
+            StartCoroutine(Move());
+            StartCoroutine(Shot());
         }
+    }
+
+    IEnumerator Move()
+    {
+        
+        yield break;
     }
 
     IEnumerator Shot()
@@ -71,7 +83,7 @@ public class EnemyCrowdController : MonoBehaviour {
         while (true)
         {
             int r = Random.Range(0, enemyColumn.Count);
-            enemyColumn[r].Shot();
+            //enemyColumn[r].Shot();
             yield return new WaitForSeconds(shotInterval);
         }
     }

@@ -349,6 +349,7 @@ MonoBehaviour:
   ufoPopMinEnemyNum: 0
   startWaitTime: 2.5
   shotInterval: 1
+  enemyUnderTransform: {fileID: 0}
 --- !u!1001 &1183180324
 Prefab:
   m_ObjectHideFlags: 0
@@ -519,6 +520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 1908278084}
   enemyController: {fileID: 638240405}
+  limitWidth: 0.5
 --- !u!1 &1900366184
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,7 +608,6 @@ MonoBehaviour:
   playerPrefab: {fileID: 1209003290138326, guid: 135dfc2dc5236460f930c5e6c57b5da2,
     type: 2}
   startPos: {x: 0, y: -3, z: 0}
-  playerWidth: 1
 --- !u!1 &2035592098
 GameObject:
   m_ObjectHideFlags: 0
