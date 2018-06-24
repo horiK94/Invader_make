@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2956f5a3-3e93-4b74-b8e6-f4eb5d81684d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Invader/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Invader/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnemyCrowdController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnemyCrowdController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Crab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Crab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Crab.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Crab.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Octopus.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Octopus.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Octopus.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Octopus.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Squid.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Squid.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Squid.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Squid.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UFOController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UFOController.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -130,8 +130,8 @@
       <file leaf-file-name="EnemyColumnController.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/EnemyColumnController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+            <state relative-caret-position="608">
+              <caret line="48" column="54" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
               <folding>
                 <marker date="1529850051630" expanded="true" signature="6:104" ph="..." />
                 <marker date="1529850051630" expanded="true" signature="156:2935" ph="{...}" />
@@ -353,12 +353,12 @@
       <workItem from="1529150756346" duration="15940000" />
       <workItem from="1529533537926" duration="282000" />
       <workItem from="1529712154046" duration="4399000" />
-      <workItem from="1529805995402" duration="15257000" />
+      <workItem from="1529805995402" duration="15538000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56762000" />
+    <option name="totallyTimeSpent" value="57043000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -965,8 +965,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/EnemyColumnController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+        <state relative-caret-position="608">
+          <caret line="48" column="54" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
           <folding>
             <marker date="1529850051630" expanded="true" signature="6:104" ph="..." />
             <marker date="1529850051630" expanded="true" signature="156:2935" ph="{...}" />

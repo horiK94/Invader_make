@@ -46,7 +46,7 @@ public class EnemyColumnController : MonoBehaviour
             enemy[i].transform.position = new Vector3(columnInfo.enemyMinPos.x + columnInfo.enemyWidthInterval * (columnInfo.columnId - 1),
                 columnInfo.enemyMaxPos.y - (columnInfo.stageNum - columnInfo.startUpStageId + 2 * (enemyHeightNum - i - 1)) * enemyHeightInterval, 0);
             
-            EnemyHealth health = enemy[i].GetComponent<EnemyHealth>();
+            EnemyHealth health = enemy[i].GetComponentInChildren<EnemyHealth>();
             health.BootUp(line[i].Point, _onAddScore, () =>
             {
                 remainEnemy--;
