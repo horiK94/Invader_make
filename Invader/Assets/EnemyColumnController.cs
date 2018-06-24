@@ -42,7 +42,6 @@ public class EnemyColumnController : MonoBehaviour
             
             enemy[i].transform.parent = enemyColumnObj;
             
-            Debug.Log(columnInfo.enemyMaxPos.y);
             enemy[i].transform.position = new Vector3(columnInfo.enemyMinPos.x + columnInfo.enemyWidthInterval * (columnInfo.columnId - 1),
                 columnInfo.enemyMaxPos.y - (columnInfo.stageNum - columnInfo.startUpStageId + 2 * (enemyHeightNum - i - 1)) * enemyHeightInterval, 0);
             
@@ -84,6 +83,6 @@ public class EnemyColumnController : MonoBehaviour
 
     public void Move()
     {
-        
+        Debug.Log("Move");
     }
 }

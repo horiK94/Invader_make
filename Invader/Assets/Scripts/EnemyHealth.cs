@@ -30,7 +30,6 @@ public class EnemyHealth : MonoBehaviour
 
     public void BootUp(int point, UnityAction<int> _onAddScore, UnityAction _onDeath)
     {
-        Debug.Log("BootUP" + _onAddScore);
         this.onAddScore = _onAddScore;
         this.onDeath = _onDeath;
     }

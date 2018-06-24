@@ -96,6 +96,7 @@ public class EnemyCrowdController : MonoBehaviour {
             int lineNumber = i + 1;
             GameObject column = new GameObject("Enemy" + lineNumber + "ColumnController");
             EnemyColumnController controller = column.AddComponent<EnemyColumnController>();
+            enemyColumns.Add(controller);
             
             column.transform.parent = transform;
             
@@ -122,19 +123,26 @@ public class EnemyCrowdController : MonoBehaviour {
                         onDeath();
                     }
                 });
-            StartCoroutine(Move());
-            StartCoroutine(Shot());
         }
+
+        if (enemyColumns.Count == 0)
+        {
+            Debug.LogError("EnemyColumnsの要素が0個になっています");
+        }
+        StartCoroutine(Move());
+        StartCoroutine(Shot());
     }
     
 
     IEnumerator Move()
     {
-        // TODO 残り敵数に応じて速さが変わるように修正する
-        for (int i = 0; i < enemyColumns.Count; i++)
+        while (true)
         {
-            enemyColumns[i].Move();
-            yield return new WaitForSeconds(moveColumnWaitTime);
+            for (int i = 0; i < enemyColumns.Count; i++)
+            {
+                yield return new WaitForSeconds(moveColumnWaitTime);
+                enemyColumns[i].Move();
+            }
         }
     }
 
