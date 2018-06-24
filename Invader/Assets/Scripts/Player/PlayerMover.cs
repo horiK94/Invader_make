@@ -10,7 +10,6 @@ public class PlayerMover : MonoBehaviour {
 	public void Set(float _limitWorldPosX)
 	{
 		this.limitWorldPosX = _limitWorldPosX;
-		Debug.Log(_limitWorldPosX);
 	}
 
 	public void Move(float _amount)

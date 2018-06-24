@@ -27,6 +27,7 @@
       <e p="Assets/Scripts" t="Include">
         <e p="Bullet.cs" t="Include" />
         <e p="Enemy" t="Include">
+          <e p="EnemyColumnCreateInfo.cs" t="Include" />
           <e p="EnemyLineInfo.cs" t="Include" />
         </e>
         <e p="EnemyController.cs" t="Include" />

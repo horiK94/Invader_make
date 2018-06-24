@@ -11,10 +11,11 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private EnemyCrowdController enemyCrowdController;
     [SerializeField] private UFOController ufoController;
     
-    public void BootUp(UnityAction<int> _onAddScore, UnityAction _onDeath, Vector2 _maxPos, Vector2 _minPos)
+    
+    public void BootUp(UnityAction<int> _onAddScore, UnityAction _onDeath, Vector3 _maxPos, Vector3 _minPos)
     {
         ufoController.BootUp(_onAddScore, _onDeath);
-        enemyCrowdController.BootUp(_onAddScore, _onDeath, _maxPos, _minPos);
+        enemyCrowdController.BootUp(_onAddScore, _onDeath, () => { enemyCrowdController.enabled = false; },_maxPos, _minPos);
         ufoController.enabled = true;
         enemyCrowdController.enabled = true;
     }

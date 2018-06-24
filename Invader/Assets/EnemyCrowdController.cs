@@ -6,31 +6,72 @@ using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 public class EnemyCrowdController : MonoBehaviour {
-    [SerializeField] private int enemyWidth = 11;
-    [SerializeField] private int enemyHeight = 5;
-    [SerializeField] private EnemyLineInfo[] enemyLineInfo;
     private Transform enemyParent = null;
-    [SerializeField] private int ufoPopMinEnemyNum = 8;        //ufoを出現させるのに必要なEnemyの最低数 TODO: これ以下になったらUfoの生成を止める
+    
+    /// <summary>
+    /// Enemyの列数
+    /// </summary>
+    [SerializeField] private int enemyWidthNum = 11;
+    /// <summary>
+    /// Enemyの段数
+    /// </summary>
+    [SerializeField] private int enemyHeightNum = 5;
+    /// <summary>
+    /// Enemyの列ごとのプレファブ情報
+    /// </summary>
+    [SerializeField] private EnemyLineInfo[] enemyLineInfo;
+    /// <summary>
+    /// ufoを出現させるのに必要なEnemyの最低の数
+    /// </summary>
+    [SerializeField] private int ufoPopMinEnemyNum = 8;
+    /// <summary>
+    /// スタート前の停止時間
+    /// </summary>
     [SerializeField] private float startWaitTime = 2.5f;
+    /// <summary>
+    /// Enemyの攻撃間隔
+    /// </summary>
     [SerializeField] private float shotInterval = 1;
-    [SerializeField] private Transform enemyUnderTransform;
+    /// <summary>
+    /// Enemyの一番上の段のy座標
+    /// </summary>
+    [SerializeField]private float enemyStartPosY;
+    /// <summary>
+    /// Enemyの横の間隔(基本、8移動でそこまで移動)
+    /// </summary>
+    [SerializeField] private float enemyWidthInterval;
+    /// <summary>
+    /// Enemyの縦の間隔
+    /// </summary>
+    [SerializeField] private float enemyHeightInterval;
+    /// <summary>
+    /// 段数の数
+    /// </summary>
+    [SerializeField]int stageNum = 19;
 
-    private List<EnemyColumnController> enemyColumn;
+    /// <summary>
+    /// １列移動するのに待つ時間
+    /// </summary>
+    [SerializeField] private float moveColumnWaitTime = 3.0f;
+    
+    private List<EnemyColumnController> enemyColumns;
     private int remainColumn = 0;
     private UnityAction<int> onAddScore = null;
-
     private UnityAction onDeath = null;
-    private Vector2 maxPos, minPos;
+    private UnityAction onBelowUfoPopMinEnemyNum = null;
+    private Vector3 maxPos = Vector3.zero, minPos = Vector3.zero;
 
-    public void BootUp(UnityAction<int> _onAddScore, UnityAction _onDeath, Vector2 _maxPos, Vector2 _minPos)
-    {
+    public void BootUp(UnityAction<int> _onAddScore, UnityAction _onDeath, UnityAction _onBelowUfoPopMinEnemyNum, Vector3 _maxPos, Vector3 _minPos)
+    {   
         this.onAddScore = _onAddScore;
         this.onDeath = _onDeath;
+        this.onBelowUfoPopMinEnemyNum = _onBelowUfoPopMinEnemyNum;
         this.maxPos = _maxPos;
         this.minPos = _minPos;
         
-        enemyColumn = new List<EnemyColumnController>(enemyWidth);
-        remainColumn = enemyWidth;
+        remainColumn = enemyWidthNum;
+        enemyColumns = new List<EnemyColumnController>(remainColumn);
+        
         SortEnemyPrefab();
         Create();
     }
@@ -38,53 +79,72 @@ public class EnemyCrowdController : MonoBehaviour {
     void SortEnemyPrefab()
     {
         Array.Sort(enemyLineInfo, (x, y) => { return x.HighestLine - y.HighestLine; });
-        if (enemyLineInfo[enemyLineInfo.Length - 1].HighestLine != enemyHeight)
+        if (enemyLineInfo[enemyLineInfo.Length - 1].HighestLine != enemyHeightNum)
         {
-            Debug.LogError("enemyLineInfo[enemyLineInfo.Length - 1].HighestLine != enemyHeightとなっています");
+            Debug.LogError("enemyLineInfo[enemyLineInfo.Length - 1].HighestLine != enemyHeightNumとなっています");
         }
     }
 
     private void Create()
     {
         enemyParent = new GameObject("Enemys").transform; 
-        
-        // 位置の決定
-        
 
-        for (int i = 0; i < enemyWidth; i++)
+        for (int i = 0; i < enemyWidthNum; i++)
         {
+            //列の生成
             int lineNumber = i + 1;
             GameObject column = new GameObject("Enemy" + lineNumber + "ColumnController");
+            EnemyColumnController controller = column.AddComponent<EnemyColumnController>();
+            
             column.transform.parent = transform;
-            column.AddComponent<EnemyColumnController>();
-            EnemyColumnController controller = column.GetComponent<EnemyColumnController>();
-            controller.Create(lineNumber, enemyHeight, enemyLineInfo, enemyParent, onAddScore, () =>
+            
+            EnemyColumnCreateInfo columnInfo = new EnemyColumnCreateInfo();
+            columnInfo.columnId = lineNumber;
+            columnInfo.enemyHeightNum = enemyHeightNum;
+            columnInfo.startUpStageId = stageNum;        //TODO ステージ数によって変化させる
+            columnInfo.enemyWidthInterval = enemyWidthInterval;
+            columnInfo.stageNum = stageNum;
+            Debug.Log(minPos + "; " + maxPos);
+            columnInfo.enemyMinPos = new Vector3(minPos.x, maxPos.y - enemyStartPosY - (stageNum - 1) * enemyHeightInterval, 0);
+            Debug.Log(columnInfo.enemyMinPos);
+            columnInfo.enemyMaxPos = new Vector3(maxPos.x, maxPos.y - enemyStartPosY, 0);
+            Debug.Log(columnInfo.enemyMaxPos);
+
+            columnInfo.moveWaitTime = moveColumnWaitTime / enemyHeightNum;
+            
+            controller.Create(columnInfo, enemyLineInfo, enemyParent, onAddScore, () =>
                 {
                     remainColumn--;
+                    if (remainColumn < ufoPopMinEnemyNum)
+                    {
+                        onBelowUfoPopMinEnemyNum();
+                    }
                     if (remainColumn <= 0)
                     {
-                        // OnDeath();
+                        onDeath();
                     }
                 });
             StartCoroutine(Move());
             StartCoroutine(Shot());
         }
     }
+    
 
     IEnumerator Move()
     {
-        
-        yield break;
+        // TODO 残り敵数に応じて速さが変わるように修正する
+        for (int i = 0; i < enemyColumns.Count; i++)
+        {
+            enemyColumns[i].Move();
+            yield return new WaitForSeconds(moveColumnWaitTime);
+        }
     }
 
     IEnumerator Shot()
     {
         yield return new WaitForSeconds(startWaitTime);
-        while (true)
-        {
-            int r = Random.Range(0, enemyColumn.Count);
-            //enemyColumn[r].Shot();
-            yield return new WaitForSeconds(shotInterval);
-        }
+        int r = Random.Range(0, enemyColumns.Count - 1);
+        //enemyColumns[r].Shot();
+        yield return new WaitForSeconds(shotInterval);
     }
 }
