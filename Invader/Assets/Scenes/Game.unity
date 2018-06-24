@@ -349,9 +349,9 @@ MonoBehaviour:
   ufoPopMinEnemyNum: 10
   startWaitTime: 2.5
   shotInterval: 1
-  enemyStartPosY: 2
-  enemyWidthInterval: 1
-  enemyHeightInterval: 0.75
+  enemyTopPosYDiff: 4
+  enemyBottomPosYDiff: 0
+  enemyWidthInterval: 1.5
   stageNum: 19
   moveColumnWaitTime: 3
 --- !u!1001 &1183180324
@@ -474,7 +474,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1303059278}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 1, z: -25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -567,7 +567,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ufoPrefab: {fileID: 1795739305026786, guid: e6e9cf000248944e6807bb44b1b9e58f, type: 2}
   ufoWidth: 1
-  ufoStartPosY: 5.3
+  ufoStartPosY: 2
   interval: 5
 --- !u!1 &1908278082
 GameObject:
@@ -611,7 +611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 1209003290138326, guid: 135dfc2dc5236460f930c5e6c57b5da2,
     type: 2}
-  startPos: {x: 0, y: -3, z: 0}
+  startPosUnderDiff: {x: 0, y: 1, z: 0}
 --- !u!1 &2035592098
 GameObject:
   m_ObjectHideFlags: 0

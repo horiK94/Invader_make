@@ -19,7 +19,6 @@ public class GameController : MonoBehaviour
     {
         maxPos = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, transform.position.z - Camera.main.transform.position.z)) - new Vector3(limitWidth, 0, 0);
         minPos = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, transform.position.z - Camera.main.transform.position.z)) + new Vector3(limitWidth, 0, 0);
-        Debug.Log(minPos);
     }
 
     private void Start()
@@ -35,7 +34,7 @@ public class GameController : MonoBehaviour
         };
         
         enemyController.BootUp(OnAddScore, OnDeath, maxPos, minPos);
-        playerController.BootUp(maxPos.x);
+        playerController.BootUp(minPos);
         
         enemyController.enabled = true;
         playerController.enabled = true;

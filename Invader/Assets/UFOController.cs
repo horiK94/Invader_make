@@ -16,6 +16,7 @@ public class UFOController : MonoBehaviour
     [SerializeField] private float interval = 25;
     private float cornerPosX;
     private UnityAction<int> onAddScore;
+    private Vector3 maxPos;
 
     public UnityAction<int> OnAddScore
     {
@@ -43,10 +44,10 @@ public class UFOController : MonoBehaviour
         cornerPosX = Camera.main.ViewportToWorldPoint(new Vector3(1, 0, ufo.transform.position.z - Camera.main.transform.position.z)).x;
     }
 
-    public void BootUp(UnityAction<int> _onAddScore, UnityAction _onDeath)
+    public void BootUp(Vector3 _maxPos, UnityAction<int> _onAddScore, UnityAction _onDeath)
     {
+        this.maxPos = _maxPos;
         ufoHelath.OnAddScore　=　_onAddScore;
-        Debug.Log(this.onDeath == null);
         ufoHelath.OnDeath += _onDeath;
         StartCoroutine(Move());
     }
@@ -70,7 +71,7 @@ public class UFOController : MonoBehaviour
         bool isRight = Random.Range(0, 2) == 0 ? true : false;
         float sign = isRight ? 1 : -1;
         
-        ufo.transform.position = new Vector3(sign * (cornerPosX + ufoWidth), ufoStartPosY, 0);
+        ufo.transform.position = new Vector3(sign * (cornerPosX + ufoWidth), this.maxPos.y - ufoStartPosY, 0);
         float otherCornerPosX = -sign * (cornerPosX + ufoWidth);
 
         ufoMover.PrepareToMove(-sign, otherCornerPosX, () =>

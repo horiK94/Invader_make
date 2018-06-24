@@ -33,17 +33,17 @@ public class EnemyCrowdController : MonoBehaviour {
     /// </summary>
     [SerializeField] private float shotInterval = 1;
     /// <summary>
-    /// Enemyの一番上の段のy座標
+    /// Enemyの一番上の段のy座標と画面上のy座標の差
     /// </summary>
-    [SerializeField]private float enemyStartPosY;
+    [SerializeField]private float enemyTopPosYDiff;
+    /// <summary>
+    /// Enemyの一番下の段のy座標と画面下のy座標の差
+    /// </summary>
+    [SerializeField] private float enemyBottomPosYDiff;
     /// <summary>
     /// Enemyの横の間隔(基本、8移動でそこまで移動)
     /// </summary>
     [SerializeField] private float enemyWidthInterval;
-    /// <summary>
-    /// Enemyの縦の間隔
-    /// </summary>
-    [SerializeField] private float enemyHeightInterval;
     /// <summary>
     /// 段数の数
     /// </summary>
@@ -60,6 +60,7 @@ public class EnemyCrowdController : MonoBehaviour {
     private UnityAction onDeath = null;
     private UnityAction onBelowUfoPopMinEnemyNum = null;
     private Vector3 maxPos = Vector3.zero, minPos = Vector3.zero;
+    private float enemyHeightInterval;
 
     public void BootUp(UnityAction<int> _onAddScore, UnityAction _onDeath, UnityAction _onBelowUfoPopMinEnemyNum, Vector3 _maxPos, Vector3 _minPos)
     {   
@@ -104,11 +105,8 @@ public class EnemyCrowdController : MonoBehaviour {
             columnInfo.startUpStageId = stageNum;        //TODO ステージ数によって変化させる
             columnInfo.enemyWidthInterval = enemyWidthInterval;
             columnInfo.stageNum = stageNum;
-            Debug.Log(minPos + "; " + maxPos);
-            columnInfo.enemyMinPos = new Vector3(minPos.x, maxPos.y - enemyStartPosY - (stageNum - 1) * enemyHeightInterval, 0);
-            Debug.Log(columnInfo.enemyMinPos);
-            columnInfo.enemyMaxPos = new Vector3(maxPos.x, maxPos.y - enemyStartPosY, 0);
-            Debug.Log(columnInfo.enemyMaxPos);
+            columnInfo.enemyMinPos = new Vector3(minPos.x, minPos.y + enemyBottomPosYDiff, 0);
+            columnInfo.enemyMaxPos = new Vector3(maxPos.x, maxPos.y - enemyTopPosYDiff, 0);
 
             columnInfo.moveWaitTime = moveColumnWaitTime / enemyHeightNum;
             

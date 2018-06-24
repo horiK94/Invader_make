@@ -14,7 +14,7 @@ public class EnemyController : MonoBehaviour
     
     public void BootUp(UnityAction<int> _onAddScore, UnityAction _onDeath, Vector3 _maxPos, Vector3 _minPos)
     {
-        ufoController.BootUp(_onAddScore, _onDeath);
+        ufoController.BootUp(_maxPos, _onAddScore, _onDeath);
         enemyCrowdController.BootUp(_onAddScore, _onDeath, () => { enemyCrowdController.enabled = false; },_maxPos, _minPos);
         ufoController.enabled = true;
         enemyCrowdController.enabled = true;
