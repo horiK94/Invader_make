@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class GameController : MonoBehaviour
 {
     [SerializeField] private PlayerController playerController;
-    [SerializeField] private EnemyController enemyController;
+    [SerializeField] private EnemysController enemysController;
     /// <summary>
     /// 移動制限の幅
     /// </summary>
@@ -33,10 +33,10 @@ public class GameController : MonoBehaviour
             //UIの表示
         };
         
-        enemyController.BootUp(OnAddScore, OnDeath, maxPos, minPos);
+        enemysController.BootUp(OnAddScore, OnDeath, maxPos, minPos);
         playerController.BootUp(minPos);
         
-        enemyController.enabled = true;
+        enemysController.enabled = true;
         playerController.enabled = true;
     }
 }

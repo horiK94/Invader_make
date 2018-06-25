@@ -19,13 +19,14 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4048899339765884}
+  - component: {fileID: 114468376972450664}
   m_Layer: 0
   m_Name: Octopus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1479578932445226
 GameObject:
   m_ObjectHideFlags: 0
@@ -36,6 +37,7 @@ GameObject:
   - component: {fileID: 4529776208502402}
   - component: {fileID: 65032601836514402}
   - component: {fileID: 114986471869695410}
+  - component: {fileID: 114196645555836200}
   m_Layer: 0
   m_Name: Octopus
   m_TagString: Untagged
@@ -154,6 +156,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.2, y: 0.8, z: 1}
   m_Center: {x: 0, y: 0.4, z: 0}
+--- !u!114 &114196645555836200
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1479578932445226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c7b3473d4feb41b98318364c157b697, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mesh:
+  - {fileID: 4300000, guid: 4065b11170063ba429e02c9751fd0f46, type: 3}
+  - {fileID: 4300000, guid: 4fb557df5a387d54c8dbefdf8a3d1414, type: 3}
+--- !u!114 &114468376972450664
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1093514475067512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eeb787a2ab694f248fe12fc7ec9a3a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114986471869695410
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -5,7 +5,9 @@
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets/EnemyColumnController.cs" t="Include" />
+      <e p="Assets/EnemyController.cs" t="Include" />
       <e p="Assets/EnemyCrowdController.cs" t="Include" />
+      <e p="Assets/EnemyMesh.cs" t="Include" />
       <e p="Assets/EnemyShot.cs" t="Include" />
       <e p="Assets/Fade" t="Include">
         <e p="Materials" t="Include">
@@ -30,8 +32,8 @@
           <e p="EnemyColumnCreateInfo.cs" t="Include" />
           <e p="EnemyLineInfo.cs" t="Include" />
         </e>
-        <e p="EnemyController.cs" t="Include" />
         <e p="EnemyHealth.cs" t="Include" />
+        <e p="EnemysController.cs" t="Include" />
         <e p="Player" t="Include">
           <e p="PlayerController.cs" t="Include" />
           <e p="PlayerHealth.cs" t="Include" />

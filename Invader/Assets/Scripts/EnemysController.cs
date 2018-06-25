@@ -6,7 +6,7 @@ using UnityEditor.iOS.Xcode;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class EnemyController : MonoBehaviour
+public class EnemysController : MonoBehaviour
 {
     [SerializeField] private EnemyCrowdController enemyCrowdController;
     [SerializeField] private UFOController ufoController;

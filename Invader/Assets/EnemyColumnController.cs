@@ -44,9 +44,9 @@ public class EnemyColumnController : MonoBehaviour
             
             enemy[i].transform.position = new Vector3(columnInfo.enemyMinPos.x + columnInfo.enemyWidthInterval * (columnInfo.columnId - 1),
                 columnInfo.enemyMaxPos.y - (columnInfo.stageNum - columnInfo.startUpStageId + 2 * (enemyHeightNum - i - 1)) * enemyHeightInterval, 0);
-                        
-            EnemyHealth health = enemy[i].GetComponentInChildren<EnemyHealth>();
-            health.BootUp(line[i].Point, _onAddScore, () =>
+
+            EnemyController controller = enemy[i].GetComponent<EnemyController>();
+            controller.BootUp(line[i].Point, _onAddScore, () =>
             {
                 remainEnemy--;
                 if (remainEnemy <= 0)
@@ -54,8 +54,6 @@ public class EnemyColumnController : MonoBehaviour
                     _onDeath();
                 }
             });
-            
-            enemy[i].SetActive(true);
         }
     }
     

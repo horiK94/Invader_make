@@ -28,7 +28,7 @@ public class EnemyHealth : MonoBehaviour
         hp = startHp;
     }
 
-    public void BootUp(int point, UnityAction<int> _onAddScore, UnityAction _onDeath)
+    public void SetUp(int point, UnityAction<int> _onAddScore, UnityAction _onDeath)
     {
         this.onAddScore = _onAddScore;
         this.onDeath = _onDeath;

@@ -36,13 +36,14 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4394802964596478}
+  - component: {fileID: 114705532828181376}
   m_Layer: 0
   m_Name: Crab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1786371095419728
 GameObject:
   m_ObjectHideFlags: 0
@@ -53,6 +54,7 @@ GameObject:
   - component: {fileID: 4682306688997050}
   - component: {fileID: 65328562718617954}
   - component: {fileID: 114153226722052148}
+  - component: {fileID: 114835154493628770}
   m_Layer: 0
   m_Name: Crab
   m_TagString: Untagged
@@ -141,7 +143,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1109452572386886}
-  m_Mesh: {fileID: 4300000, guid: 8141e69dc1b8d6b4a9fb821e06609dc9, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 787d872479952cd478bc37c5e5a11b8b, type: 3}
 --- !u!65 &65328562718617954
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -166,3 +168,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startHp: 1
+--- !u!114 &114705532828181376
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1318664489645212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eeb787a2ab694f248fe12fc7ec9a3a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114835154493628770
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1786371095419728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c7b3473d4feb41b98318364c157b697, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mesh:
+  - {fileID: 4300000, guid: 8141e69dc1b8d6b4a9fb821e06609dc9, type: 3}
+  - {fileID: 4300000, guid: 787d872479952cd478bc37c5e5a11b8b, type: 3}
