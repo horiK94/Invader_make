@@ -125,10 +125,6 @@ public class EnemyCrowdController : MonoBehaviour {
                 });
         }
 
-        if (enemyColumns.Count == 0)
-        {
-            Debug.LogError("EnemyColumnsの要素が0個になっています");
-        }
         StartCoroutine(Move());
         StartCoroutine(Shot());
     }
@@ -136,7 +132,7 @@ public class EnemyCrowdController : MonoBehaviour {
 
     IEnumerator Move()
     {
-        while (true)
+        while (enemyColumns.Count != 0)
         {
             for (int i = 0; i < enemyColumns.Count; i++)
             {
