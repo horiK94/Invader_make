@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,8 +11,7 @@ public class EnemyColumnController : MonoBehaviour
     /// </summary>
     [SerializeField] private int moveNextEnemyActionNum = 8;
     private UnityAction<int> onAddScore;
-    private GameObject[] enemy;
-    private int remainEnemy;
+    private List<GameObject> enemy = new List<GameObject>();
     private EnemyColumnCreateInfo columnInfo;
 
     public void Create(EnemyColumnCreateInfo columnInfo, EnemyLineInfo[] lineInfo, Transform enemyColumnParent, UnityAction<int> _onAddScore, UnityAction _onDeath)
@@ -19,9 +19,6 @@ public class EnemyColumnController : MonoBehaviour
         this.columnInfo = columnInfo;
         int enemyHeightNum = columnInfo.enemyHeightNum;
         float enemyHeightInterval = (columnInfo.enemyMaxPos.y - columnInfo.enemyMinPos.y) / (columnInfo.stageNum - 1);
-        
-        //enemy配列の初期化
-        enemy = new GameObject[enemyHeightNum];
         
         //親となる空オブジェクトを生成し、その中にこの後生成するenemyオブジェクトを入れていく
         Transform enemyColumnObj = new GameObject("Enemys" + columnInfo.columnId + "Column").transform;
@@ -38,18 +35,19 @@ public class EnemyColumnController : MonoBehaviour
         //enemyの生成
         for (int i = 0; i < enemyHeightNum; i++)
         {
-            enemy[i] = Instantiate(line[i].Prefab);
+            GameObject obj = Instantiate(line[i].Prefab);
+            enemy.Add(obj);
             
-            enemy[i].transform.parent = enemyColumnObj;
+            obj.transform.parent = enemyColumnObj;
             
-            enemy[i].transform.position = new Vector3(columnInfo.enemyMinPos.x + columnInfo.enemyWidthInterval * (columnInfo.columnId - 1),
+            obj.transform.position = new Vector3(columnInfo.enemyMinPos.x + columnInfo.enemyWidthInterval * (columnInfo.columnId - 1),
                 columnInfo.enemyMaxPos.y - (columnInfo.stageNum - columnInfo.startUpStageId + 2 * (enemyHeightNum - i - 1)) * enemyHeightInterval, 0);
 
-            EnemyController controller = enemy[i].GetComponent<EnemyController>();
-            controller.BootUp(line[i].Point, _onAddScore, () =>
+            EnemyController controller = obj.GetComponent<EnemyController>();
+            controller.BootUp(i, line[i].Point, _onAddScore, (id) =>
             {
-                remainEnemy--;
-                if (remainEnemy <= 0)
+                enemy.RemoveAll(ob => ob.GetComponent<EnemyController>().Id == id);
+                if (enemy.Count <= 0)
                 {
                     _onDeath();
                 }
@@ -78,11 +76,9 @@ public class EnemyColumnController : MonoBehaviour
 
     public void Shot()
     {
-        Debug.Log("Shot");
     }
 
     public void Move()
     {
-        Debug.Log("Move");
     }
 }

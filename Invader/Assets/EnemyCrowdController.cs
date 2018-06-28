@@ -53,8 +53,8 @@ public class EnemyCrowdController : MonoBehaviour {
     /// １列移動するのに待つ時間
     /// </summary>
     [SerializeField] private float moveColumnWaitTime = 3.0f;
-    
-    private List<EnemyColumnController> enemyColumns;
+
+    private List<EnemyColumnController> enemyColumns = new List<EnemyColumnController>();
     private int remainColumn = 0;
     private UnityAction<int> onAddScore = null;
     private UnityAction onDeath = null;
@@ -71,7 +71,6 @@ public class EnemyCrowdController : MonoBehaviour {
         this.minPos = _minPos;
         
         remainColumn = enemyWidthNum;
-        enemyColumns = new List<EnemyColumnController>(remainColumn);
         
         SortEnemyPrefab();
         Create();
@@ -145,8 +144,11 @@ public class EnemyCrowdController : MonoBehaviour {
     IEnumerator Shot()
     {
         yield return new WaitForSeconds(startWaitTime);
-        int r = Random.Range(0, enemyColumns.Count - 1);
-        //enemyColumns[r].Shot();
-        yield return new WaitForSeconds(shotInterval);
+        while (enemyColumns.Count != 0)
+        {        
+            int r = Random.Range(0, enemyColumns.Count - 1);
+            enemyColumns[r].Shot();
+            yield return new WaitForSeconds(shotInterval);
+        }
     }
 }

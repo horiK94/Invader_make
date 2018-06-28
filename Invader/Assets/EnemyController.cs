@@ -7,6 +7,8 @@ public class EnemyController : MonoBehaviour
 {
 	private EnemyHealth enemyHealth;
 	private EnemyMesh enemyMesh;
+	private int id;
+	public int Id => id;
 
 	void Awake()
 	{
@@ -14,9 +16,10 @@ public class EnemyController : MonoBehaviour
 		enemyMesh = GetComponentInChildren<EnemyMesh>();
 	}
 
-	public void BootUp(int point, UnityAction<int> onAddScore, UnityAction onDeath)
+	public void BootUp(int id, int point, UnityAction<int> onAddScore, UnityAction<int> onDeath)
 	{
-		enemyHealth.SetUp(point, onAddScore, onDeath);
+		id = this.id;
+		enemyHealth.SetUp(point, onAddScore, () => { onDeath(id); });
 	}
 
 	public void Move()
