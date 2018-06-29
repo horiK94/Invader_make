@@ -10,7 +10,7 @@ public class EnemyMesh : MonoBehaviour
     [SerializeField] private Mesh[] mesh;
     private MeshFilter meshFilter;
     private int meshLength = 0;
-    private int count = 0;
+    public int MeshLength => meshLength;
 
     void Awake()
     {
@@ -18,9 +18,12 @@ public class EnemyMesh : MonoBehaviour
         meshLength = mesh.Length;
     }
 
-    public void Change()
+    public void ChangeMesh(int meshId)
     {
-        count++;
-        meshFilter.mesh = mesh[count % meshLength];
+        if (meshId < 0 || meshId >= MeshLength)
+        {
+            Debug.LogError("meshIdが無効な値です");
+        }
+        meshFilter.mesh = mesh[meshId];
     }
 }
