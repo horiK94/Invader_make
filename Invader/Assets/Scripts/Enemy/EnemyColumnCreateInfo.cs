@@ -32,9 +32,4 @@ public class EnemyColumnCreateInfo : MonoBehaviour
     /// 敵の可動域の右上の座標
     /// </summary>
     public Vector3 enemyMaxPos;
-
-    /// <summary>
-    /// １体を移動させるのにかかる時間
-    /// </summary>
-    public float moveWaitTime;
 }

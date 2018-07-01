@@ -421,9 +421,9 @@ MonoBehaviour:
   shotInterval: 1
   enemyTopPosYDiff: 4
   enemyBottomPosYDiff: 0
-  enemyWidthInterval: 1.5
+  enemyWidthInterval: 1.8
   stageNum: 19
-  moveColumnWaitTime: 3
+  moveLineWaitTime: 0.2
 --- !u!1 &1303059278
 GameObject:
   m_ObjectHideFlags: 0

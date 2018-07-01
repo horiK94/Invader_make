@@ -1,8 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngineInternal;
 
 public class EnemyColumnController : MonoBehaviour
 {
@@ -13,17 +16,23 @@ public class EnemyColumnController : MonoBehaviour
     private UnityAction<int> onAddScore;
     private List<GameObject> enemy = new List<GameObject>();
     private EnemyColumnCreateInfo columnInfo;
+    private int minStage;
+    public int MinStage => minStage;
+    private int maxStage;
+    public int MaxStage => maxStage;
 
     public void Create(EnemyColumnCreateInfo columnInfo, EnemyLineInfo[] lineInfo, Transform enemyColumnParent, UnityAction<int> _onAddScore, UnityAction _onDeath)
     {
         this.columnInfo = columnInfo;
         int enemyHeightNum = columnInfo.enemyHeightNum;
         float enemyHeightInterval = (columnInfo.enemyMaxPos.y - columnInfo.enemyMinPos.y) / (columnInfo.stageNum - 1);
-        
+        minStage = 0;
+        maxStage = columnInfo.enemyHeightNum - 1;
+
         //親となる空オブジェクトを生成し、その中にこの後生成するenemyオブジェクトを入れていく
         Transform enemyColumnObj = new GameObject("Enemys" + columnInfo.columnId + "Column").transform;
         enemyColumnObj.parent = enemyColumnParent;
-        
+
         //enemyの情報を参照
         EnemyLineInfo[] line = new EnemyLineInfo[enemyHeightNum];
         for (int i = 0; i < enemyHeightNum; i++)
@@ -32,8 +41,10 @@ public class EnemyColumnController : MonoBehaviour
             line[i] = FindEnemyInfo(lineNumber, lineInfo);
         }
 
+        float verticalDiff = (columnInfo.enemyMaxPos.y - columnInfo.enemyMinPos.y) / (columnInfo.stageNum - 1);
+
         //enemyの生成
-        for (int i = 0; i < enemyHeightNum; i++)
+        for (int i = enemyHeightNum - 1; i >= 0; i--)
         {
             GameObject obj = Instantiate(line[i].Prefab);
             enemy.Add(obj);
@@ -51,7 +62,7 @@ public class EnemyColumnController : MonoBehaviour
                 {
                     _onDeath();
                 }
-            });
+            }, columnInfo.enemyWidthInterval / moveNextEnemyActionNum, verticalDiff, columnInfo.enemyMinPos, columnInfo.enemyMaxPos);
         }
     }
     
@@ -78,7 +89,24 @@ public class EnemyColumnController : MonoBehaviour
     {
     }
 
-    public void Move()
+    public IEnumerator Move(int minId, int maxId, float moveLineWaitTime)
     {
+        UpdateSurviveInfo();
+        for (int i = minId; i <= maxId; i++)
+        {
+            enemy[i].GetComponent<EnemyController>().Move();
+            yield return  new WaitForSeconds(moveLineWaitTime);
+        }
+    }
+
+    void UpdateSurviveInfo()
+    {
+        if (enemy.Count == 0)
+        {
+            return;
+        }
+        var ids = enemy.Select(ob => ob.GetComponent<EnemyController>().Id);
+        maxStage = ids.Max();
+        minStage = ids.Min();
     }
 }

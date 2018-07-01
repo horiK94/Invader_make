@@ -32,6 +32,7 @@ public class EnemyHealth : MonoBehaviour
     {
         this.onAddScore = _onAddScore;
         this.onDeath = _onDeath;
+        this.point = point;
     }
 
     void DecreaseHp()

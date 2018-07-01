@@ -55,6 +55,7 @@ GameObject:
   - component: {fileID: 65328562718617954}
   - component: {fileID: 114153226722052148}
   - component: {fileID: 114835154493628770}
+  - component: {fileID: 114767980761602918}
   m_Layer: 0
   m_Name: Crab
   m_TagString: Untagged
@@ -177,6 +178,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5eeb787a2ab694f248fe12fc7ec9a3a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: {fileID: 0}
+  enemyMesh: {fileID: 0}
+  enemyMove: {fileID: 0}
+--- !u!114 &114767980761602918
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1786371095419728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a5c3d5bcea374a4294e4afbe232262c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114835154493628770

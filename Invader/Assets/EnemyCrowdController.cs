@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Linq;
+using UnityEngine.Assertions.Must;
 using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
@@ -50,9 +52,9 @@ public class EnemyCrowdController : MonoBehaviour {
     [SerializeField]int stageNum = 19;
 
     /// <summary>
-    /// １列移動するのに待つ時間
+    /// １行移動するのに待つ時間
     /// </summary>
-    [SerializeField] private float moveColumnWaitTime = 3.0f;
+    [SerializeField] private float moveLineWaitTime = 3.0f;
 
     private List<EnemyColumnController> enemyColumns = new List<EnemyColumnController>();
     private int remainColumn = 0;
@@ -61,7 +63,14 @@ public class EnemyCrowdController : MonoBehaviour {
     private UnityAction onBelowUfoPopMinEnemyNum = null;
     private Vector3 maxPos = Vector3.zero, minPos = Vector3.zero;
     private float enemyHeightInterval;
+    private int minStage, maxStage;
 
+    void Awake()
+    {
+        minStage = 0;
+        maxStage = enemyHeightNum - 1;
+    }
+    
     public void BootUp(UnityAction<int> _onAddScore, UnityAction _onDeath, UnityAction _onBelowUfoPopMinEnemyNum, Vector3 _maxPos, Vector3 _minPos)
     {   
         this.onAddScore = _onAddScore;
@@ -107,8 +116,6 @@ public class EnemyCrowdController : MonoBehaviour {
             columnInfo.stageNum = stageNum;
             columnInfo.enemyMinPos = new Vector3(minPos.x, minPos.y + enemyBottomPosYDiff, 0);
             columnInfo.enemyMaxPos = new Vector3(maxPos.x, maxPos.y - enemyTopPosYDiff, 0);
-
-            columnInfo.moveWaitTime = moveColumnWaitTime / enemyHeightNum;
             
             controller.Create(columnInfo, enemyLineInfo, enemyParent, onAddScore, () =>
                 {
@@ -131,14 +138,24 @@ public class EnemyCrowdController : MonoBehaviour {
 
     IEnumerator Move()
     {
+        yield return new WaitForSeconds(startWaitTime);
+        UpdateSurviveInfo();
         while (enemyColumns.Count != 0)
         {
-            for (int i = 0; i < enemyColumns.Count; i++)
+            for (int i = 0; i < enemyWidthNum; i++)
             {
-                yield return new WaitForSeconds(moveColumnWaitTime);
-                enemyColumns[i].Move();
+                StartCoroutine(enemyColumns[i].Move(minStage, maxStage, moveLineWaitTime));
             }
+            yield return  new WaitForSeconds((maxStage - minStage + 1) * moveLineWaitTime);
         }
+    }
+
+    void UpdateSurviveInfo()
+    {
+        var maxStages = enemyColumns.Select(ob => ob.MaxStage);
+        maxStage = maxStages.Max();
+        var minStages = enemyColumns.Select(ob => ob.MinStage);
+        minStage = minStages.Min();
     }
 
     IEnumerator Shot()

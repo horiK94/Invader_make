@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 65731378701110394}
   - component: {fileID: 114278020184361976}
   - component: {fileID: 114337669949984086}
+  - component: {fileID: 114890377588469972}
   m_Layer: 0
   m_Name: Squid
   m_TagString: Untagged
@@ -191,5 +192,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5eeb787a2ab694f248fe12fc7ec9a3a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: {fileID: 0}
+  enemyMesh: {fileID: 0}
+  enemyMove: {fileID: 0}
+--- !u!114 &114890377588469972
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1342828165848292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a5c3d5bcea374a4294e4afbe232262c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
