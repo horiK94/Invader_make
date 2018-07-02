@@ -9,13 +9,15 @@ public class EnemyMesh : MonoBehaviour
     /// </summary>
     [SerializeField] private Mesh[] mesh;
     private MeshFilter meshFilter;
-    private int meshLength = 0;
-    public int MeshLength => meshLength;
+    public int MeshLength => mesh.Length;
 
     void Awake()
     {
         meshFilter = GetComponentInChildren<MeshFilter>();
-        meshLength = mesh.Length;
+        if (MeshLength != 0)
+        {
+            meshFilter.mesh = mesh[0];
+        }
     }
 
     public void ChangeMesh(int meshId)

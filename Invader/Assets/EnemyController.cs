@@ -21,6 +21,7 @@ public class EnemyController : MonoBehaviour
 
 	private bool isDead = false;
 	public bool IsDead => isDead;
+	private int count = 0;
 
 	void Awake()
 	{
@@ -51,7 +52,8 @@ public class EnemyController : MonoBehaviour
 
 	public void Move()
 	{
-		enemyMesh.ChangeMesh(0);
+		count++;
+		enemyMesh.ChangeMesh(count % enemyMesh.MeshLength);
 		if (CanMoveSide()) //移動後に画面の外に出てしまうかの確認
 		{
 			MoveSide();
