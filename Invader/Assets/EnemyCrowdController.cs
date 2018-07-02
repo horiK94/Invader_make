@@ -56,7 +56,7 @@ public class EnemyCrowdController : MonoBehaviour {
     /// </summary>
     [SerializeField] private float moveLineWaitTime = 3.0f;
 
-    private List<EnemyColumnController> enemyColumns = new List<EnemyColumnController>();
+    private EnemyColumnController[] enemyColumns;
     private int remainColumn = 0;
     private UnityAction<int> onAddScore = null;
     private UnityAction onDeath = null;
@@ -64,6 +64,7 @@ public class EnemyCrowdController : MonoBehaviour {
     private Vector3 maxPos = Vector3.zero, minPos = Vector3.zero;
     private float enemyHeightInterval;
     private int minStage, maxStage;
+    private int[] rowAliveEnemuNum;
 
     void Awake()
     {
@@ -96,15 +97,22 @@ public class EnemyCrowdController : MonoBehaviour {
 
     private void Create()
     {
-        enemyParent = new GameObject("Enemys").transform; 
+        enemyParent = new GameObject("Enemys").transform;
 
+        rowAliveEnemuNum = new int[enemyHeightNum];
+        for (int i = 0; i < enemyHeightNum; i++)
+        {
+            rowAliveEnemuNum[i] = enemyWidthNum;
+        }
+
+        enemyColumns = new EnemyColumnController[enemyWidthNum];
         for (int i = 0; i < enemyWidthNum; i++)
         {
             //列の生成
             int lineNumber = i + 1;
             GameObject column = new GameObject("Enemy" + lineNumber + "ColumnController");
             EnemyColumnController controller = column.AddComponent<EnemyColumnController>();
-            enemyColumns.Add(controller);
+            enemyColumns[i] = controller;
             
             column.transform.parent = transform;
             
@@ -117,55 +125,48 @@ public class EnemyCrowdController : MonoBehaviour {
             columnInfo.enemyMinPos = new Vector3(minPos.x, minPos.y + enemyBottomPosYDiff, 0);
             columnInfo.enemyMaxPos = new Vector3(maxPos.x, maxPos.y - enemyTopPosYDiff, 0);
             
-            controller.Create(columnInfo, enemyLineInfo, enemyParent, onAddScore, () =>
+            controller.Create(columnInfo, enemyLineInfo, enemyParent, onAddScore, (id) =>
+            {
+                rowAliveEnemuNum[id]--;
+                if (rowAliveEnemuNum.Sum() == 0)
                 {
-                    remainColumn--;
-                    if (remainColumn < ufoPopMinEnemyNum)
-                    {
-                        onBelowUfoPopMinEnemyNum();
-                    }
-                    if (remainColumn <= 0)
-                    {
-                        onDeath();
-                    }
-                });
+                    onDeath();
+                }
+
+                if (rowAliveEnemuNum[id] == 0)
+                {
+                    onRowDeath();
+                }
+            });
         }
 
         StartCoroutine(Move());
         StartCoroutine(Shot());
     }
-    
+
+    void onRowDeath()
+    {
+        for (int i = 0; i < enemyWidthNum; i++)
+        {
+            
+        }
+    }
 
     IEnumerator Move()
     {
         yield return new WaitForSeconds(startWaitTime);
-        UpdateSurviveInfo();
-        while (enemyColumns.Count != 0)
+        while (enemyColumns.Where(e => e != null).ToArray().Length != 0)
         {
             for (int i = 0; i < enemyWidthNum; i++)
             {
                 StartCoroutine(enemyColumns[i].Move(minStage, maxStage, moveLineWaitTime));
             }
-            yield return  new WaitForSeconds((maxStage - minStage + 1) * moveLineWaitTime);
+            yield return new WaitForSeconds((maxStage - minStage + 1) * moveLineWaitTime);
         }
-    }
-
-    void UpdateSurviveInfo()
-    {
-        var maxStages = enemyColumns.Select(ob => ob.MaxStage);
-        maxStage = maxStages.Max();
-        var minStages = enemyColumns.Select(ob => ob.MinStage);
-        minStage = minStages.Min();
     }
 
     IEnumerator Shot()
     {
-        yield return new WaitForSeconds(startWaitTime);
-        while (enemyColumns.Count != 0)
-        {        
-            int r = Random.Range(0, enemyColumns.Count - 1);
-            enemyColumns[r].Shot();
-            yield return new WaitForSeconds(shotInterval);
-        }
+        yield return new WaitForSeconds(shotInterval);
     }
 }

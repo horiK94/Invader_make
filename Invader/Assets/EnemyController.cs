@@ -19,6 +19,9 @@ public class EnemyController : MonoBehaviour
 	private Vector3 minPos;
 	private Vector3 maxPos;
 
+	private bool isDead = false;
+	public bool IsDead => isDead;
+
 	void Awake()
 	{
 		enemyHealth = GetComponentInChildren<EnemyHealth>();
@@ -39,7 +42,11 @@ public class EnemyController : MonoBehaviour
 		this.minPos = minPos;
 		this.maxPos = maxPos;
 		
-		enemyHealth.SetUp(point, onAddScore, () => { onDeath(id); });
+		enemyHealth.SetUp(point, onAddScore, () =>
+		{
+			isDead = true;
+			onDeath(id);
+		});
 	}
 
 	public void Move()

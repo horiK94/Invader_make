@@ -1,11 +1,7 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngineInternal;
 
 public class EnemyColumnController : MonoBehaviour
 {
@@ -14,20 +10,14 @@ public class EnemyColumnController : MonoBehaviour
     /// </summary>
     [SerializeField] private int moveNextEnemyActionNum = 8;
     private UnityAction<int> onAddScore;
-    private List<GameObject> enemy = new List<GameObject>();
+    private GameObject[] enemy;
     private EnemyColumnCreateInfo columnInfo;
-    private int minStage;
-    public int MinStage => minStage;
-    private int maxStage;
-    public int MaxStage => maxStage;
 
-    public void Create(EnemyColumnCreateInfo columnInfo, EnemyLineInfo[] lineInfo, Transform enemyColumnParent, UnityAction<int> _onAddScore, UnityAction _onDeath)
+    public void Create(EnemyColumnCreateInfo columnInfo, EnemyLineInfo[] lineInfo, Transform enemyColumnParent, UnityAction<int> _onAddScore, UnityAction<int> _onDeath)
     {
         this.columnInfo = columnInfo;
         int enemyHeightNum = columnInfo.enemyHeightNum;
         float enemyHeightInterval = (columnInfo.enemyMaxPos.y - columnInfo.enemyMinPos.y) / (columnInfo.stageNum - 1);
-        minStage = 0;
-        maxStage = columnInfo.enemyHeightNum - 1;
 
         //親となる空オブジェクトを生成し、その中にこの後生成するenemyオブジェクトを入れていく
         Transform enemyColumnObj = new GameObject("Enemys" + columnInfo.columnId + "Column").transform;
@@ -42,12 +32,14 @@ public class EnemyColumnController : MonoBehaviour
         }
 
         float verticalDiff = (columnInfo.enemyMaxPos.y - columnInfo.enemyMinPos.y) / (columnInfo.stageNum - 1);
+        
+        enemy = new GameObject[enemyHeightNum];
 
         //enemyの生成
         for (int i = enemyHeightNum - 1; i >= 0; i--)
         {
             GameObject obj = Instantiate(line[i].Prefab);
-            enemy.Add(obj);
+            enemy[i] = obj;
             
             obj.transform.parent = enemyColumnObj;
             
@@ -56,13 +48,9 @@ public class EnemyColumnController : MonoBehaviour
 
             EnemyController controller = obj.GetComponent<EnemyController>();
             controller.BootUp(i, line[i].Point, _onAddScore, (id) =>
-            {
-                enemy.RemoveAll(ob => ob.GetComponent<EnemyController>().Id == id);
-                if (enemy.Count <= 0)
                 {
-                    _onDeath();
-                }
-            }, columnInfo.enemyWidthInterval / moveNextEnemyActionNum, verticalDiff, columnInfo.enemyMinPos, columnInfo.enemyMaxPos);
+                    _onDeath(id);
+                }, columnInfo.enemyWidthInterval / moveNextEnemyActionNum, verticalDiff, columnInfo.enemyMinPos, columnInfo.enemyMaxPos);
         }
     }
     
@@ -89,24 +77,35 @@ public class EnemyColumnController : MonoBehaviour
     {
     }
 
-    public IEnumerator Move(int minId, int maxId, float moveLineWaitTime)
+    //public IEnumerator Move(bool[] isRowDeath, float moveLineWaitTime)
+    public IEnumerator Move(int minStage, int maxStage, float moveLineWaitTime)
     {
-        UpdateSurviveInfo();
-        for (int i = minId; i <= maxId; i++)
+        for (int i = 0; i < enemy.Length; i++)
         {
-            enemy[i].GetComponent<EnemyController>().Move();
-            yield return  new WaitForSeconds(moveLineWaitTime);
+            //if (isRowDeath[i])
+            if(enemy[i] != null)
+            {
+                if (!enemy[i].GetComponent<EnemyController>().IsDead)
+                {
+                    enemy[i].GetComponent<EnemyController>().Move();
+                }
+                yield return new WaitForSeconds(moveLineWaitTime);
+            }
         }
     }
 
-    void UpdateSurviveInfo()
+    public bool IsAliveEnemy(int id)
     {
-        if (enemy.Count == 0)
-        {
-            return;
-        }
-        var ids = enemy.Select(ob => ob.GetComponent<EnemyController>().Id);
-        maxStage = ids.Max();
-        minStage = ids.Min();
+        return enemy[id] != null;
+    }
+
+    public int ResultEnemy()
+    {
+        return enemy.Where(e => e != null).ToArray().Length;
+    }
+
+    public void DeathRow(int id)
+    {
+        enemy[id] = null;
     }
 }
