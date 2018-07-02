@@ -60,7 +60,6 @@ public class EnemyController : MonoBehaviour
 		{
 			MoveBefore();
 		}
-		Debug.Log("EnemyMove: " + id);
 	}
 
 	bool CanMoveSide()

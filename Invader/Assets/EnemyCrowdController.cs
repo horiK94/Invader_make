@@ -135,7 +135,7 @@ public class EnemyCrowdController : MonoBehaviour {
 
                 if (rowAliveEnemuNum[id] == 0)
                 {
-                    onRowDeath();
+                    onRowDeath(id);
                 }
             });
         }
@@ -144,11 +144,11 @@ public class EnemyCrowdController : MonoBehaviour {
         StartCoroutine(Shot());
     }
 
-    void onRowDeath()
+    void onRowDeath(int id)
     {
         for (int i = 0; i < enemyWidthNum; i++)
         {
-            
+            enemyColumns[i].DeadRow(id);
         }
     }
 
@@ -159,9 +159,9 @@ public class EnemyCrowdController : MonoBehaviour {
         {
             for (int i = 0; i < enemyWidthNum; i++)
             {
-                StartCoroutine(enemyColumns[i].Move(minStage, maxStage, moveLineWaitTime));
+                StartCoroutine(enemyColumns[i].Move(moveLineWaitTime));
             }
-            yield return new WaitForSeconds((maxStage - minStage + 1) * moveLineWaitTime);
+            yield return new WaitForSeconds(rowAliveEnemuNum.Where(e => e != 0).ToArray().Length * moveLineWaitTime);
         }
     }
 

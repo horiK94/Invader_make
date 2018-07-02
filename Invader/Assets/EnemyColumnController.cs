@@ -77,12 +77,10 @@ public class EnemyColumnController : MonoBehaviour
     {
     }
 
-    //public IEnumerator Move(bool[] isRowDeath, float moveLineWaitTime)
-    public IEnumerator Move(int minStage, int maxStage, float moveLineWaitTime)
+    public IEnumerator Move(float moveLineWaitTime)
     {
         for (int i = 0; i < enemy.Length; i++)
         {
-            //if (isRowDeath[i])
             if(enemy[i] != null)
             {
                 if (!enemy[i].GetComponent<EnemyController>().IsDead)
@@ -104,7 +102,7 @@ public class EnemyColumnController : MonoBehaviour
         return enemy.Where(e => e != null).ToArray().Length;
     }
 
-    public void DeathRow(int id)
+    public void DeadRow(int id)
     {
         enemy[id] = null;
     }
