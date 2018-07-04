@@ -47,10 +47,12 @@ public class EnemyColumnController : MonoBehaviour
                 columnInfo.enemyMaxPos.y - (columnInfo.stageNum - columnInfo.startUpStageId + 2 * (enemyHeightNum - i - 1)) * enemyHeightInterval, 0);
 
             EnemyController controller = obj.GetComponent<EnemyController>();
+            /*
             controller.BootUp(i, line[i].Point, _onAddScore, (id) =>
                 {
                     _onDeath(id);
                 }, columnInfo.enemyWidthInterval / moveNextEnemyActionNum, verticalDiff, columnInfo.enemyMinPos, columnInfo.enemyMaxPos);
+                */
         }
     }
     

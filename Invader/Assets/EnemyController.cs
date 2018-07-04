@@ -35,7 +35,7 @@ public class EnemyController : MonoBehaviour
 	//縦にどのくらい移動するか
 	//端っこの情報
 
-	public void BootUp(int id, int point, UnityAction<int> onAddScore, UnityAction<int> onDeath, float moveHorizontalAmount, float moveVerticalAmount, Vector3 minPos, Vector3 maxPos)
+	public void BootUp(int id, int point, UnityAction<int> onAddScore, UnityAction onDeath, float moveHorizontalAmount, float moveVerticalAmount, Vector3 minPos, Vector3 maxPos)
 	{
 		this.id = id;
 		this.moveHorizontalAmount = moveHorizontalAmount;
@@ -46,7 +46,7 @@ public class EnemyController : MonoBehaviour
 		enemyHealth.SetUp(point, onAddScore, () =>
 		{
 			isDead = true;
-			onDeath(id);
+			onDeath();
 		});
 	}
 

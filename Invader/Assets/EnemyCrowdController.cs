@@ -50,13 +50,12 @@ public class EnemyCrowdController : MonoBehaviour {
     /// 段数の数
     /// </summary>
     [SerializeField]int stageNum = 19;
-
     /// <summary>
     /// １行移動するのに待つ時間
     /// </summary>
-    [SerializeField] private float moveLineWaitTime = 3.0f;
+    [SerializeField] private float moveRowWaitTime = 1.0f;
 
-    private EnemyColumnController[] enemyColumns;
+    private EnemyRowController[] enemyRows;
     private int remainColumn = 0;
     private UnityAction<int> onAddScore = null;
     private UnityAction onDeath = null;
@@ -89,9 +88,9 @@ public class EnemyCrowdController : MonoBehaviour {
     void SortEnemyPrefab()
     {
         Array.Sort(enemyLineInfo, (x, y) => { return x.HighestLine - y.HighestLine; });
-        if (enemyLineInfo[enemyLineInfo.Length - 1].HighestLine != enemyHeightNum)
+        if (enemyLineInfo[enemyLineInfo.Length - 1].HighestLine != enemyHeightNum - 1)
         {
-            Debug.LogError("enemyLineInfo[enemyLineInfo.Length - 1].HighestLine != enemyHeightNumとなっています");
+            Debug.LogError("enemyLineInfo[enemyLineInfo.Length - 1].HighestLine != enemyHeightNum - 1となっています");
         }
     }
 
@@ -105,27 +104,29 @@ public class EnemyCrowdController : MonoBehaviour {
             rowAliveEnemuNum[i] = enemyWidthNum;
         }
 
-        enemyColumns = new EnemyColumnController[enemyWidthNum];
-        for (int i = 0; i < enemyWidthNum; i++)
+        enemyRows = new EnemyRowController[enemyWidthNum];
+        for (int i = 0; i < enemyHeightNum; i++)
         {
             //列の生成
             int lineNumber = i + 1;
             GameObject column = new GameObject("Enemy" + lineNumber + "ColumnController");
-            EnemyColumnController controller = column.AddComponent<EnemyColumnController>();
-            enemyColumns[i] = controller;
+            EnemyRowController controller = column.AddComponent<EnemyRowController>();
+            enemyRows[i] = controller;
             
             column.transform.parent = transform;
             
-            EnemyColumnCreateInfo columnInfo = new EnemyColumnCreateInfo();
-            columnInfo.columnId = lineNumber;
-            columnInfo.enemyHeightNum = enemyHeightNum;
-            columnInfo.startUpStageId = stageNum;        //TODO ステージ数によって変化させる
-            columnInfo.enemyWidthInterval = enemyWidthInterval;
-            columnInfo.stageNum = stageNum;
-            columnInfo.enemyMinPos = new Vector3(minPos.x, minPos.y + enemyBottomPosYDiff, 0);
-            columnInfo.enemyMaxPos = new Vector3(maxPos.x, maxPos.y - enemyTopPosYDiff, 0);
+            EnemyRowCreateInfo rowInfo = new EnemyRowCreateInfo();
+            rowInfo.rowId = i;
+            rowInfo.rowInfo = FindEnemyInfo(i);
+            rowInfo.enemyHeightNum = enemyHeightNum;
+            rowInfo.enemyWidthNum = enemyWidthNum;
+            rowInfo.startUpStageId = stageNum - 1;        //TODO ステージ数によって変化させる
+            rowInfo.enemyWidthInterval = enemyWidthInterval;
+            rowInfo.stageNum = stageNum;
+            rowInfo.enemyMinPos = new Vector3(minPos.x, minPos.y + enemyBottomPosYDiff, 0);
+            rowInfo.enemyMaxPos = new Vector3(maxPos.x, maxPos.y - enemyTopPosYDiff, 0);
             
-            controller.Create(columnInfo, enemyLineInfo, enemyParent, onAddScore, (id) =>
+            controller.Create(rowInfo, enemyParent, onAddScore, (id) =>
             {
                 rowAliveEnemuNum[id]--;
                 if (rowAliveEnemuNum.Sum() == 0)
@@ -135,7 +136,7 @@ public class EnemyCrowdController : MonoBehaviour {
 
                 if (rowAliveEnemuNum[id] == 0)
                 {
-                    onRowDeath(id);
+                    // TODO
                 }
             });
         }
@@ -144,24 +145,16 @@ public class EnemyCrowdController : MonoBehaviour {
         StartCoroutine(Shot());
     }
 
-    void onRowDeath(int id)
-    {
-        for (int i = 0; i < enemyWidthNum; i++)
-        {
-            enemyColumns[i].DeadRow(id);
-        }
-    }
-
     IEnumerator Move()
     {
         yield return new WaitForSeconds(startWaitTime);
-        while (enemyColumns.Where(e => e != null).ToArray().Length != 0)
+        while (enemyRows.Where(e => e != null).ToArray().Length != 0)
         {
-            for (int i = 0; i < enemyWidthNum; i++)
+            for (int i = 0; i < enemyHeightNum; i++)
             {
-                StartCoroutine(enemyColumns[i].Move(moveLineWaitTime));
+                StartCoroutine(enemyRows[i].Move(moveRowWaitTime));
             }
-            yield return new WaitForSeconds(rowAliveEnemuNum.Where(e => e != 0).ToArray().Length * moveLineWaitTime);
+            yield return new WaitForSeconds(rowAliveEnemuNum.Where(e => e != 0).ToArray().Length * moveRowWaitTime);
         }
     }
 
@@ -169,4 +162,18 @@ public class EnemyCrowdController : MonoBehaviour {
     {
         yield return new WaitForSeconds(shotInterval);
     }
+    
+    EnemyLineInfo FindEnemyInfo(int line)
+    {
+        for (int j = 0; j < enemyLineInfo.Length; j++)
+        {
+            int lowerLine = j == 0 ? 0: enemyLineInfo[j - 1].HighestLine + 1;
+            if (line >= lowerLine && line <= enemyLineInfo[j].HighestLine)
+            {
+                return  enemyLineInfo[j];
+            }
+        }
+        return null;
+    }
+
 }
