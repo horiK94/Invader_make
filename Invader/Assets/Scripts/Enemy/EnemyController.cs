@@ -21,7 +21,6 @@ public class EnemyController : MonoBehaviour
 
 	private bool isDead = false;
 	public bool IsDead => isDead;
-	private int count = 0;
 
 	void Awake()
 	{
@@ -50,37 +49,25 @@ public class EnemyController : MonoBehaviour
 		});
 	}
 
-	public void Move()
-	{
-		count++;
-		enemyMesh.ChangeMesh(count % enemyMesh.MeshLength);
-		if (CanMoveSide()) //移動後に画面の外に出てしまうかの確認
-		{
-			MoveSide();
-		}
-		else
-		{
-			MoveBefore();
-		}
-	}
-
-	bool CanMoveSide()
+	public bool CanMoveSide()
 	{
 		float moveSign = isFacingRight ? 1 : -1;
 		float willMovePosX = transform.position.x + moveSign * moveHorizontalAmount;
-		bool isInside = willMovePosX >= minPos.x && willMovePosX <= maxPos.y;
+		bool isInside = willMovePosX >= minPos.x && willMovePosX <= maxPos.x;
 		return isInside;
 	}
 
-	void MoveSide()
+	public void MoveSide()
 	{
 		float moveSign = isFacingRight ? 1 : -1;
-		enemyMove.Move(moveSign * new Vector3(moveSign * moveHorizontalAmount, 0, 0));
+		enemyMove.Move(moveSign * new Vector3(moveHorizontalAmount, 0, 0));
+		enemyMesh.ChangeMesh();
 	}
 
-	void MoveBefore()
+	public void MoveBefore()
 	{
-		enemyMove.Move(new Vector3(0, -moveVerticalAmount, 0));
 		isFacingRight = !isFacingRight;
+		enemyMove.Move(new Vector3(0, -moveVerticalAmount, 0));
+		enemyMesh.ChangeMesh();
 	}
 }

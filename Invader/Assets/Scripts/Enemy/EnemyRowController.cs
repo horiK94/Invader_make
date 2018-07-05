@@ -48,14 +48,37 @@ public class EnemyRowController : MonoBehaviour {
         }
     }
 
-    public void Move()
+    public void MoveBefore()
     {
         for (int i = 0; i < enemy.Length; i++)
         {
             if (enemy[i].activeSelf)
             {
-                enemy[i].GetComponent<EnemyController>().Move();
+                enemy[i].GetComponent<EnemyController>().MoveBefore();
             }
         }
+    }
+
+    public void MoveSide()
+    {
+        for (int i = 0; i < enemy.Length; i++)
+        {
+            if (enemy[i].activeSelf)
+            {
+                enemy[i].GetComponent<EnemyController>().MoveSide();
+            }
+        }
+    }
+
+    public bool CanMoveSide()
+    {
+        for (int i = 0; i < enemy.Length; i++)
+        {
+            if (enemy[i].activeSelf && !enemy[i].GetComponent<EnemyController>().CanMoveSide())
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }

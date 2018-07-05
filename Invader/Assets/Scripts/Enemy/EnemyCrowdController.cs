@@ -64,6 +64,7 @@ public class EnemyCrowdController : MonoBehaviour {
     private float enemyHeightInterval;
     private int minStage, maxStage;
     private int[] rowAliveEnemuNum;
+    private bool isTurn = false;
 
     void Awake()
     {
@@ -150,12 +151,34 @@ public class EnemyCrowdController : MonoBehaviour {
         yield return new WaitForSeconds(startWaitTime);
         while (enemyRows.Where(e => e != null).ToArray().Length != 0)
         {
+            bool canMoveSide = CanMoveSide();
             for (int i = 0; i < enemyHeightNum; i++)
             {
-                enemyRows[i].Move();
+                if (canMoveSide)
+                {
+                    enemyRows[i].MoveSide();
+                }
+                else
+                {
+                    enemyRows[i].MoveBefore();
+                }
                 yield return  new WaitForSeconds(moveRowWaitTime);
             }
         }
+    }
+
+    bool CanMoveSide()
+    {
+        for (int i = 0; i < enemyHeightNum; i++)
+        {
+            if (!enemyRows[i].CanMoveSide() && !isTurn)
+            {
+                isTurn = true;
+                return false;
+            }
+        }
+        isTurn = false;
+        return true;
     }
 
     IEnumerator Shot()
