@@ -152,9 +152,9 @@ public class EnemyCrowdController : MonoBehaviour {
         {
             for (int i = 0; i < enemyHeightNum; i++)
             {
-                StartCoroutine(enemyRows[i].Move(moveRowWaitTime));
+                enemyRows[i].Move();
+                yield return  new WaitForSeconds(moveRowWaitTime);
             }
-            yield return new WaitForSeconds(rowAliveEnemuNum.Where(e => e != 0).ToArray().Length * moveRowWaitTime);
         }
     }
 

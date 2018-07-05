@@ -5,12 +5,6 @@
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="EnemyColumnController.cs" t="Include" />
-        <e p="EnemyController.cs" t="Include" />
-        <e p="EnemyCrowdController.cs" t="Include" />
-        <e p="EnemyMesh.cs" t="Include" />
-        <e p="EnemyMove.cs" t="Include" />
-        <e p="EnemyShot.cs" t="Include" />
         <e p="Fade" t="Include">
           <e p="Materials" t="Include">
             <e p="UI-Fade-Alpha.shader" t="Include" />
@@ -27,17 +21,26 @@
             <e p="IFade.cs" t="Include" />
           </e>
         </e>
-        <e p="GameController.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Bullet.cs" t="Include" />
           <e p="Enemy" t="Include">
-            <e p="EnemyColumnCreateInfo.cs" t="Include" />
+            <e p="EnemyController.cs" t="Include" />
+            <e p="EnemyCrowdController.cs" t="Include" />
             <e p="EnemyHealth.cs" t="Include" />
             <e p="EnemyLineInfo.cs" t="Include" />
+            <e p="EnemyMesh.cs" t="Include" />
+            <e p="EnemyMove.cs" t="Include" />
             <e p="EnemyRowController.cs" t="Include" />
             <e p="EnemyRowCreateInfo.cs" t="Include" />
             <e p="EnemysController.cs" t="Include" />
+            <e p="EnemyShot.cs" t="Include" />
+            <e p="UFO" t="Include">
+              <e p="UFOController.cs" t="Include" />
+              <e p="UFOHealth.cs" t="Include" />
+              <e p="UFOMover.cs" t="Include" />
+            </e>
           </e>
+          <e p="GameController.cs" t="Include" />
           <e p="Player" t="Include">
             <e p="PlayerController.cs" t="Include" />
             <e p="PlayerHealth.cs" t="Include" />
@@ -56,9 +59,6 @@
         <e p="Test" t="Include">
           <e p="Test.cs" t="Include" />
         </e>
-        <e p="UFOController.cs" t="Include" />
-        <e p="UFOHealth.cs" t="Include" />
-        <e p="UFOMover.cs" t="Include" />
       </e>
       <e p="Invader.sln" t="IncludeFlat" />
       <e p="Library" t="ExcludeRecursive" />

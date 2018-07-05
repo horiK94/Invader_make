@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 using UnityEngine.Events;
 
 public class EnemyRowController : MonoBehaviour {
@@ -47,9 +48,14 @@ public class EnemyRowController : MonoBehaviour {
         }
     }
 
-    public IEnumerator Move(float waitTime)
+    public void Move()
     {
-        // TODO
-        yield return  new WaitForSeconds(waitTime);
+        for (int i = 0; i < enemy.Length; i++)
+        {
+            if (enemy[i].activeSelf)
+            {
+                enemy[i].GetComponent<EnemyController>().Move();
+            }
+        }
     }
 }
