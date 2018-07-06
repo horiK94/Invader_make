@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 65149383523061484}
   - component: {fileID: 114718065918634942}
   - component: {fileID: 114045698898292536}
+  - component: {fileID: 114411084055290802}
   m_Layer: 0
   m_Name: ufo
   m_TagString: Untagged
@@ -86,6 +87,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 55ef29dfe055c4e98948c007020ce779, type: 2}
   m_StaticBatchInfo:
@@ -138,6 +140,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startHp: 1
+  enemyTrigger: {fileID: 114411084055290802}
+--- !u!114 &114411084055290802
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1795739305026786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bba46244494bc4a509b3a6f8d84402ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114718065918634942
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private int startHp = 1;
+    [SerializeField] private EnemyTrigger enemyTrigger = null;
     private int hp = 1;
     private int point;
 
@@ -28,6 +29,21 @@ public class EnemyHealth : MonoBehaviour
         hp = startHp;
     }
 
+    void Start()
+    {
+        enemyTrigger.SetUp((other) =>
+        {
+            if (other.GetComponent<Bullet>() != null)
+            {
+                DecreaseHp();
+                if (IsDead())
+                {
+                    Death();
+                }
+            }
+        });
+    }
+
     public void SetUp(int point, UnityAction<int> _onAddScore, UnityAction _onDeath)
     {
         this.onAddScore = _onAddScore;
@@ -48,21 +64,8 @@ public class EnemyHealth : MonoBehaviour
     protected virtual void Death()
     {
         // TODO 死んだ処理
-        Debug.Log("<EnemyHealth> Death");
         OnAddScore(point);
         OnDeath();
         gameObject.SetActive(false);
-    }
-    
-    protected void OnTriggerEnter(Collider other)
-    {
-        if (other.GetComponent<Bullet>() != null)
-        {
-            DecreaseHp();
-            if (IsDead())
-            {
-                Death();
-            }
-        }
     }
 }

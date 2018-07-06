@@ -14,9 +14,4 @@ public class UFOHealth : EnemyHealth
         OnDeath();
         gameObject.SetActive(false);
     }
-
-    protected void OnTriggerEnter(Collider other)
-    {
-        base.OnTriggerEnter(other);
-    }
 }

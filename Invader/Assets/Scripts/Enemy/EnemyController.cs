@@ -24,16 +24,12 @@ public class EnemyController : MonoBehaviour
 
 	void Awake()
 	{
-		enemyHealth = GetComponentInChildren<EnemyHealth>();
+		enemyHealth = GetComponent<EnemyHealth>();
 		enemyMesh = GetComponentInChildren<EnemyMesh>();
-		enemyMove = GetComponentInChildren<EnemyMove>();
+		enemyMove = GetComponent<EnemyMove>();
 		isFacingRight = true;
 	}
-	//欲しいデータ
-	//横にどれくらい移動するか
-	//縦にどのくらい移動するか
-	//端っこの情報
-
+	
 	public void BootUp(int id, int point, UnityAction<int> onAddScore, UnityAction onDeath, float moveHorizontalAmount, float moveVerticalAmount, Vector3 minPos, Vector3 maxPos)
 	{
 		this.id = id;
@@ -51,6 +47,11 @@ public class EnemyController : MonoBehaviour
 
 	public bool CanMoveSide()
 	{
+		if (!gameObject.activeSelf)
+		{
+			return true;
+		}
+		
 		float moveSign = isFacingRight ? 1 : -1;
 		float willMovePosX = transform.position.x + moveSign * moveHorizontalAmount;
 		bool isInside = willMovePosX >= minPos.x && willMovePosX <= maxPos.x;
