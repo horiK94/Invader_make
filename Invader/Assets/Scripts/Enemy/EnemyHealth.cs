@@ -63,7 +63,6 @@ public class EnemyHealth : MonoBehaviour
 
     protected virtual void Death()
     {
-        // TODO 死んだ処理
         OnAddScore(point);
         OnDeath();
         gameObject.SetActive(false);

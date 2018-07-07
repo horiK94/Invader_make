@@ -81,4 +81,22 @@ public class EnemyRowController : MonoBehaviour {
         }
         return true;
     }
+
+    public bool IsAlive(int id)
+    {
+        return enemy[id].activeSelf;
+    }
+
+    public void Shot(int columnId)
+    {
+        if (!IsValidColumnId(columnId) || !enemy[columnId].activeSelf)
+        {
+            return;
+        }
+    }
+    
+    bool IsValidColumnId(int columnId)
+    {
+        return columnId >= 0 && columnId < enemy.Length;
+    }
 }

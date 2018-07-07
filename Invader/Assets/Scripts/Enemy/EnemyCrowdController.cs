@@ -63,13 +63,18 @@ public class EnemyCrowdController : MonoBehaviour {
     private Vector3 maxPos = Vector3.zero, minPos = Vector3.zero;
     private float enemyHeightInterval;
     private int minStage, maxStage;
-    private int[] rowAliveEnemuNum;
+    private int[] rowAliveEnemyNum;
     private bool isTurn = false;
+    private List<int> enemyAliveCash;
 
     void Awake()
     {
         minStage = 0;
         maxStage = enemyHeightNum - 1;
+      
+        enemyAliveCash = new List<int>(enemyWidthNum);
+        rowAliveEnemyNum = new int[enemyHeightNum];
+
     }
     
     public void BootUp(UnityAction<int> _onAddScore, UnityAction _onDeath, UnityAction _onBelowUfoPopMinEnemyNum, Vector3 _maxPos, Vector3 _minPos)
@@ -99,12 +104,12 @@ public class EnemyCrowdController : MonoBehaviour {
     {
         enemyParent = new GameObject("Enemys").transform;
 
-        rowAliveEnemuNum = new int[enemyHeightNum];
-        for (int i = 0; i < enemyHeightNum; i++)
+        rowAliveEnemyNum = rowAliveEnemyNum.Select(i => enemyWidthNum).ToArray();
+        for (int i = 0; i < enemyWidthNum; i++)
         {
-            rowAliveEnemuNum[i] = enemyWidthNum;
+            enemyAliveCash.Add(i);
         }
-
+        
         enemyRows = new EnemyRowController[enemyWidthNum];
         for (int i = 0; i < enemyHeightNum; i++)
         {
@@ -129,13 +134,13 @@ public class EnemyCrowdController : MonoBehaviour {
             
             controller.Create(rowInfo, enemyParent, onAddScore, (id) =>
             {
-                rowAliveEnemuNum[id]--;
-                if (rowAliveEnemuNum.Sum() == 0)
+                rowAliveEnemyNum[id]--;
+                if (rowAliveEnemyNum.Sum() == 0)
                 {
                     onDeath();
                 }
 
-                if (rowAliveEnemuNum[id] == 0)
+                if (rowAliveEnemyNum[id] == 0)
                 {
                     // TODO
                 }
@@ -183,7 +188,24 @@ public class EnemyCrowdController : MonoBehaviour {
 
     IEnumerator Shot()
     {
-        yield return new WaitForSeconds(shotInterval);
+        yield return new WaitForSeconds(startWaitTime);
+        while (enemyAliveCash.Count != 0)
+        {
+            int r = Random.Range(0, enemyAliveCash.Count);
+            int randomId = enemyAliveCash[r];
+
+            int aliveColumnid = GetAliveMinRowId(randomId);
+            if (aliveColumnid == -1)
+            {
+                enemyAliveCash.RemoveAt(r);
+            }
+            else
+            {
+                enemyRows[aliveColumnid].Shot(randomId);
+                Debug.Log(randomId);
+                yield return new WaitForSeconds(shotInterval);
+            }
+        }
     }
     
     EnemyLineInfo FindEnemyInfo(int line)
@@ -199,4 +221,20 @@ public class EnemyCrowdController : MonoBehaviour {
         return null;
     }
 
+    bool IsAliveEnemy(int rowId, int columnId)
+    {
+        return enemyRows[rowId].IsAlive(columnId);
+    }
+
+    int GetAliveMinRowId(int columnId)
+    {
+        for (int i = 0; i < enemyHeightNum; i++)
+        {
+            if (IsAliveEnemy(i, columnId))
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
 }

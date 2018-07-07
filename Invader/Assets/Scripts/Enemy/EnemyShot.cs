@@ -8,7 +8,10 @@ public class EnemyShot : MonoBehaviour
 
     public void Shot(Transform transform, GameObject bullet)
     {
-        bullet.SetActive(true);
-        bullet.transform.position = transform.position;
+        if (!bullet.activeSelf)
+        {
+            bullet.SetActive(true);
+            bullet.transform.position = transform.position;
+        }
     }
 }
