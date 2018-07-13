@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4741795921318966}
   - component: {fileID: 33979184265120164}
   - component: {fileID: 23139576042923826}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bullet_part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4953208846734220}
   - component: {fileID: 33963881486003318}
   - component: {fileID: 23118557975598406}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bullet_part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4769910288928740}
   - component: {fileID: 33462288130954010}
   - component: {fileID: 23500249968128948}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bullet_part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4386723456476256}
   - component: {fileID: 33447875621504424}
   - component: {fileID: 23780236425485874}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bullet_part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,8 +90,8 @@ GameObject:
   - component: {fileID: 65229709840054084}
   - component: {fileID: 114734945676488518}
   - component: {fileID: 54580494424046010}
-  m_Layer: 0
-  m_Name: Bullet
+  m_Layer: 10
+  m_Name: PlayerBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 4920807895752076}
   - component: {fileID: 33030871762404514}
   - component: {fileID: 23064602353846280}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bullet_part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 4044453264722076}
   - component: {fileID: 33529612753996228}
   - component: {fileID: 23557601510841422}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bullet_part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 4808956694013706}
   - component: {fileID: 33707689530947792}
   - component: {fileID: 23950042894928310}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bullet_part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 4696401130862110}
   - component: {fileID: 33017220298540314}
   - component: {fileID: 23586563182259504}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bullet_part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 4682330208904112}
   - component: {fileID: 33587308081892556}
   - component: {fileID: 23258929405269182}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bullet_part
   m_TagString: Untagged
   m_Icon: {fileID: 0}

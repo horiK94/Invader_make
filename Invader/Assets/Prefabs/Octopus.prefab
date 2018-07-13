@@ -22,7 +22,8 @@ GameObject:
   - component: {fileID: 114468376972450664}
   - component: {fileID: 114431099131688170}
   - component: {fileID: 114909167191730210}
-  m_Layer: 0
+  - component: {fileID: 114091210423073974}
+  m_Layer: 9
   m_Name: Octopus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +41,7 @@ GameObject:
   - component: {fileID: 65032601836514402}
   - component: {fileID: 114860927201928664}
   - component: {fileID: 114208538896085396}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Octopus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +58,7 @@ GameObject:
   - component: {fileID: 4111700151231112}
   - component: {fileID: 33663097208736522}
   - component: {fileID: 23322418397025046}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: OctopusMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,6 +160,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.2, y: 0.8, z: 1}
   m_Center: {x: 0, y: 0.4, z: 0}
+--- !u!114 &114091210423073974
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1093514475067512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d18c620eeab6d477e9a3bab3a8daf6ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!114 &114208538896085396
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -192,6 +205,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eeb787a2ab694f248fe12fc7ec9a3a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shotPos: {x: 0, y: -3, z: 0}
+  enemyHealth: {fileID: 114909167191730210}
+  enemyMesh: {fileID: 114860927201928664}
+  enemyMove: {fileID: 114431099131688170}
+  enemyShot: {fileID: 114091210423073974}
 --- !u!114 &114860927201928664
 MonoBehaviour:
   m_ObjectHideFlags: 1

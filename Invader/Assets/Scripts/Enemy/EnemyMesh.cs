@@ -23,6 +23,10 @@ public class EnemyMesh : MonoBehaviour
 
     public void ChangeMesh()
     {
+        if (MeshLength == 0)
+        {
+            return;
+        }
         meshFilter.mesh = mesh[++id % MeshLength];
     }
 }

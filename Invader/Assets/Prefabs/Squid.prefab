@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4631070660208732}
   - component: {fileID: 33550092343406242}
   - component: {fileID: 23965501221581794}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SquidMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 65731378701110394}
   - component: {fileID: 114638571125295450}
   - component: {fileID: 114909206034244838}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Squid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,8 @@ GameObject:
   - component: {fileID: 114833372306423036}
   - component: {fileID: 114599364568788256}
   - component: {fileID: 114925177088572050}
-  m_Layer: 0
+  - component: {fileID: 114833121748448562}
+  m_Layer: 9
   m_Name: Squid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,6 +185,18 @@ MonoBehaviour:
   mesh:
   - {fileID: 4300000, guid: 55a49129c5cb693428e5e144a3e95008, type: 3}
   - {fileID: 4300000, guid: 185109f8776bb194e81cf38a9304c785, type: 3}
+--- !u!114 &114833121748448562
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1377135177113106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d18c620eeab6d477e9a3bab3a8daf6ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!114 &114833372306423036
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -195,6 +208,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eeb787a2ab694f248fe12fc7ec9a3a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shotPos: {x: 0, y: -3, z: 0}
+  enemyHealth: {fileID: 114925177088572050}
+  enemyMesh: {fileID: 114638571125295450}
+  enemyMove: {fileID: 114599364568788256}
+  enemyShot: {fileID: 114833121748448562}
 --- !u!114 &114909206034244838
 MonoBehaviour:
   m_ObjectHideFlags: 1

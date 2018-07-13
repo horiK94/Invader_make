@@ -6,9 +6,31 @@ using UnityEngine.Events;
 
 public class EnemyController : MonoBehaviour
 {
+	/// <summary>
+	/// 発射してすぐの弾の位置と敵の位置との差
+	/// </summary>
+	[SerializeField] private Vector3 shotPos;
+	
+	/// <summary>
+	/// EnemyHelathの参照
+	/// </summary>
+	[SerializeField]
 	private EnemyHealth enemyHealth;
+	/// <summary>
+	/// EnemyMeshの参照
+	/// </summary>
+	[SerializeField]
 	private EnemyMesh enemyMesh;
+	/// <summary>
+	/// EnemyMoveの参照
+	/// </summary>
+	[SerializeField]
 	private EnemyMove enemyMove;
+	/// <summary>
+	/// EnemyShotの参照
+	/// </summary>
+	[SerializeField]
+	private EnemyShot enemyShot;
 	private int id;
 	public int Id => id;
 	//横移動量
@@ -24,9 +46,6 @@ public class EnemyController : MonoBehaviour
 
 	void Awake()
 	{
-		enemyHealth = GetComponent<EnemyHealth>();
-		enemyMesh = GetComponentInChildren<EnemyMesh>();
-		enemyMove = GetComponent<EnemyMove>();
 		isFacingRight = true;
 	}
 	
@@ -38,6 +57,7 @@ public class EnemyController : MonoBehaviour
 		this.minPos = minPos;
 		this.maxPos = maxPos;
 		
+		Debug.Log(enemyHealth);
 		enemyHealth.SetUp(point, onAddScore, () =>
 		{
 			isDead = true;
@@ -70,5 +90,10 @@ public class EnemyController : MonoBehaviour
 		isFacingRight = !isFacingRight;
 		enemyMove.Move(new Vector3(0, -moveVerticalAmount, 0));
 		enemyMesh.ChangeMesh();
+	}
+
+	public void Shot(GameObject bullet)
+	{
+		enemyShot.Shot(transform.position + shotPos,　bullet);
 	}
 }

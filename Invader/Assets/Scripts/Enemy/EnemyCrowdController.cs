@@ -54,6 +54,10 @@ public class EnemyCrowdController : MonoBehaviour {
     /// １行移動するのに待つ時間
     /// </summary>
     [SerializeField] private float moveRowWaitTime = 1.0f;
+    /// <summary>
+    /// bulletのPrefab
+    /// </summary>
+    [SerializeField] private GameObject bulletPrefab;
 
     private EnemyRowController[] enemyRows;
     private int remainColumn = 0;
@@ -66,6 +70,10 @@ public class EnemyCrowdController : MonoBehaviour {
     private int[] rowAliveEnemyNum;
     private bool isTurn = false;
     private List<int> enemyAliveCash;
+    /// <summary>
+    /// 敵の弾
+    /// </summary>
+    private GameObject enemyBullet;
 
     void Awake()
     {
@@ -74,7 +82,10 @@ public class EnemyCrowdController : MonoBehaviour {
       
         enemyAliveCash = new List<int>(enemyWidthNum);
         rowAliveEnemyNum = new int[enemyHeightNum];
-
+        
+        // enemyBulletの作成
+        enemyBullet = Instantiate(bulletPrefab) as GameObject;
+        enemyBullet.SetActive(false);
     }
     
     public void BootUp(UnityAction<int> _onAddScore, UnityAction _onDeath, UnityAction _onBelowUfoPopMinEnemyNum, Vector3 _maxPos, Vector3 _minPos)
@@ -201,13 +212,15 @@ public class EnemyCrowdController : MonoBehaviour {
             }
             else
             {
-                enemyRows[aliveColumnid].Shot(randomId);
-                Debug.Log(randomId);
+                enemyRows[aliveColumnid].Shot(enemyBullet, randomId);
                 yield return new WaitForSeconds(shotInterval);
             }
         }
     }
     
+    /// <summary>
+    /// 引数で渡した値の行の生成するEnemyの情報を返す
+    /// </summary>
     EnemyLineInfo FindEnemyInfo(int line)
     {
         for (int j = 0; j < enemyLineInfo.Length; j++)
@@ -221,11 +234,18 @@ public class EnemyCrowdController : MonoBehaviour {
         return null;
     }
 
+    /// <summary>
+    /// 行と列のidのEnemyが生存しているかどうかを返す
+    /// </summary>
+    /// <param name="rowId"></param>
     bool IsAliveEnemy(int rowId, int columnId)
     {
         return enemyRows[rowId].IsAlive(columnId);
     }
 
+    /// <summary>
+    /// 列を示すcolumnIdに対して、生きている最小の行Idを返す
+    /// </summary>
     int GetAliveMinRowId(int columnId)
     {
         for (int i = 0; i < enemyHeightNum; i++)

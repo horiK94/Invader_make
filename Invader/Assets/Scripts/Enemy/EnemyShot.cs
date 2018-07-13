@@ -6,7 +6,7 @@ public class EnemyShot : MonoBehaviour
 {
     [SerializeField] private float speed;
 
-    public void Shot(Transform transform, GameObject bullet)
+    public void Shot(Vector3 pos, GameObject bullet)
     {
         if (!bullet.activeSelf)
         {

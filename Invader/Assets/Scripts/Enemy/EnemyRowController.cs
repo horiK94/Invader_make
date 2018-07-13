@@ -87,12 +87,20 @@ public class EnemyRowController : MonoBehaviour {
         return enemy[id].activeSelf;
     }
 
-    public void Shot(int columnId)
+    public void Shot(GameObject bullet, int columnId)
     {
-        if (!IsValidColumnId(columnId) || !enemy[columnId].activeSelf)
+        // 引数が正しい値かチェック
+        if (!IsValidColumnId(columnId))
         {
             return;
         }
+        // 該当のEnemyがactiveかどうかチェック
+        if (!enemy[columnId].activeSelf)
+        {
+            return;
+        }
+        
+        enemy[columnId].GetComponent<EnemyController>().Shot(bullet);
     }
     
     bool IsValidColumnId(int columnId)

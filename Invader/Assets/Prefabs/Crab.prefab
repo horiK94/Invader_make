@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4493026023834352}
   - component: {fileID: 33010337784999972}
   - component: {fileID: 23210030603298428}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CrabMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,8 @@ GameObject:
   - component: {fileID: 114705532828181376}
   - component: {fileID: 114697534598900138}
   - component: {fileID: 114756129392022046}
-  m_Layer: 0
+  - component: {fileID: 114808867689530014}
+  m_Layer: 9
   m_Name: Crab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +58,7 @@ GameObject:
   - component: {fileID: 65328562718617954}
   - component: {fileID: 114835154493628770}
   - component: {fileID: 114784647707992392}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Crab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,6 +182,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eeb787a2ab694f248fe12fc7ec9a3a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shotPos: {x: 0, y: -3, z: 0}
+  enemyHealth: {fileID: 114756129392022046}
+  enemyMesh: {fileID: 114835154493628770}
+  enemyMove: {fileID: 114697534598900138}
+  enemyShot: {fileID: 114808867689530014}
 --- !u!114 &114756129392022046
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -205,6 +211,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bba46244494bc4a509b3a6f8d84402ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114808867689530014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1318664489645212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d18c620eeab6d477e9a3bab3a8daf6ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!114 &114835154493628770
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -216,6 +234,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c7b3473d4feb41b98318364c157b697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mesh:
-  - {fileID: 4300000, guid: 8141e69dc1b8d6b4a9fb821e06609dc9, type: 3}
-  - {fileID: 4300000, guid: 787d872479952cd478bc37c5e5a11b8b, type: 3}
+  mesh: []
