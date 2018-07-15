@@ -2,8 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// ゲームシーンのロード・破棄された際に実行するメソッド群
+/// </summary>
 public class TitleSceneState : SceneState {
-	[SerializeField]GameObject title;
+	/// <summary>
+	/// TitleシーンでEnterキーを押した時の処理を行うプレファブ
+	/// </summary>
+	[SerializeField]GameObject title = null;
 
 	void Awake()
 	{

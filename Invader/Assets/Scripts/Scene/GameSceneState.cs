@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// ゲームシーンのロード・破棄された際に実行するメソッド群
+/// </summary>
 public class GameSceneState : SceneState {
 	void Awake()
 	{
 		sceneTitle = "Game";
-		Debug.Log("Game");
 	}
 
 	public override void LoadedScene()
@@ -18,5 +20,4 @@ public class GameSceneState : SceneState {
 	{
 
 	}
-
 }

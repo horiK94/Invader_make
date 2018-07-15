@@ -9,12 +9,19 @@ using Object = System.Object;
 [Serializable]
 public class EnemyLineInfo
 {
-    [SerializeField] private GameObject prefab;
+    /// <summary>
+    /// enemyのプレファブ
+    /// </summary>
+    [SerializeField] private GameObject prefab = null;
     public GameObject Prefab => prefab;
-
-    [SerializeField] private int highestLine; // prefabのenemyがいる最高段
+    /// <summary>
+    /// プレファブのenemyがいる最高段
+    /// </summary>
+    [SerializeField] private int highestLine = 0;
     public int HighestLine => highestLine;
-
-    [SerializeField] private int point;
+    /// <summary>
+    /// enemyを倒した時の点数
+    /// </summary>
+    [SerializeField] private int point = 0;
     public int Point => point;
 }

@@ -3,22 +3,45 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
-	[SerializeField]GameObject playerPrefab;
-	[SerializeField]Vector3 startPosUnderDiff;
+	/// <summary>
+	/// Playerのプレファブ
+	/// </summary>
+	[SerializeField]GameObject playerPrefab = null;
+	/// <summary>
+	/// 画面左下の座標からどれだけ離れた位置からPlayerの移動を解するか
+	/// </summary>
+	[SerializeField]Vector3 minPosDiffAtStart = Vector3.zero;
 
-	private GameObject player;
-	private PlayerMover playerMover;
-	private PlayerHealth playerHealth;
-	private PlayerShot playerShot;
+	/// <summary>
+	/// プレファブから生成したPlayerの参照
+	/// </summary>
+	private GameObject player = null;
+	/// <summary>
+	/// PlayerにアタッチされたPlayerMoverコンポーネントの参照
+	/// </summary>
+	private PlayerMover playerMover  = null;
+	/// <summary>
+	/// PlayerにアタッチされたPlayerHealthコンポーネントの参照
+	/// </summary>
+	private PlayerHealth playerHealth = null;
+	/// <summary>
+	/// PlayerにアタッチされたPlayerShotコンポーネントの参照
+	/// </summary>
+	private PlayerShot playerShot = null;
 
-	public void BootUp(Vector3 minPos)
+	/// <summary>
+	/// playerの生成
+	/// </summary>
+	public void BootUp(Vector3 _maxPos, Vector3 _minPos)
 	{
-		player = Instantiate (playerPrefab, new Vector3(0, minPos.y, 0) + startPosUnderDiff, Quaternion.identity);
+		player = Instantiate (playerPrefab, _minPos + minPosDiffAtStart, Quaternion.identity);
+		
 		playerMover = player.GetComponent<PlayerMover>();
 		playerHealth = player.GetComponent<PlayerHealth>();
 		playerShot = player.GetComponent<PlayerShot>();
 		
-		playerMover.Set(Mathf.Abs(minPos.x));
+		//playerのx座標方向の移動可能範囲を設定
+		playerMover.SetLimitPos(_maxPos.x, _minPos.x);
 	}
 
 	void Update()

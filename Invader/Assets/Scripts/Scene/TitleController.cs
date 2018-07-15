@@ -4,7 +4,13 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class TitleController : MonoBehaviour {
+	/// <summary>
+	/// エンターキーが押された時に行う処理
+	/// </summary>
 	UnityAction onEnterKeyDown = null;
+	/// <summary>
+	/// エンターキーが押された時に行う処理
+	/// </summary>
 	public UnityAction OnEnterKeyDown
 	{
 		get{

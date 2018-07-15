@@ -7,6 +7,9 @@ using UnityEngine.Assertions.Must;
 using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
+/// <summary>
+/// Enemy全体のController
+/// </summary>
 public class EnemyCrowdController : MonoBehaviour {
     private Transform enemyParent = null;
     
@@ -21,7 +24,7 @@ public class EnemyCrowdController : MonoBehaviour {
     /// <summary>
     /// Enemyの列ごとのプレファブ情報
     /// </summary>
-    [SerializeField] private EnemyLineInfo[] enemyLineInfo;
+    [SerializeField] private EnemyLineInfo[] enemyLineInfo = null;
     /// <summary>
     /// ufoを出現させるのに必要なEnemyの最低の数
     /// </summary>
@@ -37,15 +40,15 @@ public class EnemyCrowdController : MonoBehaviour {
     /// <summary>
     /// Enemyの一番上の段のy座標と画面上のy座標の差
     /// </summary>
-    [SerializeField]private float enemyTopPosYDiff;
+    [SerializeField]private float enemyTopPosYDiff = 0;
     /// <summary>
     /// Enemyの一番下の段のy座標と画面下のy座標の差
     /// </summary>
-    [SerializeField] private float enemyBottomPosYDiff;
+    [SerializeField] private float enemyBottomPosYDiff = 0;
     /// <summary>
     /// Enemyの横の間隔(基本、8移動でそこまで移動)
     /// </summary>
-    [SerializeField] private float enemyWidthInterval;
+    [SerializeField] private float enemyWidthInterval = 0;
     /// <summary>
     /// 段数の数
     /// </summary>
@@ -57,30 +60,49 @@ public class EnemyCrowdController : MonoBehaviour {
     /// <summary>
     /// bulletのPrefab
     /// </summary>
-    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject bulletPrefab = null;
 
-    private EnemyRowController[] enemyRows;
-    private int remainColumn = 0;
-    private UnityAction<int> onAddScore = null;
-    private UnityAction onDeath = null;
-    private UnityAction onBelowUfoPopMinEnemyNum = null;
-    private Vector3 maxPos = Vector3.zero, minPos = Vector3.zero;
-    private float enemyHeightInterval;
-    private int minStage, maxStage;
-    private int[] rowAliveEnemyNum;
-    private bool isTurn = false;
-    private List<int> enemyAliveCash;
     /// <summary>
-    /// 敵の弾
+    /// 列ごとのController(EnemyRowController)の参照
     /// </summary>
-    private GameObject enemyBullet;
+    private EnemyRowController[] enemyRows = null;
+    /// <summary>
+    /// Enemyを倒した時のスコア加算デリゲートメソッド
+    /// </summary>
+    private UnityAction<int> onAddScore = null;
+    /// <summary>
+    /// Enemy全体が死んだ際に呼ぶデリゲートメソッド
+    /// </summary>
+    private UnityAction onDeathAll = null;
+    /// <summary>
+    /// Enemyの可動領域の左下の座標
+    /// </summary>
+    private Vector3 minPos = Vector3.zero;
+    /// <summary>
+    /// Enemyの可動領域の右上の座標
+    /// </summary>
+    private Vector3 maxPos = Vector3.zero;
+    /// <summary>
+    /// 列ごとの残りEnemy数
+    /// </summary>
+    private int[] rowAliveEnemyNum = null;
+    /// <summary>
+    /// 前の移動の際に、方向転換を行ったかどうか
+    /// </summary>
+    private bool wasTurn = false;
+    /// <summary>
+    /// Enemyが生きている列idを保存したリスト
+    /// </summary>
+    private List<int> columnEnemyAliveCash = null;
+    /// <summary>
+    /// 敵の弾のプレファブ
+    /// </summary>
+    private GameObject enemyBullet = null;
 
     void Awake()
     {
-        minStage = 0;
-        maxStage = enemyHeightNum - 1;
-      
-        enemyAliveCash = new List<int>(enemyWidthNum);
+        //メモリの確保
+        columnEnemyAliveCash = new List<int>(enemyWidthNum);
         rowAliveEnemyNum = new int[enemyHeightNum];
         
         // enemyBulletの作成
@@ -88,20 +110,24 @@ public class EnemyCrowdController : MonoBehaviour {
         enemyBullet.SetActive(false);
     }
     
-    public void BootUp(UnityAction<int> _onAddScore, UnityAction _onDeath, UnityAction _onBelowUfoPopMinEnemyNum, Vector3 _maxPos, Vector3 _minPos)
+    /// <summary>
+    /// 初期設定を行う
+    /// </summary>
+    public void BootUp(UnityAction<int> _onAddScore, UnityAction _onDeath, Vector3 _maxPos, Vector3 _minPos)
     {   
         this.onAddScore = _onAddScore;
-        this.onDeath = _onDeath;
-        this.onBelowUfoPopMinEnemyNum = _onBelowUfoPopMinEnemyNum;
+        this.onDeathAll = _onDeath;
         this.maxPos = _maxPos;
         this.minPos = _minPos;
         
-        remainColumn = enemyWidthNum;
-        
         SortEnemyPrefab();
         Create();
+        StartCoroutine(Act());
     }
 
+    /// <summary>
+    /// enemyLineInfoを行idの順にソートし直す
+    /// </summary>
     void SortEnemyPrefab()
     {
         Array.Sort(enemyLineInfo, (x, y) => { return x.HighestLine - y.HighestLine; });
@@ -111,27 +137,35 @@ public class EnemyCrowdController : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Enemyの生成
+    /// </summary>
     private void Create()
     {
+        //生成したenemyをしまう親オブジェクトを設定
         enemyParent = new GameObject("Enemys").transform;
 
-        rowAliveEnemyNum = rowAliveEnemyNum.Select(i => enemyWidthNum).ToArray();
+        rowAliveEnemyNum = rowAliveEnemyNum.Select(i => enemyWidthNum).ToArray();        //全要素にenemyの１行に設置する数を代入する
+        //全ての列のidをListに追加
         for (int i = 0; i < enemyWidthNum; i++)
         {
-            enemyAliveCash.Add(i);
+            columnEnemyAliveCash.Add(i);
         }
         
-        enemyRows = new EnemyRowController[enemyWidthNum];
+        //行ごとにContollerを作成
+        enemyRows = new EnemyRowController[enemyHeightNum];
         for (int i = 0; i < enemyHeightNum; i++)
         {
-            //列の生成
+            //行に関するControllerの作成
             int lineNumber = i + 1;
-            GameObject column = new GameObject("Enemy" + lineNumber + "ColumnController");
+            string rowControllerPrefabName = "Enemy" + lineNumber + "RowController";
+            GameObject column = new GameObject(rowControllerPrefabName);        //行のControllerとなるオブジェクトを生成
             EnemyRowController controller = column.AddComponent<EnemyRowController>();
             enemyRows[i] = controller;
             
             column.transform.parent = transform;
             
+            //列に対して与える情報を設定
             EnemyRowCreateInfo rowInfo = new EnemyRowCreateInfo();
             rowInfo.rowId = i;
             rowInfo.rowInfo = FindEnemyInfo(i);
@@ -146,72 +180,95 @@ public class EnemyCrowdController : MonoBehaviour {
             controller.Create(rowInfo, enemyParent, onAddScore, (id) =>
             {
                 rowAliveEnemyNum[id]--;
-                if (rowAliveEnemyNum.Sum() == 0)
+                if (rowAliveEnemyNum.Sum() == 0)        //敵が全員死んだ時
                 {
-                    onDeath();
+                    onDeathAll();
                 }
 
-                if (rowAliveEnemyNum[id] == 0)
+                if (rowAliveEnemyNum[id] == 0)        //idの行のEnemyが全滅した時
                 {
                     // TODO
                 }
             });
         }
+    }
 
+    /// <summary>
+    /// Enemyの移動・攻撃を行う
+    /// </summary>
+    private IEnumerator Act()
+    {
+        yield return new WaitForSeconds(startWaitTime);
         StartCoroutine(Move());
         StartCoroutine(Shot());
     }
 
-    IEnumerator Move()
+    /// <summary>
+    /// enemyの移動を行う
+    /// </summary>
+    private IEnumerator Move()
     {
-        yield return new WaitForSeconds(startWaitTime);
-        while (enemyRows.Where(e => e != null).ToArray().Length != 0)
+        while (enemyRows.Where(e => e != null).ToArray().Length != 0)        //全敵が死んでいる場合は移動を行わない
         {
+            //全行の敵に対してどの方向に移動するかの処理を同じに行うため、for文の外で判定を行う
+            /*
+             * 各行で前方に進むかの処理をしようとすると、端の敵が倒された時に前進するタイミングが行によってずれる
+             * また、for文の外で判定しないと、ある行が移動する前に、前方へ移動した行があった時に前方に移動した行の判定が前方へ移動した後に左右に移動できるに変わるため、
+             * 前方に移動すべきかの判定がうまくとれなくなる
+             */
             bool canMoveSide = CanMoveSide();
             for (int i = 0; i < enemyHeightNum; i++)
             {
-                if (canMoveSide)
+                if (canMoveSide)        //左右に移動できるか
                 {
                     enemyRows[i].MoveSide();
                 }
                 else
                 {
-                    enemyRows[i].MoveBefore();
+                    enemyRows[i].MoveBefore();        //移動できない場合は前に進む
                 }
-                yield return  new WaitForSeconds(moveRowWaitTime);
+                yield return new WaitForSeconds(moveRowWaitTime);        //移動後のインターバル
             }
         }
     }
 
+    /// <summary>
+    /// 次の移動で全て行が左右に移動できるか
+    /// </summary>
     bool CanMoveSide()
     {
         for (int i = 0; i < enemyHeightNum; i++)
         {
-            if (!enemyRows[i].CanMoveSide() && !isTurn)
+            if (!enemyRows[i].CanMoveSide() && !wasTurn)
             {
-                isTurn = true;
+                wasTurn = true;
                 return false;
             }
         }
-        isTurn = false;
+        wasTurn = false;
         return true;
     }
 
+    /// <summary>
+    /// 攻撃する
+    /// </summary>
     IEnumerator Shot()
     {
-        yield return new WaitForSeconds(startWaitTime);
-        while (enemyAliveCash.Count != 0)
+        while (columnEnemyAliveCash.Count != 0)        //全列で敵が死んでいる時
         {
-            int r = Random.Range(0, enemyAliveCash.Count);
-            int randomId = enemyAliveCash[r];
+            int r = Random.Range(0, columnEnemyAliveCash.Count);        //発射する列のidが入ったリストの要素番号をランダムで決定
+            int randomId = columnEnemyAliveCash[r];        //列のidを取得
 
+            //上で決定した列idに敵が生存しているかの確認
             int aliveColumnid = GetAliveMinRowId(randomId);
-            if (aliveColumnid == -1)
+            if (aliveColumnid == -1)        //生存していない
             {
-                enemyAliveCash.RemoveAt(r);
+                //次選択されないようにリストから削除する
+                columnEnemyAliveCash.RemoveAt(r);
             }
             else
             {
+                //生存している敵のうち一番Playerに近い敵に発射を依頼
                 enemyRows[aliveColumnid].Shot(enemyBullet, randomId);
                 yield return new WaitForSeconds(shotInterval);
             }
@@ -219,7 +276,7 @@ public class EnemyCrowdController : MonoBehaviour {
     }
     
     /// <summary>
-    /// 引数で渡した値の行の生成するEnemyの情報を返す
+    /// 引数で渡した行idに該当する行を生成するのに必要な情報を返す
     /// </summary>
     EnemyLineInfo FindEnemyInfo(int line)
     {
