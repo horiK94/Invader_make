@@ -7,35 +7,10 @@
     <list default="true" id="2956f5a3-3e93-4b74-b8e6-f4eb5d81684d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Invader/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Invader/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Invader/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Invader/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnemyTrigger.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnemyTrigger.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Process.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Process.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyCrowdController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyCrowdController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyHealth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyLineInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyLineInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMesh.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMesh.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyRowController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyRowController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyRowCreateInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyRowCreateInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyShot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyShot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemysController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemysController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/UFO/UFOController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/UFO/UFOController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/UFO/UFOHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/UFO/UFOHealth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/UFO/UFOMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/UFO/UFOMover.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMover.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerShot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerShot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scene/GameSceneState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scene/GameSceneState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scene/ISceneState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scene/ISceneState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scene/SceneProcessManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scene/SceneProcessManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scene/SceneState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scene/SceneState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scene/TitleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scene/TitleController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scene/TitleSceneState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scene/TitleSceneState.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,229 +21,259 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SceneProcessManager.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Scene/SceneProcessManager.cs">
+      <file leaf-file-name="PlayerController.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
+              <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
               <folding>
-                <marker date="1531633486873" expanded="false" signature="6:113" ph="..." />
-                <marker date="1531633486873" expanded="true" signature="115:161" ph="/// シーンの進行に関するクラス ... " />
-                <marker date="1531633486873" expanded="true" signature="211:804" ph="{...}" />
-                <marker date="1531633486873" expanded="false" signature="214:260" ph="/// 最初にロードするシーン ... " />
-                <marker date="1531633486873" expanded="false" signature="310:351" ph="/// 現在のシーン ... " />
-                <marker date="1531633486873" expanded="true" signature="382:444" ph="/// フェードイン, フェードアウトを行うオブジェクトの参照 ... " />
-                <marker date="1531633486873" expanded="true" signature="481:535" ph="/// フェードイン・フェードアウトをする時間 ... " />
-                <marker date="1531633486873" expanded="true" signature="588:628" ph="{...}" />
-                <marker date="1531633486873" expanded="true" signature="643:665" ph="{...}" />
-                <marker date="1531633486873" expanded="true" signature="668:713" ph="/// 最初のシーンをロード ... " />
-                <marker date="1531633486873" expanded="true" signature="731:802" ph="{...}" />
+                <marker date="1531637984557" expanded="false" signature="6:78" ph="..." />
+                <marker date="1531637984557" expanded="true" signature="126:1418" ph="{...}" />
+                <marker date="1531637984557" expanded="false" signature="129:176" ph="/// Playerのプレファブ ... " />
+                <marker date="1531637984557" expanded="false" signature="227:296" ph="/// 画面左下の座標からどれだけ離れた位置からPlayerの移動を解するか ... " />
+                <marker date="1531637984557" expanded="false" signature="358:413" ph="/// プレファブから生成したPlayerの参照 ... " />
+                <marker date="1531637984557" expanded="false" signature="450:520" ph="/// PlayerにアタッチされたPlayerMoverコンポーネントの参照 ... " />
+                <marker date="1531637984557" expanded="false" signature="564:635" ph="/// PlayerにアタッチされたPlayerHealthコンポーネントの参照 ... " />
+                <marker date="1531637984557" expanded="false" signature="680:749" ph="/// PlayerにアタッチされたPlayerShotコンポーネントの参照 ... " />
+                <marker date="1531637984557" expanded="false" signature="791:835" ph="/// playerの生成 ... " />
+                <marker date="1531637984557" expanded="true" signature="889:1275" ph="{...}" />
+                <marker date="1531637984557" expanded="true" signature="1179:1191" ph="{...}" />
+                <marker date="1531637984557" expanded="false" signature="1291:1415" ph="{...}" />
+                <marker date="1531637984557" expanded="true" signature="1382:1412" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TitleSceneState.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Scene/TitleSceneState.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-              <folding>
-                <marker date="1531571881241" expanded="false" signature="6:78" ph="..." />
-                <marker date="1531571881241" expanded="false" signature="80:140" ph="/// ゲームシーンのロード・破棄された際に実行するメソッド群 ... " />
-                <marker date="1531571881241" expanded="true" signature="183:588" ph="{...}" />
-                <marker date="1531571881241" expanded="false" signature="186:253" ph="/// TitleシーンでEnterキーを押した時の処理を行うプレファブ ... " />
-                <marker date="1531571881241" expanded="true" signature="310:340" ph="{...}" />
-                <marker date="1531571881241" expanded="true" signature="377:536" ph="{...}" />
-                <marker date="1531571881241" expanded="true" signature="579:586" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TitleController.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Scene/TitleController.cs">
+      <file leaf-file-name="PlayerHealth.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
-              <caret line="30" selection-end-line="30" />
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
               <folding>
-                <marker date="1531571371651" expanded="false" signature="6:104" ph="..." />
-                <marker date="1531571371651" expanded="true" signature="151:504" ph="{...}" />
-                <marker date="1531571371651" expanded="false" signature="154:206" ph="/// エンターキーが押された時に行う処理 ... " />
-                <marker date="1531571371651" expanded="false" signature="244:296" ph="/// エンターキーが押された時に行う処理 ... " />
-                <marker date="1531571371651" expanded="true" signature="331:412" ph="{...}" />
-                <marker date="1531571371651" expanded="true" signature="340:371" ph="{...}" />
-                <marker date="1531571371651" expanded="true" signature="377:409" ph="{...}" />
-                <marker date="1531571371651" expanded="true" signature="429:502" ph="{...}" />
-                <marker date="1531571371651" expanded="true" signature="472:499" ph="{...}" />
+                <marker date="1531834593765" expanded="true" signature="6:104" ph="..." />
+                <marker date="1531834593765" expanded="true" signature="147:913" ph="{...}" />
+                <marker date="1531834593765" expanded="true" signature="151:190" ph="/// 初期残機 ... " />
+                <marker date="1531834593765" expanded="true" signature="231:280" ph="/// Playerが死んだ時の処理 ... " />
+                <marker date="1531834593765" expanded="true" signature="311:350" ph="/// 残り残機 ... " />
+                <marker date="1531834593765" expanded="true" signature="392:420" ph="{...}" />
+                <marker date="1531834593765" expanded="true" signature="423:477" ph="/// Playerが死んだ時の処理を登録する ... " />
+                <marker date="1531834593765" expanded="true" signature="527:559" ph="{...}" />
+                <marker date="1531834593765" expanded="true" signature="600:762" ph="{...}" />
+                <marker date="1531834593765" expanded="true" signature="659:759" ph="{...}" />
+                <marker date="1531834593765" expanded="true" signature="765:806" ph="/// HPを減らす ... " />
+                <marker date="1531834593765" expanded="true" signature="832:911" ph="{...}" />
+                <marker date="1531834593765" expanded="true" signature="870:908" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EnemyShot.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyShot.cs">
+      <file leaf-file-name="GameController.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+            <state relative-caret-position="675">
+              <caret line="56" column="10" lean-forward="true" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
               <folding>
-                <marker date="1531634548957" expanded="false" signature="6:78" ph="..." />
-                <marker date="1531634548957" expanded="true" signature="80:126" ph="/// enemy単体の攻撃クラス ... " />
-                <marker date="1531634548957" expanded="true" signature="165:436" ph="{...}" />
-                <marker date="1531634548957" expanded="true" signature="172:215" ph="/// 攻撃 ... " />
-                <marker date="1531634548957" expanded="true" signature="268:434" ph="{...}" />
-                <marker date="1531634548957" expanded="true" signature="306:428" ph="{...}" />
+                <marker date="1531835818425" expanded="false" signature="6:104" ph="..." />
+                <marker date="1531835818425" expanded="false" signature="106:156" ph="/// Gameの全体的な処理や連携を行う ... " />
+                <marker date="1531835818425" expanded="true" signature="200:2152" ph="{...}" />
+                <marker date="1531835818425" expanded="false" signature="207:267" ph="/// PlayerControllerの参照 ... " />
+                <marker date="1531835818425" expanded="false" signature="343:402" ph="/// EnemyControllerの参照 ... " />
+                <marker date="1531835818425" expanded="false" signature="478:525" ph="/// 移動制限の幅 ... " />
+                <marker date="1531835818425" expanded="true" signature="581:637" ph="/// UIControllerの参照 ... " />
+                <marker date="1531835818425" expanded="true" signature="706:753" ph="/// 現在のスコア ... " />
+                <marker date="1531835818425" expanded="true" signature="897:1514" ph="{...}" />
+                <marker date="1531835818425" expanded="true" signature="1540:2150" ph="{...}" />
+                <marker date="1531835818425" expanded="true" signature="1619:1719" ph="{...}" />
+                <marker date="1531835818425" expanded="true" signature="1784:1859" ph="{...}" />
+                <marker date="1531835818425" expanded="true" signature="1807:1849" ph="/* TODO Sceneの切り替え ... */" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EnemyTrigger.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyTrigger.cs">
+      <file leaf-file-name="UIController.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/UIController.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+              <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
               <folding>
-                <marker date="1531634613190" expanded="false" signature="6:104" ph="..." />
-                <marker date="1531634613190" expanded="true" signature="106:157" ph="/// enemyの当たり判定に関するクラス ... " />
-                <marker date="1531634613190" expanded="true" signature="199:600" ph="{...}" />
-                <marker date="1531634613190" expanded="true" signature="206:266" ph="/// 当たった際に呼ばれるデリゲートメソッド ... " />
-                <marker date="1531634613190" expanded="true" signature="326:379" ph="/// デリゲートメソッドの設定 ... " />
-                <marker date="1531634613190" expanded="true" signature="439:497" ph="{...}" />
-                <marker date="1531634613190" expanded="true" signature="550:598" ph="{...}" />
+                <marker date="1531835648393" expanded="true" signature="6:100" ph="..." />
+                <marker date="1531835648393" expanded="true" signature="143:468" ph="{...}" />
+                <marker date="1531835648393" expanded="true" signature="150:205" ph="/// スコアの数字のテキストの参照 ... " />
+                <marker date="1531835648393" expanded="true" signature="260:315" ph="/// scoreの表示フォーマット ... " />
+                <marker date="1531835648393" expanded="true" signature="400:466" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UFOController.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/UFO/UFOController.cs">
+      <file leaf-file-name="EnemyCrowdController.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyCrowdController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="122" column="16" selection-start-line="122" selection-start-column="8" selection-end-line="122" selection-end-column="16" />
+            <state relative-caret-position="293">
+              <caret line="117" column="17" selection-start-line="117" selection-start-column="17" selection-end-line="117" selection-end-column="17" />
               <folding>
-                <marker date="1531634993082" expanded="false" signature="6:153" ph="..." />
-                <marker date="1531634993082" expanded="true" signature="155:202" ph="/// UFOのController ... " />
-                <marker date="1531634993082" expanded="true" signature="245:3171" ph="{...}" />
-                <marker date="1531634993082" expanded="true" signature="252:302" ph="/// UFOのプレファブ ... " />
-                <marker date="1531634993082" expanded="true" signature="358:409" ph="/// UFOのインスタンス ... " />
-                <marker date="1531634993082" expanded="true" signature="449:519" ph="/// UFOのインスタンスにアタッチされたUFOMoverの参照 ... " />
-                <marker date="1531634993082" expanded="true" signature="555:626" ph="/// UFOのインスタンスにアタッチされたUFOHealthの参照 ... " />
-                <marker date="1531634993082" expanded="true" signature="664:710" ph="/// UFOの幅 ... " />
-                <marker date="1531634993082" expanded="true" signature="760:813" ph="/// UFOが生成される位置y ... " />
-                <marker date="1531634993082" expanded="true" signature="867:920" ph="/// UFOが出現する時間感覚 ... " />
-                <marker date="1531634993082" expanded="true" signature="975:1023" ph="/// 画面端の位置x ... " />
-                <marker date="1531634993082" expanded="true" signature="1058:1117" ph="/// 倒した時にポイント加算をするメソッド ... " />
-                <marker date="1531634993082" expanded="true" signature="1163:1212" ph="/// 画面右上端の位置 ... " />
-                <marker date="1531634993082" expanded="true" signature="1280:1363" ph="{...}" />
-                <marker date="1531634993082" expanded="true" signature="1369:1427" ph="/// UFOが死んだ時に呼ばれるメソッド ... " />
-                <marker date="1531634993082" expanded="false" signature="1492:1569" ph="{...}" />
-                <marker date="1531634993082" expanded="true" signature="1587:1924" ph="{...}" />
-                <marker date="1531634993082" expanded="true" signature="1618:1680" ph="{...}" />
-                <marker date="1531634993082" expanded="true" signature="1930:1975" ph="/// 初期設定 ... " />
-                <marker date="1531634993082" expanded="true" signature="2067:2225" ph="{...}" />
-                <marker date="1531634993082" expanded="true" signature="2231:2302" ph="/// 移動 ... " />
-                <marker date="1531634993082" expanded="true" signature="2325:2640" ph="{...}" />
-                <marker date="1531634993082" expanded="true" signature="2413:2634" ph="{...}" />
-                <marker date="1531634993082" expanded="true" signature="2455:2544" ph="{...}" />
-                <marker date="1531634993082" expanded="true" signature="2646:2695" ph="/// UFOを稼働する ... " />
-                <marker date="1531634993082" expanded="true" signature="2723:3169" ph="{...}" />
-                <marker date="1531634993082" expanded="true" signature="3078:3132" ph="{...}" />
+                <marker date="1531632826341" expanded="false" signature="6:207" ph="..." />
+                <marker date="1531632826341" expanded="false" signature="209:260" ph="/// Enemy全体のController ... " />
+                <marker date="1531632826341" expanded="true" signature="311:9405" ph="{...}" />
+                <marker date="1531632826341" expanded="false" signature="364:413" ph="/// Enemyの列数 ... " />
+                <marker date="1531632826341" expanded="false" signature="471:520" ph="/// Enemyの段数 ... " />
+                <marker date="1531632826341" expanded="false" signature="578:636" ph="/// Enemyの列ごとのプレファブ情報 ... " />
+                <marker date="1531632826341" expanded="false" signature="708:773" ph="/// ufoを出現させるのに必要なEnemyの最低の数 ... " />
+                <marker date="1531632826341" expanded="false" signature="834:885" ph="/// スタート前の停止時間 ... " />
+                <marker date="1531632826341" expanded="false" signature="947:998" ph="/// Enemyの攻撃間隔 ... " />
+                <marker date="1531632826341" expanded="false" signature="1056:1122" ph="/// Enemyの一番上の段のy座標と画面上のy座標の差 ... " />
+                <marker date="1531632826341" expanded="false" signature="1183:1249" ph="/// Enemyの一番下の段のy座標と画面下のy座標の差 ... " />
+                <marker date="1531632826341" expanded="false" signature="1314:1380" ph="/// Enemyの横の間隔(基本、8移動でそこまで移動) ... " />
+                <marker date="1531632826341" expanded="false" signature="1444:1489" ph="/// 段数の数 ... " />
+                <marker date="1531632826341" expanded="false" signature="1533:1586" ph="/// １行移動するのに待つ時間 ... " />
+                <marker date="1531632826341" expanded="false" signature="1650:1704" ph="/// bulletのPrefab ... " />
+                <marker date="1531632826341" expanded="false" signature="1771:1849" ph="/// 列ごとのController(EnemyRowController)の参照 ... " />
+                <marker date="1531632826341" expanded="false" signature="1905:1971" ph="/// Enemyを倒した時のスコア加算デリゲートメソッド ... " />
+                <marker date="1531632826341" expanded="false" signature="2024:2089" ph="/// Enemy全体が死んだ際に呼ぶデリゲートメソッド ... " />
+                <marker date="1531632826341" expanded="false" signature="2137:2194" ph="/// Enemyの可動領域の左下の座標 ... " />
+                <marker date="1531632826341" expanded="false" signature="2242:2299" ph="/// Enemyの可動領域の右上の座標 ... " />
+                <marker date="1531632826341" expanded="false" signature="2347:2400" ph="/// 列ごとの残りEnemy数 ... " />
+                <marker date="1531632826341" expanded="false" signature="2448:2509" ph="/// 前の移動の際に、方向転換を行ったかどうか ... " />
+                <marker date="1531632826341" expanded="false" signature="2548:2611" ph="/// Enemyが生きている列idを保存したリスト ... " />
+                <marker date="1531632826341" expanded="false" signature="2667:2717" ph="/// 敵の弾のプレファブ ... " />
+                <marker date="1531632826341" expanded="false" signature="2778:3056" ph="{...}" />
+                <marker date="1531632826341" expanded="false" signature="3066:3114" ph="/// 初期設定を行う ... " />
+                <marker date="1531632826341" expanded="true" signature="3223:3460" ph="{...}" />
+                <marker date="1531632826341" expanded="false" signature="3466:3533" ph="/// enemyLineInfoを行idの順にソートし直す ... " />
+                <marker date="1531632826341" expanded="false" signature="3560:3879" ph="{...}" />
+                <marker date="1531632826341" expanded="true" signature="3741:3873" ph="{...}" />
+                <marker date="1531632826341" expanded="false" signature="3885:3934" ph="/// Enemyの生成 ... " />
+                <marker date="1531632826341" expanded="false" signature="3960:6013" ph="{...}" />
+                <marker date="1531632826341" expanded="true" signature="4248:4309" ph="{...}" />
+                <marker date="1531632826341" expanded="true" signature="4454:6007" ph="{...}" />
+                <marker date="1531632826341" expanded="true" signature="5652:5995" ph="{...}" />
+                <marker date="1531632826341" expanded="true" signature="5773:5843" ph="{...}" />
+                <marker date="1531632826341" expanded="true" signature="5917:5981" ph="{...}" />
+                <marker date="1531632826341" expanded="false" signature="6019:6074" ph="/// Enemyの移動・攻撃を行う ... " />
+                <marker date="1531632826341" expanded="false" signature="6104:6236" ph="{...}" />
+                <marker date="1531632826341" expanded="false" signature="6242:6294" ph="/// enemyの移動を行う ... " />
+                <marker date="1531632826341" expanded="false" signature="6325:7213" ph="{...}" />
+                <marker date="1531632826341" expanded="true" signature="6429:7207" ph="{...}" />
+                <marker date="1531632826341" expanded="true" signature="6509:6724" ph="/* 各行で前方に進むかの処理をしようとすると、端の敵が倒された時に前進するタイミングが行によってずれる ... */" />
+                <marker date="1531632826341" expanded="true" signature="6823:7197" ph="{...}" />
+                <marker date="1531632826341" expanded="true" signature="6889:6970" ph="{...}" />
+                <marker date="1531632826341" expanded="true" signature="6991:7097" ph="{...}" />
+                <marker date="1531632826341" expanded="false" signature="7219:7278" ph="/// 次の移動で全て行が左右に移動できるか ... " />
+                <marker date="1531632826341" expanded="false" signature="7301:7575" ph="{...}" />
+                <marker date="1531632826341" expanded="true" signature="7356:7523" ph="{...}" />
+                <marker date="1531632826341" expanded="true" signature="7423:7513" ph="{...}" />
+                <marker date="1531632826341" expanded="false" signature="7581:7626" ph="/// 攻撃する ... " />
+                <marker date="1531632826341" expanded="false" signature="7649:8415" ph="{...}" />
+                <marker date="1531632826341" expanded="true" signature="7724:8409" ph="{...}" />
+                <marker date="1531632826341" expanded="true" signature="8058:8174" ph="{...}" />
+                <marker date="1531632826341" expanded="true" signature="8191:8399" ph="{...}" />
+                <marker date="1531632826341" expanded="false" signature="8425:8496" ph="/// 引数で渡した行idに該当する行を生成するのに必要な情報を返す ... " />
+                <marker date="1531632826341" expanded="false" signature="8538:8869" ph="{...}" />
+                <marker date="1531632826341" expanded="true" signature="8599:8842" ph="{...}" />
+                <marker date="1531632826341" expanded="true" signature="8762:8832" ph="{...}" />
+                <marker date="1531632826341" expanded="false" signature="8875:8979" ph="/// 行と列のidのEnemyが生存しているかどうかを返す ... " />
+                <marker date="1531632826341" expanded="false" signature="9026:9089" ph="{...}" />
+                <marker date="1531632826341" expanded="false" signature="9095:9167" ph="/// 列を示すcolumnIdに対して、生きている最小の行Idを返す ... " />
+                <marker date="1531632826341" expanded="false" signature="9206:9403" ph="{...}" />
+                <marker date="1531632826341" expanded="true" signature="9261:9378" ph="{...}" />
+                <marker date="1531632826341" expanded="true" signature="9314:9368" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UFOHealth.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/UFO/UFOHealth.cs">
+      <file leaf-file-name="EnemysController.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemysController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+            <state relative-caret-position="180">
+              <caret line="25" column="108" selection-start-line="25" selection-start-column="108" selection-end-line="25" selection-end-column="108" />
               <folding>
-                <marker date="1531635035002" expanded="false" signature="6:104" ph="..." />
-                <marker date="1531635035002" expanded="true" signature="106:152" ph="/// UFOのHPに関するクラス ... " />
-                <marker date="1531635035002" expanded="true" signature="189:531" ph="{...}" />
-                <marker date="1531635035002" expanded="true" signature="196:240" ph="/// 得点表 ... " />
-                <marker date="1531635035002" expanded="true" signature="298:350" ph="/// 死んだ時に呼ぶメソッド ... " />
-                <marker date="1531635035002" expanded="true" signature="386:529" ph="{...}" />
+                <marker date="1531634453103" expanded="false" signature="6:147" ph="..." />
+                <marker date="1531634453103" expanded="false" signature="149:200" ph="/// Enemy全体のController ... " />
+                <marker date="1531634453103" expanded="true" signature="246:923" ph="{...}" />
+                <marker date="1531634453103" expanded="false" signature="253:318" ph="/// EnemyCrowdControllerへの参照 ... " />
+                <marker date="1531634453103" expanded="false" signature="403:461" ph="/// UFOControllerへの参照 ... " />
+                <marker date="1531634453103" expanded="false" signature="532:577" ph="/// 初期設定 ... " />
+                <marker date="1531634453103" expanded="true" signature="686:921" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UFOMover.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/UFO/UFOMover.cs">
+      <file leaf-file-name="EnemyRowController.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyRowController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+            <state relative-caret-position="444">
+              <caret line="59" column="26" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
               <folding>
-                <marker date="1531635599703" expanded="false" signature="6:104" ph="..." />
-                <marker date="1531635599703" expanded="true" signature="106:152" ph="/// UFOの移動に関するクラス ... " />
-                <marker date="1531635599703" expanded="true" signature="190:1310" ph="{...}" />
-                <marker date="1531635599703" expanded="true" signature="197:246" ph="/// UFOの移動速度 ... " />
-                <marker date="1531635599703" expanded="true" signature="293:354" ph="/// 端まで到着した時に呼ぶデリゲートメソッド ... " />
-                <marker date="1531635599703" expanded="true" signature="406:457" ph="/// 移動方向を決める数値 ... " />
-                <marker date="1531635599703" expanded="true" signature="494:541" ph="/// 画面端の位置 ... " />
-                <marker date="1531635599703" expanded="true" signature="585:635" ph="/// 移動のための値設定 ... " />
-                <marker date="1531635599703" expanded="true" signature="723:912" ph="{...}" />
-                <marker date="1531635599703" expanded="true" signature="765:906" ph="{...}" />
-                <marker date="1531635599703" expanded="true" signature="939:1308" ph="{...}" />
-                <marker date="1531635599703" expanded="true" signature="1113:1163" ph="{...}" />
-                <marker date="1531635599703" expanded="true" signature="1252:1302" ph="{...}" />
+                <marker date="1531632888505" expanded="false" signature="6:139" ph="..." />
+                <marker date="1531632888505" expanded="false" signature="141:189" ph="/// Enemyの行を管理するクラス ... " />
+                <marker date="1531632888505" expanded="true" signature="238:4046" ph="{...}" />
+                <marker date="1531632888505" expanded="false" signature="244:306" ph="/// 隣の敵の位置に移動するのに、何回移動するか ... " />
+                <marker date="1531632888505" expanded="false" signature="372:430" ph="/// 行のenemyのゲームオブジェクト ... " />
+                <marker date="1531632888505" expanded="false" signature="474:522" ph="/// 行に関する情報 ... " />
+                <marker date="1531632888505" expanded="false" signature="579:633" ph="/// 行に対してのEnemy作成 ... " />
+                <marker date="1531632888505" expanded="true" signature="769:2358" ph="{...}" />
+                <marker date="1531632888505" expanded="true" signature="1327:2352" ph="{...}" />
+                <marker date="1531632888505" expanded="true" signature="2150:2231" ph="{...}" />
+                <marker date="1531632888505" expanded="false" signature="2364:2411" ph="/// 前に移動する ... " />
+                <marker date="1531632888505" expanded="false" signature="2440:2655" ph="{...}" />
+                <marker date="1531632888505" expanded="true" signature="2493:2649" ph="{...}" />
+                <marker date="1531632888505" expanded="true" signature="2540:2639" ph="{...}" />
+                <marker date="1531632888505" expanded="false" signature="2661:2709" ph="/// 左右に移動する ... " />
+                <marker date="1531632888505" expanded="false" signature="2736:2949" ph="{...}" />
+                <marker date="1531632888505" expanded="true" signature="2789:2943" ph="{...}" />
+                <marker date="1531632888505" expanded="true" signature="2836:2933" ph="{...}" />
+                <marker date="1531632888505" expanded="false" signature="2955:3010" ph="/// 次の移動で左右に移動できるか ... " />
+                <marker date="1531632888505" expanded="false" signature="3040:3294" ph="{...}" />
+                <marker date="1531632888505" expanded="true" signature="3093:3267" ph="{...}" />
+                <marker date="1531632888505" expanded="true" signature="3199:3257" ph="{...}" />
+                <marker date="1531632888505" expanded="false" signature="3300:3362" ph="/// 引数で指定した列のenemyが生きているか ... " />
+                <marker date="1531632888505" expanded="false" signature="3394:3443" ph="{...}" />
+                <marker date="1531632888505" expanded="false" signature="3449:3511" ph="/// 引数で指定した列のenemyに弾を撃たせる ... " />
+                <marker date="1531632888505" expanded="false" signature="3565:3876" ph="{...}" />
+                <marker date="1531632888505" expanded="true" signature="3635:3675" ph="{...}" />
+                <marker date="1531632888505" expanded="true" signature="3751:3791" ph="{...}" />
+                <marker date="1531632888505" expanded="false" signature="3886:3936" ph="/// 列idが正常な値か ... " />
+                <marker date="1531632888505" expanded="false" signature="3975:4044" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameSceneState.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Scene/GameSceneState.cs">
+      <file leaf-file-name="EnemyHealth.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyHealth.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+            <state relative-caret-position="390">
+              <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
               <folding>
-                <marker date="1531568510654" expanded="false" signature="6:78" ph="..." />
-                <marker date="1531568510654" expanded="false" signature="80:140" ph="/// ゲームシーンのロード・破棄された際に実行するメソッド群 ... " />
-                <marker date="1531568510654" expanded="true" signature="182:324" ph="{...}" />
-                <marker date="1531568510654" expanded="false" signature="197:226" ph="{...}" />
-                <marker date="1531568510654" expanded="false" signature="263:272" ph="{...}" />
-                <marker date="1531568510654" expanded="false" signature="315:322" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SceneState.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Scene/SceneState.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-              <folding>
-                <marker date="1531634381420" expanded="true" signature="6:113" ph="..." />
-                <marker date="1531634381420" expanded="true" signature="168:1539" ph="{...}" />
-                <marker date="1531634381420" expanded="false" signature="171:210" ph="/// シーン名 ... " />
-                <marker date="1531634381420" expanded="false" signature="247:296" ph="/// シーン名(readonly) ... " />
-                <marker date="1531634381420" expanded="false" signature="322:361" ph="{...}" />
-                <marker date="1531634381420" expanded="true" signature="331:358" ph="{...}" />
-                <marker date="1531634381420" expanded="false" signature="363:406" ph="/// 次のシーンの参照 ... " />
-                <marker date="1531634381420" expanded="false" signature="457:510" ph="/// 次のシーンの参照(readonly) ... " />
-                <marker date="1531634381420" expanded="false" signature="539:577" ph="{...}" />
-                <marker date="1531634381420" expanded="true" signature="548:574" ph="{...}" />
-                <marker date="1531634381420" expanded="true" signature="579:630" ph="/// シーンがロード後呼ばれるメソッド ... " />
-                <marker date="1531634381420" expanded="true" signature="665:672" ph="{...}" />
-                <marker date="1531634381420" expanded="false" signature="675:729" ph="/// シーンが破棄される前に呼ばれるメソッド ... " />
-                <marker date="1531634381420" expanded="true" signature="770:777" ph="{...}" />
-                <marker date="1531634381420" expanded="false" signature="782:826" ph="/// シーンをロードする ... " />
-                <marker date="1531634381420" expanded="true" signature="851:884" ph="{...}" />
-                <marker date="1531634381420" expanded="true" signature="887:935" ph="/// 非同期でシーンをロードする ... " />
-                <marker date="1531634381420" expanded="true" signature="955:1150" ph="{...}" />
-                <marker date="1531634381420" expanded="true" signature="1039:1147" ph="{...}" />
-                <marker date="1531634381420" expanded="true" signature="1060:1121" ph="{...}" />
-                <marker date="1531634381420" expanded="true" signature="1153:1213" ph="/// 現在のシーンを破棄、nextSceneをロードする ... " />
-                <marker date="1531634381420" expanded="true" signature="1242:1292" ph="{...}" />
-                <marker date="1531634381420" expanded="false" signature="1295:1344" ph="/// シーンを破棄する前に呼ばれる ... " />
-                <marker date="1531634381420" expanded="true" signature="1364:1400" ph="{...}" />
-                <marker date="1531634381420" expanded="false" signature="1403:1450" ph="/// 非同期でシーンを破棄する ... " />
-                <marker date="1531634381420" expanded="true" signature="1472:1537" ph="{...}" />
+                <marker date="1531834699733" expanded="false" signature="6:104" ph="..." />
+                <marker date="1531834699733" expanded="false" signature="106:157" ph="/// EnemyのHPや生存に関するクラス ... " />
+                <marker date="1531834699733" expanded="true" signature="198:2034" ph="{...}" />
+                <marker date="1531834699733" expanded="false" signature="205:250" ph="/// 初期HP ... " />
+                <marker date="1531834699733" expanded="false" signature="301:363" ph="/// Enemyの当たり判定コンポーネントの参照 ... " />
+                <marker date="1531834699733" expanded="false" signature="431:477" ph="/// 現在のHP ... " />
+                <marker date="1531834699733" expanded="false" signature="506:561" ph="/// 倒した時にもらえるpoint ... " />
+                <marker date="1531834699733" expanded="false" signature="594:657" ph="/// 倒した時にスコア加算をするデリゲートメソッド ... " />
+                <marker date="1531834699733" expanded="false" signature="739:822" ph="{...}" />
+                <marker date="1531834699733" expanded="false" signature="828:885" ph="/// 倒した時に呼ぶデリゲートメソッド ... " />
+                <marker date="1531834699733" expanded="false" signature="951:1028" ph="{...}" />
+                <marker date="1531834699733" expanded="false" signature="1056:1090" ph="{...}" />
+                <marker date="1531834699733" expanded="false" signature="1108:1387" ph="{...}" />
+                <marker date="1531834699733" expanded="true" signature="1152:1379" ph="{...}" />
+                <marker date="1531834699733" expanded="true" signature="1216:1369" ph="{...}" />
+                <marker date="1531834699733" expanded="true" signature="1290:1355" ph="{...}" />
+                <marker date="1531834699733" expanded="false" signature="1393:1438" ph="/// 初期設定 ... " />
+                <marker date="1531834699733" expanded="true" signature="1523:1635" ph="{...}" />
+                <marker date="1531834699733" expanded="false" signature="1641:1688" ph="/// hpを減らす ... " />
+                <marker date="1531834699733" expanded="false" signature="1710:1736" ph="{...}" />
+                <marker date="1531834699733" expanded="false" signature="1742:1790" ph="/// 死んだかどうか ... " />
+                <marker date="1531834699733" expanded="false" signature="1808:1844" ph="{...}" />
+                <marker date="1531834699733" expanded="false" signature="1850:1902" ph="/// 死んだ時に呼ばれる関数 ... " />
+                <marker date="1531834699733" expanded="false" signature="1937:2032" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -278,8 +283,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Scen</find>
-      <find>Sort</find>
       <find>enemyColumnParent</find>
       <find>EnemyCrowdController</find>
       <find>EnemyController</find>
@@ -308,6 +311,8 @@
       <find>maxPos</find>
       <find>ufoHelath</find>
       <find>ufoMover</find>
+      <find>_onde</find>
+      <find>_onAddScore</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -316,6 +321,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyLineInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2CB3F964-2747-47EA-8DBB-F446E27D4D28/24/5df5d10a/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UIController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scene/SceneProcessManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scene/TitleController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scene/ISceneState.cs" root0="FORCE_HIGHLIGHTING" />
@@ -326,7 +332,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scene/GameSceneState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scene/TitleSceneState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scene/SceneState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMesh.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyShot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMove.cs" root0="FORCE_HIGHLIGHTING" />
@@ -334,9 +340,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemysController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyHealth.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyCrowdController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyCrowdController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyRowCreateInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerMover.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerShot.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -366,21 +372,16 @@
         <option value="$PROJECT_DIR$/Assets/EnemyTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMover.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Scene/ISceneState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Scene/GameSceneState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Scene/TitleController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Scene/TitleSceneState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerShot.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyHealth.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyLineInfo.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMesh.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMove.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyRowCreateInfo.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyCrowdController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyRowController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Scene/SceneProcessManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Scene/SceneState.cs" />
@@ -390,6 +391,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/UFO/UFOHealth.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/UFO/UFOController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/UFO/UFOMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyHealth.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyCrowdController.cs" />
+        <option value="$PROJECT_DIR$/Assets/UIController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
       </list>
     </option>
   </component>
@@ -419,11 +426,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="SolutionExplorer">
-        <option name="show-file-system" value="false" />
-        <option name="show-all-items" value="false" />
-      </pane>
       <pane id="UnityExplorer">
         <subPane>
           <expand>
@@ -447,6 +449,11 @@
         </subPane>
         <option name="show-hidden-items" value="false" />
       </pane>
+      <pane id="SolutionExplorer">
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -493,12 +500,13 @@
       <workItem from="1530111043459" duration="14352000" />
       <workItem from="1530708542493" duration="1448000" />
       <workItem from="1530800604857" duration="14006000" />
-      <workItem from="1531577886607" duration="8466000" />
+      <workItem from="1531577886607" duration="9274000" />
+      <workItem from="1531834562143" duration="1165000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119245000" />
+    <option name="totallyTimeSpent" value="121218000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -518,16 +526,16 @@
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32903227" />
       <window_info anchor="bottom" id="Unit Tests" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="12" />
       <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Run" order="12" />
       <window_info anchor="bottom" id="Terminal" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.16666667" />
-      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.16849817" />
       <window_info anchor="bottom" id="Unity" order="2" />
+      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="1" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="10" weight="0.4" />
       <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="10" weight="0.4" />
       <window_info anchor="bottom" id="NuGet" order="13" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -543,24 +551,24 @@
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="12" />
       <window_info anchor="bottom" id="Unity" order="2" />
-      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25579977" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="2" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="14" />
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Unit Tests" order="4" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32903227" />
       <window_info anchor="right" id="Errors In Solution" order="0" />
-      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="5" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32903227" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Database" order="1" />
-      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -571,13 +579,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerMover.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -629,20 +630,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding>
-            <marker date="1531549021382" expanded="false" signature="6:78" ph="..." />
-            <marker date="1531549021382" expanded="true" signature="80:124" ph="/// 弾の挙動に関するクラス ... " />
-            <marker date="1531549021382" expanded="true" signature="160:1484" ph="{...}" />
-            <marker date="1531549021382" expanded="true" signature="167:212" ph="/// 弾の高さ ... " />
-            <marker date="1531549021382" expanded="true" signature="266:311" ph="/// 移動速度 ... " />
-            <marker date="1531549021382" expanded="true" signature="358:412" ph="/// 弾の移動する座標yの最大値 ... " />
-            <marker date="1531549021382" expanded="true" signature="453:507" ph="/// 弾の移動する座標yの最小値 ... " />
-            <marker date="1531549021382" expanded="true" signature="548:600" ph="/// 弾のRigidbody ... " />
-            <marker date="1531549021382" expanded="true" signature="658:1045" ph="{...}" />
-            <marker date="1531549021382" expanded="true" signature="1064:1384" ph="{...}" />
-            <marker date="1531549021382" expanded="true" signature="1286:1378" ph="{...}" />
-            <marker date="1531549021382" expanded="true" signature="1433:1482" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -653,37 +640,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding>
-            <marker date="1531565606700" expanded="false" signature="6:104" ph="..." />
-            <marker date="1531565606700" expanded="true" signature="148:572" ph="{...}" />
-            <marker date="1531565606700" expanded="true" signature="151:200" ph="/// Playerが死んだ時の処理 ... " />
-            <marker date="1531565606700" expanded="true" signature="232:286" ph="/// Playerが死んだ時の処理を登録する ... " />
-            <marker date="1531565606700" expanded="true" signature="336:367" ph="{...}" />
-            <marker date="1531565606700" expanded="true" signature="408:570" ph="{...}" />
-            <marker date="1531565606700" expanded="true" signature="467:567" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerMover.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding>
-            <marker date="1531565242682" expanded="false" signature="6:78" ph="..." />
-            <marker date="1531565242682" expanded="true" signature="121:864" ph="{...}" />
-            <marker date="1531565242682" expanded="true" signature="124:165" ph="/// 移動スピード ... " />
-            <marker date="1531565242682" expanded="true" signature="203:250" ph="/// 移動可能なx座標の最小値 ... " />
-            <marker date="1531565242682" expanded="true" signature="285:332" ph="/// 移動可能なx座標の最大値 ... " />
-            <marker date="1531565242682" expanded="true" signature="369:426" ph="/// playerのx座標方向の移動可能範囲を設定 ... " />
-            <marker date="1531565242682" expanded="true" signature="493:573" ph="{...}" />
-            <marker date="1531565242682" expanded="true" signature="576:623" ph="/// playerの移動を行う ... " />
-            <marker date="1531565242682" expanded="true" signature="656:862" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -691,35 +651,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding>
-            <marker date="1531571974355" expanded="false" signature="6:78" ph="..." />
-            <marker date="1531571974355" expanded="true" signature="120:695" ph="{...}" />
-            <marker date="1531571974355" expanded="true" signature="123:165" ph="/// 弾のプレファブ ... " />
-            <marker date="1531571974355" expanded="true" signature="216:257" ph="/// 発射口の位置 ... " />
-            <marker date="1531571974355" expanded="true" signature="319:362" ph="/// 生成した弾の参照 ... " />
-            <marker date="1531571974355" expanded="true" signature="412:487" ph="{...}" />
-            <marker date="1531571974355" expanded="true" signature="437:484" ph="{...}" />
-            <marker date="1531571974355" expanded="true" signature="490:529" ph="/// 弾を撃つ ... " />
-            <marker date="1531571974355" expanded="true" signature="549:693" ph="{...}" />
-            <marker date="1531571974355" expanded="true" signature="598:690" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-          <folding>
-            <marker date="1531571997207" expanded="false" signature="6:104" ph="..." />
-            <marker date="1531571997207" expanded="false" signature="106:156" ph="/// Gameの全体的な処理や連携を行う ... " />
-            <marker date="1531571997207" expanded="true" signature="200:1772" ph="{...}" />
-            <marker date="1531571997207" expanded="false" signature="207:267" ph="/// PlayerControllerの参照 ... " />
-            <marker date="1531571997207" expanded="false" signature="343:402" ph="/// EnemyControllerの参照 ... " />
-            <marker date="1531571997207" expanded="false" signature="478:525" ph="/// 移動制限の幅 ... " />
-            <marker date="1531571997207" expanded="true" signature="693:1224" ph="{...}" />
-            <marker date="1531571997207" expanded="false" signature="1250:1770" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -727,62 +658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1470">
           <caret line="117" column="14" selection-start-line="117" selection-start-column="14" selection-end-line="117" selection-end-column="14" />
-          <folding>
-            <marker date="1531572388854" expanded="false" signature="6:123" ph="..." />
-            <marker date="1531572388854" expanded="true" signature="125:176" ph="/// Enemy単体のController ... " />
-            <marker date="1531572388854" expanded="true" signature="221:2975" ph="{...}" />
-            <marker date="1531572388854" expanded="false" signature="225:279" ph="/// 発射してすぐの弾の位置と敵の位置との差 ... " />
-            <marker date="1531572388854" expanded="false" signature="341:390" ph="/// EnemyHelathの参照 ... " />
-            <marker date="1531572388854" expanded="false" signature="451:498" ph="/// EnemyMeshの参照 ... " />
-            <marker date="1531572388854" expanded="false" signature="555:602" ph="/// EnemyMoveの参照 ... " />
-            <marker date="1531572388854" expanded="false" signature="659:706" ph="/// EnemyShotの参照 ... " />
-            <marker date="1531572388854" expanded="true" signature="1087:1117" ph="{...}" />
-            <marker date="1531572388854" expanded="true" signature="1121:1597" ph="/// Enemyの初期設定を行う ... " />
-            <marker date="1531572388854" expanded="true" signature="1772:2032" ph="{...}" />
-            <marker date="1531572388854" expanded="true" signature="1987:2027" ph="{...}" />
-            <marker date="1531572388854" expanded="true" signature="2035:2085" ph="/// 次に移動の際に、横に移動可能か ... " />
-            <marker date="1531572388854" expanded="true" signature="2112:2388" ph="{...}" />
-            <marker date="1531572388854" expanded="true" signature="2145:2169" ph="{...}" />
-            <marker date="1531572388854" expanded="true" signature="2391:2432" ph="/// 横に移動する ... " />
-            <marker date="1531572388854" expanded="true" signature="2456:2601" ph="{...}" />
-            <marker date="1531572388854" expanded="true" signature="2604:2645" ph="/// 前に移動する ... " />
-            <marker date="1531572388854" expanded="false" signature="2671:2795" ph="{...}" />
-            <marker date="1531572388854" expanded="true" signature="2798:2874" ph="/// 弾を発射する ... " />
-            <marker date="1531572388854" expanded="false" signature="2911:2973" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyHealth.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="820">
-          <caret line="94" column="19" selection-start-line="94" selection-start-column="19" selection-end-line="94" selection-end-column="19" />
-          <folding>
-            <marker date="1531586730774" expanded="true" signature="6:104" ph="..." />
-            <marker date="1531586730774" expanded="true" signature="106:157" ph="/// EnemyのHPや生存に関するクラス ... " />
-            <marker date="1531586730774" expanded="true" signature="198:2034" ph="{...}" />
-            <marker date="1531586730774" expanded="true" signature="205:250" ph="/// 初期HP ... " />
-            <marker date="1531586730774" expanded="true" signature="301:363" ph="/// Enemyの当たり判定コンポーネントの参照 ... " />
-            <marker date="1531586730774" expanded="true" signature="431:477" ph="/// 現在のHP ... " />
-            <marker date="1531586730774" expanded="true" signature="506:561" ph="/// 倒した時にもらえるpoint ... " />
-            <marker date="1531586730774" expanded="true" signature="594:657" ph="/// 倒した時にスコア加算をするデリゲートメソッド ... " />
-            <marker date="1531586730774" expanded="true" signature="739:822" ph="{...}" />
-            <marker date="1531586730774" expanded="true" signature="828:885" ph="/// 倒した時に呼ぶデリゲートメソッド ... " />
-            <marker date="1531586730774" expanded="false" signature="951:1028" ph="{...}" />
-            <marker date="1531586730774" expanded="true" signature="1056:1090" ph="{...}" />
-            <marker date="1531586730774" expanded="true" signature="1108:1387" ph="{...}" />
-            <marker date="1531586730774" expanded="true" signature="1152:1379" ph="{...}" />
-            <marker date="1531586730774" expanded="true" signature="1216:1369" ph="{...}" />
-            <marker date="1531586730774" expanded="true" signature="1290:1355" ph="{...}" />
-            <marker date="1531586730774" expanded="true" signature="1393:1438" ph="/// 初期設定 ... " />
-            <marker date="1531586730774" expanded="true" signature="1523:1635" ph="{...}" />
-            <marker date="1531586730774" expanded="true" signature="1641:1688" ph="/// hpを減らす ... " />
-            <marker date="1531586730774" expanded="true" signature="1710:1736" ph="{...}" />
-            <marker date="1531586730774" expanded="true" signature="1742:1790" ph="/// 死んだかどうか ... " />
-            <marker date="1531586730774" expanded="true" signature="1808:1844" ph="{...}" />
-            <marker date="1531586730774" expanded="true" signature="1850:1902" ph="/// 死んだ時に呼ばれる関数 ... " />
-            <marker date="1531586730774" expanded="true" signature="1937:2032" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -790,13 +665,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-          <folding>
-            <marker date="1531586812438" expanded="false" signature="6:212" ph="..." />
-            <marker date="1531586812438" expanded="true" signature="255:701" ph="{...}" />
-            <marker date="1531586812438" expanded="true" signature="262:314" ph="/// enemyのプレファブ ... " />
-            <marker date="1531586812438" expanded="true" signature="414:472" ph="/// プレファブのenemyがいる最高段 ... " />
-            <marker date="1531586812438" expanded="true" signature="570:624" ph="/// enemyを倒した時の点数 ... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -804,19 +672,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
-          <folding>
-            <marker date="1531590859889" expanded="false" signature="6:78" ph="..." />
-            <marker date="1531590859889" expanded="true" signature="118:914" ph="{...}" />
-            <marker date="1531590859889" expanded="true" signature="125:187" ph="/// Enemyが動いているように見せるMesh ... " />
-            <marker date="1531590859889" expanded="true" signature="241:298" ph="/// enemyのMeshFilter ... " />
-            <marker date="1531590859889" expanded="true" signature="338:389" ph="/// 設定したMeshの数 ... " />
-            <marker date="1531590859889" expanded="true" signature="436:488" ph="/// Meshを変更した回数 ... " />
-            <marker date="1531590859889" expanded="true" signature="533:692" ph="{...}" />
-            <marker date="1531590859889" expanded="true" signature="627:686" ph="{...}" />
-            <marker date="1531590859889" expanded="true" signature="698:748" ph="/// meshの切り替え ... " />
-            <marker date="1531590859889" expanded="true" signature="777:912" ph="{...}" />
-            <marker date="1531590859889" expanded="true" signature="812:852" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -824,147 +679,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <marker date="1531590904930" expanded="false" signature="6:78" ph="..." />
-            <marker date="1531590904930" expanded="true" signature="80:122" ph="/// 移動に関するクラス ... " />
-            <marker date="1531590904930" expanded="true" signature="162:308" ph="{...}" />
-            <marker date="1531590904930" expanded="true" signature="168:217" ph="/// Enemyの移動 ... " />
-            <marker date="1531590904930" expanded="false" signature="255:306" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyCrowdController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <marker date="1531632826341" expanded="true" signature="6:207" ph="..." />
-            <marker date="1531632826341" expanded="true" signature="209:260" ph="/// Enemy全体のController ... " />
-            <marker date="1531632826341" expanded="true" signature="311:9405" ph="{...}" />
-            <marker date="1531632826341" expanded="true" signature="364:413" ph="/// Enemyの列数 ... " />
-            <marker date="1531632826341" expanded="true" signature="471:520" ph="/// Enemyの段数 ... " />
-            <marker date="1531632826341" expanded="true" signature="578:636" ph="/// Enemyの列ごとのプレファブ情報 ... " />
-            <marker date="1531632826341" expanded="true" signature="708:773" ph="/// ufoを出現させるのに必要なEnemyの最低の数 ... " />
-            <marker date="1531632826341" expanded="true" signature="834:885" ph="/// スタート前の停止時間 ... " />
-            <marker date="1531632826341" expanded="true" signature="947:998" ph="/// Enemyの攻撃間隔 ... " />
-            <marker date="1531632826341" expanded="true" signature="1056:1122" ph="/// Enemyの一番上の段のy座標と画面上のy座標の差 ... " />
-            <marker date="1531632826341" expanded="true" signature="1183:1249" ph="/// Enemyの一番下の段のy座標と画面下のy座標の差 ... " />
-            <marker date="1531632826341" expanded="true" signature="1314:1380" ph="/// Enemyの横の間隔(基本、8移動でそこまで移動) ... " />
-            <marker date="1531632826341" expanded="true" signature="1444:1489" ph="/// 段数の数 ... " />
-            <marker date="1531632826341" expanded="true" signature="1533:1586" ph="/// １行移動するのに待つ時間 ... " />
-            <marker date="1531632826341" expanded="true" signature="1650:1704" ph="/// bulletのPrefab ... " />
-            <marker date="1531632826341" expanded="true" signature="1771:1849" ph="/// 列ごとのController(EnemyRowController)の参照 ... " />
-            <marker date="1531632826341" expanded="true" signature="1905:1971" ph="/// Enemyを倒した時のスコア加算デリゲートメソッド ... " />
-            <marker date="1531632826341" expanded="true" signature="2024:2089" ph="/// Enemy全体が死んだ際に呼ぶデリゲートメソッド ... " />
-            <marker date="1531632826341" expanded="true" signature="2137:2194" ph="/// Enemyの可動領域の左下の座標 ... " />
-            <marker date="1531632826341" expanded="true" signature="2242:2299" ph="/// Enemyの可動領域の右上の座標 ... " />
-            <marker date="1531632826341" expanded="true" signature="2347:2400" ph="/// 列ごとの残りEnemy数 ... " />
-            <marker date="1531632826341" expanded="true" signature="2448:2509" ph="/// 前の移動の際に、方向転換を行ったかどうか ... " />
-            <marker date="1531632826341" expanded="true" signature="2548:2611" ph="/// Enemyが生きている列idを保存したリスト ... " />
-            <marker date="1531632826341" expanded="true" signature="2667:2717" ph="/// 敵の弾のプレファブ ... " />
-            <marker date="1531632826341" expanded="true" signature="2778:3056" ph="{...}" />
-            <marker date="1531632826341" expanded="true" signature="3066:3114" ph="/// 初期設定を行う ... " />
-            <marker date="1531632826341" expanded="true" signature="3223:3460" ph="{...}" />
-            <marker date="1531632826341" expanded="true" signature="3466:3533" ph="/// enemyLineInfoを行idの順にソートし直す ... " />
-            <marker date="1531632826341" expanded="true" signature="3560:3879" ph="{...}" />
-            <marker date="1531632826341" expanded="true" signature="3741:3873" ph="{...}" />
-            <marker date="1531632826341" expanded="true" signature="3885:3934" ph="/// Enemyの生成 ... " />
-            <marker date="1531632826341" expanded="true" signature="3960:6013" ph="{...}" />
-            <marker date="1531632826341" expanded="true" signature="4248:4309" ph="{...}" />
-            <marker date="1531632826341" expanded="true" signature="4454:6007" ph="{...}" />
-            <marker date="1531632826341" expanded="true" signature="5652:5995" ph="{...}" />
-            <marker date="1531632826341" expanded="true" signature="5773:5843" ph="{...}" />
-            <marker date="1531632826341" expanded="true" signature="5917:5981" ph="{...}" />
-            <marker date="1531632826341" expanded="true" signature="6019:6074" ph="/// Enemyの移動・攻撃を行う ... " />
-            <marker date="1531632826341" expanded="true" signature="6104:6236" ph="{...}" />
-            <marker date="1531632826341" expanded="true" signature="6242:6294" ph="/// enemyの移動を行う ... " />
-            <marker date="1531632826341" expanded="true" signature="6325:7213" ph="{...}" />
-            <marker date="1531632826341" expanded="true" signature="6429:7207" ph="{...}" />
-            <marker date="1531632826341" expanded="true" signature="6509:6724" ph="/* 各行で前方に進むかの処理をしようとすると、端の敵が倒された時に前進するタイミングが行によってずれる ... */" />
-            <marker date="1531632826341" expanded="true" signature="6823:7197" ph="{...}" />
-            <marker date="1531632826341" expanded="true" signature="6889:6970" ph="{...}" />
-            <marker date="1531632826341" expanded="true" signature="6991:7097" ph="{...}" />
-            <marker date="1531632826341" expanded="true" signature="7219:7278" ph="/// 次の移動で全て行が左右に移動できるか ... " />
-            <marker date="1531632826341" expanded="true" signature="7301:7575" ph="{...}" />
-            <marker date="1531632826341" expanded="true" signature="7356:7523" ph="{...}" />
-            <marker date="1531632826341" expanded="true" signature="7423:7513" ph="{...}" />
-            <marker date="1531632826341" expanded="true" signature="7581:7626" ph="/// 攻撃する ... " />
-            <marker date="1531632826341" expanded="true" signature="7649:8415" ph="{...}" />
-            <marker date="1531632826341" expanded="true" signature="7724:8409" ph="{...}" />
-            <marker date="1531632826341" expanded="true" signature="8058:8174" ph="{...}" />
-            <marker date="1531632826341" expanded="true" signature="8191:8399" ph="{...}" />
-            <marker date="1531632826341" expanded="true" signature="8425:8496" ph="/// 引数で渡した行idに該当する行を生成するのに必要な情報を返す ... " />
-            <marker date="1531632826341" expanded="true" signature="8538:8869" ph="{...}" />
-            <marker date="1531632826341" expanded="true" signature="8599:8842" ph="{...}" />
-            <marker date="1531632826341" expanded="true" signature="8762:8832" ph="{...}" />
-            <marker date="1531632826341" expanded="true" signature="8875:8979" ph="/// 行と列のidのEnemyが生存しているかどうかを返す ... " />
-            <marker date="1531632826341" expanded="true" signature="9026:9089" ph="{...}" />
-            <marker date="1531632826341" expanded="true" signature="9095:9167" ph="/// 列を示すcolumnIdに対して、生きている最小の行Idを返す ... " />
-            <marker date="1531632826341" expanded="true" signature="9206:9403" ph="{...}" />
-            <marker date="1531632826341" expanded="true" signature="9261:9378" ph="{...}" />
-            <marker date="1531632826341" expanded="true" signature="9314:9368" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyRowController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="13" column="60" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
-          <folding>
-            <marker date="1531632888505" expanded="false" signature="6:139" ph="..." />
-            <marker date="1531632888505" expanded="true" signature="141:189" ph="/// Enemyの行を管理するクラス ... " />
-            <marker date="1531632888505" expanded="true" signature="238:4046" ph="{...}" />
-            <marker date="1531632888505" expanded="true" signature="244:306" ph="/// 隣の敵の位置に移動するのに、何回移動するか ... " />
-            <marker date="1531632888505" expanded="true" signature="372:430" ph="/// 行のenemyのゲームオブジェクト ... " />
-            <marker date="1531632888505" expanded="true" signature="474:522" ph="/// 行に関する情報 ... " />
-            <marker date="1531632888505" expanded="true" signature="579:633" ph="/// 行に対してのEnemy作成 ... " />
-            <marker date="1531632888505" expanded="true" signature="769:2358" ph="{...}" />
-            <marker date="1531632888505" expanded="true" signature="1327:2352" ph="{...}" />
-            <marker date="1531632888505" expanded="true" signature="2150:2231" ph="{...}" />
-            <marker date="1531632888505" expanded="true" signature="2364:2411" ph="/// 前に移動する ... " />
-            <marker date="1531632888505" expanded="false" signature="2440:2655" ph="{...}" />
-            <marker date="1531632888505" expanded="true" signature="2493:2649" ph="{...}" />
-            <marker date="1531632888505" expanded="true" signature="2540:2639" ph="{...}" />
-            <marker date="1531632888505" expanded="true" signature="2661:2709" ph="/// 左右に移動する ... " />
-            <marker date="1531632888505" expanded="false" signature="2736:2949" ph="{...}" />
-            <marker date="1531632888505" expanded="true" signature="2789:2943" ph="{...}" />
-            <marker date="1531632888505" expanded="true" signature="2836:2933" ph="{...}" />
-            <marker date="1531632888505" expanded="true" signature="2955:3010" ph="/// 次の移動で左右に移動できるか ... " />
-            <marker date="1531632888505" expanded="false" signature="3040:3294" ph="{...}" />
-            <marker date="1531632888505" expanded="true" signature="3093:3267" ph="{...}" />
-            <marker date="1531632888505" expanded="true" signature="3199:3257" ph="{...}" />
-            <marker date="1531632888505" expanded="true" signature="3300:3362" ph="/// 引数で指定した列のenemyが生きているか ... " />
-            <marker date="1531632888505" expanded="true" signature="3394:3443" ph="{...}" />
-            <marker date="1531632888505" expanded="true" signature="3449:3511" ph="/// 引数で指定した列のenemyに弾を撃たせる ... " />
-            <marker date="1531632888505" expanded="false" signature="3565:3876" ph="{...}" />
-            <marker date="1531632888505" expanded="true" signature="3635:3675" ph="{...}" />
-            <marker date="1531632888505" expanded="true" signature="3751:3791" ph="{...}" />
-            <marker date="1531632888505" expanded="true" signature="3886:3936" ph="/// 列idが正常な値か ... " />
-            <marker date="1531632888505" expanded="true" signature="3975:4044" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-          <folding>
-            <marker date="1531565525766" expanded="false" signature="6:78" ph="..." />
-            <marker date="1531565525766" expanded="true" signature="126:1365" ph="{...}" />
-            <marker date="1531565525766" expanded="false" signature="129:176" ph="/// Playerのプレファブ ... " />
-            <marker date="1531565525766" expanded="false" signature="227:296" ph="/// 画面左下の座標からどれだけ離れた位置からPlayerの移動を解するか ... " />
-            <marker date="1531565525766" expanded="false" signature="358:413" ph="/// プレファブから生成したPlayerの参照 ... " />
-            <marker date="1531565525766" expanded="false" signature="450:520" ph="/// PlayerにアタッチされたPlayerMoverコンポーネントの参照 ... " />
-            <marker date="1531565525766" expanded="false" signature="564:635" ph="/// PlayerにアタッチされたPlayerHealthコンポーネントの参照 ... " />
-            <marker date="1531565525766" expanded="false" signature="680:749" ph="/// PlayerにアタッチされたPlayerShotコンポーネントの参照 ... " />
-            <marker date="1531565525766" expanded="false" signature="791:835" ph="/// playerの生成 ... " />
-            <marker date="1531565525766" expanded="true" signature="889:1222" ph="{...}" />
-            <marker date="1531565525766" expanded="false" signature="1238:1362" ph="{...}" />
-            <marker date="1531565525766" expanded="true" signature="1329:1359" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -972,20 +686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="43" column="45" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="45" />
-          <folding>
-            <marker date="1531632754575" expanded="false" signature="6:78" ph="..." />
-            <marker date="1531632754575" expanded="true" signature="80:128" ph="/// 行ごとのEnemyに関する情報 ... " />
-            <marker date="1531632754575" expanded="true" signature="177:1012" ph="{...}" />
-            <marker date="1531632754575" expanded="false" signature="183:227" ph="/// 行ID ... " />
-            <marker date="1531632754575" expanded="false" signature="258:311" ph="/// 行に相当するprefab ... " />
-            <marker date="1531632754575" expanded="false" signature="357:408" ph="/// 一行のEnemyの数 ... " />
-            <marker date="1531632754575" expanded="false" signature="447:501" ph="/// Enemyの軍団の初期高さ ... " />
-            <marker date="1531632754575" expanded="false" signature="541:595" ph="/// スタート時の一番上の段ID ... " />
-            <marker date="1531632754575" expanded="false" signature="635:681" ph="/// 敵と敵の幅 ... " />
-            <marker date="1531632754575" expanded="false" signature="727:773" ph="/// 全段数の数 ... " />
-            <marker date="1531632754575" expanded="false" signature="807:859" ph="/// 敵の可動域の左下の座標 ... " />
-            <marker date="1531632754575" expanded="false" signature="911:963" ph="/// 敵の可動域の右上の座標 ... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -993,19 +693,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="35" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <marker date="1531633486873" expanded="false" signature="6:113" ph="..." />
-            <marker date="1531633486873" expanded="true" signature="115:161" ph="/// シーンの進行に関するクラス ... " />
-            <marker date="1531633486873" expanded="true" signature="211:804" ph="{...}" />
-            <marker date="1531633486873" expanded="false" signature="214:260" ph="/// 最初にロードするシーン ... " />
-            <marker date="1531633486873" expanded="false" signature="310:351" ph="/// 現在のシーン ... " />
-            <marker date="1531633486873" expanded="true" signature="382:444" ph="/// フェードイン, フェードアウトを行うオブジェクトの参照 ... " />
-            <marker date="1531633486873" expanded="true" signature="481:535" ph="/// フェードイン・フェードアウトをする時間 ... " />
-            <marker date="1531633486873" expanded="true" signature="588:628" ph="{...}" />
-            <marker date="1531633486873" expanded="true" signature="643:665" ph="{...}" />
-            <marker date="1531633486873" expanded="true" signature="668:713" ph="/// 最初のシーンをロード ... " />
-            <marker date="1531633486873" expanded="true" signature="731:802" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1013,25 +700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="35" column="17" lean-forward="true" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
-          <folding>
-            <marker date="1528633916720" expanded="true" signature="0:1091" ph="/* The MIT License (MIT) ... */" />
-            <marker date="1528633916720" expanded="false" signature="1098:1166" ph="..." />
-            <marker date="1528633916720" expanded="true" signature="1201:2818" ph="{...}" />
-            <marker date="1528633916720" expanded="true" signature="1231:1271" ph="{...}" />
-            <marker date="1528633916720" expanded="true" signature="1287:1332" ph="{...}" />
-            <marker date="1528633916720" expanded="false" signature="1368:1407" ph="{...}" />
-            <marker date="1528633916720" expanded="false" signature="1428:1473" ph="{...}" />
-            <marker date="1528633916720" expanded="false" signature="1539:1913" ph="{...}" />
-            <marker date="1528633916720" expanded="true" signature="1699:1820" ph="{...}" />
-            <marker date="1528633916720" expanded="true" signature="1891:1910" ph="{...}" />
-            <marker date="1528633916720" expanded="false" signature="1978:2364" ph="{...}" />
-            <marker date="1528633916720" expanded="true" signature="2144:2271" ph="{...}" />
-            <marker date="1528633916720" expanded="true" signature="2342:2361" ph="{...}" />
-            <marker date="1528633916720" expanded="false" signature="2426:2515" ph="{...}" />
-            <marker date="1528633916720" expanded="false" signature="2555:2592" ph="{...}" />
-            <marker date="1528633916720" expanded="false" signature="2653:2741" ph="{...}" />
-            <marker date="1528633916720" expanded="false" signature="2780:2816" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1039,34 +707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding>
-            <marker date="1531634381420" expanded="true" signature="6:113" ph="..." />
-            <marker date="1531634381420" expanded="true" signature="168:1539" ph="{...}" />
-            <marker date="1531634381420" expanded="false" signature="171:210" ph="/// シーン名 ... " />
-            <marker date="1531634381420" expanded="false" signature="247:296" ph="/// シーン名(readonly) ... " />
-            <marker date="1531634381420" expanded="false" signature="322:361" ph="{...}" />
-            <marker date="1531634381420" expanded="true" signature="331:358" ph="{...}" />
-            <marker date="1531634381420" expanded="false" signature="363:406" ph="/// 次のシーンの参照 ... " />
-            <marker date="1531634381420" expanded="false" signature="457:510" ph="/// 次のシーンの参照(readonly) ... " />
-            <marker date="1531634381420" expanded="false" signature="539:577" ph="{...}" />
-            <marker date="1531634381420" expanded="true" signature="548:574" ph="{...}" />
-            <marker date="1531634381420" expanded="true" signature="579:630" ph="/// シーンがロード後呼ばれるメソッド ... " />
-            <marker date="1531634381420" expanded="true" signature="665:672" ph="{...}" />
-            <marker date="1531634381420" expanded="false" signature="675:729" ph="/// シーンが破棄される前に呼ばれるメソッド ... " />
-            <marker date="1531634381420" expanded="true" signature="770:777" ph="{...}" />
-            <marker date="1531634381420" expanded="false" signature="782:826" ph="/// シーンをロードする ... " />
-            <marker date="1531634381420" expanded="true" signature="851:884" ph="{...}" />
-            <marker date="1531634381420" expanded="true" signature="887:935" ph="/// 非同期でシーンをロードする ... " />
-            <marker date="1531634381420" expanded="true" signature="955:1150" ph="{...}" />
-            <marker date="1531634381420" expanded="true" signature="1039:1147" ph="{...}" />
-            <marker date="1531634381420" expanded="true" signature="1060:1121" ph="{...}" />
-            <marker date="1531634381420" expanded="true" signature="1153:1213" ph="/// 現在のシーンを破棄、nextSceneをロードする ... " />
-            <marker date="1531634381420" expanded="true" signature="1242:1292" ph="{...}" />
-            <marker date="1531634381420" expanded="false" signature="1295:1344" ph="/// シーンを破棄する前に呼ばれる ... " />
-            <marker date="1531634381420" expanded="true" signature="1364:1400" ph="{...}" />
-            <marker date="1531634381420" expanded="false" signature="1403:1450" ph="/// 非同期でシーンを破棄する ... " />
-            <marker date="1531634381420" expanded="true" signature="1472:1537" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1074,14 +714,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-          <folding>
-            <marker date="1531634548957" expanded="false" signature="6:78" ph="..." />
-            <marker date="1531634548957" expanded="true" signature="80:126" ph="/// enemy単体の攻撃クラス ... " />
-            <marker date="1531634548957" expanded="true" signature="165:436" ph="{...}" />
-            <marker date="1531634548957" expanded="true" signature="172:215" ph="/// 攻撃 ... " />
-            <marker date="1531634548957" expanded="true" signature="268:434" ph="{...}" />
-            <marker date="1531634548957" expanded="true" signature="306:428" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1089,31 +721,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-          <folding>
-            <marker date="1531634613190" expanded="false" signature="6:104" ph="..." />
-            <marker date="1531634613190" expanded="true" signature="106:157" ph="/// enemyの当たり判定に関するクラス ... " />
-            <marker date="1531634613190" expanded="true" signature="199:600" ph="{...}" />
-            <marker date="1531634613190" expanded="true" signature="206:266" ph="/// 当たった際に呼ばれるデリゲートメソッド ... " />
-            <marker date="1531634613190" expanded="true" signature="326:379" ph="/// デリゲートメソッドの設定 ... " />
-            <marker date="1531634613190" expanded="true" signature="439:497" ph="{...}" />
-            <marker date="1531634613190" expanded="true" signature="550:598" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemysController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="25" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-          <folding>
-            <marker date="1531634453103" expanded="false" signature="6:147" ph="..." />
-            <marker date="1531634453103" expanded="true" signature="149:200" ph="/// Enemy全体のController ... " />
-            <marker date="1531634453103" expanded="true" signature="246:923" ph="{...}" />
-            <marker date="1531634453103" expanded="false" signature="253:318" ph="/// EnemyCrowdControllerへの参照 ... " />
-            <marker date="1531634453103" expanded="false" signature="403:461" ph="/// UFOControllerへの参照 ... " />
-            <marker date="1531634453103" expanded="true" signature="532:577" ph="/// 初期設定 ... " />
-            <marker date="1531634453103" expanded="true" signature="686:921" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1121,84 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="30" selection-end-line="30" />
-          <folding>
-            <marker date="1531571371651" expanded="false" signature="6:104" ph="..." />
-            <marker date="1531571371651" expanded="true" signature="151:504" ph="{...}" />
-            <marker date="1531571371651" expanded="false" signature="154:206" ph="/// エンターキーが押された時に行う処理 ... " />
-            <marker date="1531571371651" expanded="false" signature="244:296" ph="/// エンターキーが押された時に行う処理 ... " />
-            <marker date="1531571371651" expanded="true" signature="331:412" ph="{...}" />
-            <marker date="1531571371651" expanded="true" signature="340:371" ph="{...}" />
-            <marker date="1531571371651" expanded="true" signature="377:409" ph="{...}" />
-            <marker date="1531571371651" expanded="true" signature="429:502" ph="{...}" />
-            <marker date="1531571371651" expanded="true" signature="472:499" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Scene/TitleSceneState.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-          <folding>
-            <marker date="1531571881241" expanded="false" signature="6:78" ph="..." />
-            <marker date="1531571881241" expanded="false" signature="80:140" ph="/// ゲームシーンのロード・破棄された際に実行するメソッド群 ... " />
-            <marker date="1531571881241" expanded="true" signature="183:588" ph="{...}" />
-            <marker date="1531571881241" expanded="false" signature="186:253" ph="/// TitleシーンでEnterキーを押した時の処理を行うプレファブ ... " />
-            <marker date="1531571881241" expanded="true" signature="310:340" ph="{...}" />
-            <marker date="1531571881241" expanded="true" signature="377:536" ph="{...}" />
-            <marker date="1531571881241" expanded="true" signature="579:586" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/UFO/UFOController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="122" column="16" selection-start-line="122" selection-start-column="8" selection-end-line="122" selection-end-column="16" />
-          <folding>
-            <marker date="1531634993082" expanded="false" signature="6:153" ph="..." />
-            <marker date="1531634993082" expanded="true" signature="155:202" ph="/// UFOのController ... " />
-            <marker date="1531634993082" expanded="true" signature="245:3171" ph="{...}" />
-            <marker date="1531634993082" expanded="true" signature="252:302" ph="/// UFOのプレファブ ... " />
-            <marker date="1531634993082" expanded="true" signature="358:409" ph="/// UFOのインスタンス ... " />
-            <marker date="1531634993082" expanded="true" signature="449:519" ph="/// UFOのインスタンスにアタッチされたUFOMoverの参照 ... " />
-            <marker date="1531634993082" expanded="true" signature="555:626" ph="/// UFOのインスタンスにアタッチされたUFOHealthの参照 ... " />
-            <marker date="1531634993082" expanded="true" signature="664:710" ph="/// UFOの幅 ... " />
-            <marker date="1531634993082" expanded="true" signature="760:813" ph="/// UFOが生成される位置y ... " />
-            <marker date="1531634993082" expanded="true" signature="867:920" ph="/// UFOが出現する時間感覚 ... " />
-            <marker date="1531634993082" expanded="true" signature="975:1023" ph="/// 画面端の位置x ... " />
-            <marker date="1531634993082" expanded="true" signature="1058:1117" ph="/// 倒した時にポイント加算をするメソッド ... " />
-            <marker date="1531634993082" expanded="true" signature="1163:1212" ph="/// 画面右上端の位置 ... " />
-            <marker date="1531634993082" expanded="true" signature="1280:1363" ph="{...}" />
-            <marker date="1531634993082" expanded="true" signature="1369:1427" ph="/// UFOが死んだ時に呼ばれるメソッド ... " />
-            <marker date="1531634993082" expanded="false" signature="1492:1569" ph="{...}" />
-            <marker date="1531634993082" expanded="true" signature="1587:1924" ph="{...}" />
-            <marker date="1531634993082" expanded="true" signature="1618:1680" ph="{...}" />
-            <marker date="1531634993082" expanded="true" signature="1930:1975" ph="/// 初期設定 ... " />
-            <marker date="1531634993082" expanded="true" signature="2067:2225" ph="{...}" />
-            <marker date="1531634993082" expanded="true" signature="2231:2302" ph="/// 移動 ... " />
-            <marker date="1531634993082" expanded="true" signature="2325:2640" ph="{...}" />
-            <marker date="1531634993082" expanded="true" signature="2413:2634" ph="{...}" />
-            <marker date="1531634993082" expanded="true" signature="2455:2544" ph="{...}" />
-            <marker date="1531634993082" expanded="true" signature="2646:2695" ph="/// UFOを稼働する ... " />
-            <marker date="1531634993082" expanded="true" signature="2723:3169" ph="{...}" />
-            <marker date="1531634993082" expanded="true" signature="3078:3132" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Scene/GameSceneState.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding>
-            <marker date="1531568510654" expanded="false" signature="6:78" ph="..." />
-            <marker date="1531568510654" expanded="false" signature="80:140" ph="/// ゲームシーンのロード・破棄された際に実行するメソッド群 ... " />
-            <marker date="1531568510654" expanded="true" signature="182:324" ph="{...}" />
-            <marker date="1531568510654" expanded="false" signature="197:226" ph="{...}" />
-            <marker date="1531568510654" expanded="false" signature="263:272" ph="{...}" />
-            <marker date="1531568510654" expanded="false" signature="315:322" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1206,35 +735,275 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-          <folding>
-            <marker date="1531635035002" expanded="false" signature="6:104" ph="..." />
-            <marker date="1531635035002" expanded="true" signature="106:152" ph="/// UFOのHPに関するクラス ... " />
-            <marker date="1531635035002" expanded="true" signature="189:531" ph="{...}" />
-            <marker date="1531635035002" expanded="true" signature="196:240" ph="/// 得点表 ... " />
-            <marker date="1531635035002" expanded="true" signature="298:350" ph="/// 死んだ時に呼ぶメソッド ... " />
-            <marker date="1531635035002" expanded="true" signature="386:529" ph="{...}" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Scene/TitleSceneState.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/UFO/UFOController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1695">
+          <caret line="122" column="16" selection-start-line="122" selection-start-column="8" selection-end-line="122" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Scene/GameSceneState.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="2" column="18" lean-forward="true" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/UFO/UFOMover.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyHealth.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
           <folding>
-            <marker date="1531635599703" expanded="false" signature="6:104" ph="..." />
-            <marker date="1531635599703" expanded="true" signature="106:152" ph="/// UFOの移動に関するクラス ... " />
-            <marker date="1531635599703" expanded="true" signature="190:1310" ph="{...}" />
-            <marker date="1531635599703" expanded="true" signature="197:246" ph="/// UFOの移動速度 ... " />
-            <marker date="1531635599703" expanded="true" signature="293:354" ph="/// 端まで到着した時に呼ぶデリゲートメソッド ... " />
-            <marker date="1531635599703" expanded="true" signature="406:457" ph="/// 移動方向を決める数値 ... " />
-            <marker date="1531635599703" expanded="true" signature="494:541" ph="/// 画面端の位置 ... " />
-            <marker date="1531635599703" expanded="true" signature="585:635" ph="/// 移動のための値設定 ... " />
-            <marker date="1531635599703" expanded="true" signature="723:912" ph="{...}" />
-            <marker date="1531635599703" expanded="true" signature="765:906" ph="{...}" />
-            <marker date="1531635599703" expanded="true" signature="939:1308" ph="{...}" />
-            <marker date="1531635599703" expanded="true" signature="1113:1163" ph="{...}" />
-            <marker date="1531635599703" expanded="true" signature="1252:1302" ph="{...}" />
+            <marker date="1531834699733" expanded="false" signature="6:104" ph="..." />
+            <marker date="1531834699733" expanded="false" signature="106:157" ph="/// EnemyのHPや生存に関するクラス ... " />
+            <marker date="1531834699733" expanded="true" signature="198:2034" ph="{...}" />
+            <marker date="1531834699733" expanded="false" signature="205:250" ph="/// 初期HP ... " />
+            <marker date="1531834699733" expanded="false" signature="301:363" ph="/// Enemyの当たり判定コンポーネントの参照 ... " />
+            <marker date="1531834699733" expanded="false" signature="431:477" ph="/// 現在のHP ... " />
+            <marker date="1531834699733" expanded="false" signature="506:561" ph="/// 倒した時にもらえるpoint ... " />
+            <marker date="1531834699733" expanded="false" signature="594:657" ph="/// 倒した時にスコア加算をするデリゲートメソッド ... " />
+            <marker date="1531834699733" expanded="false" signature="739:822" ph="{...}" />
+            <marker date="1531834699733" expanded="false" signature="828:885" ph="/// 倒した時に呼ぶデリゲートメソッド ... " />
+            <marker date="1531834699733" expanded="false" signature="951:1028" ph="{...}" />
+            <marker date="1531834699733" expanded="false" signature="1056:1090" ph="{...}" />
+            <marker date="1531834699733" expanded="false" signature="1108:1387" ph="{...}" />
+            <marker date="1531834699733" expanded="true" signature="1152:1379" ph="{...}" />
+            <marker date="1531834699733" expanded="true" signature="1216:1369" ph="{...}" />
+            <marker date="1531834699733" expanded="true" signature="1290:1355" ph="{...}" />
+            <marker date="1531834699733" expanded="false" signature="1393:1438" ph="/// 初期設定 ... " />
+            <marker date="1531834699733" expanded="true" signature="1523:1635" ph="{...}" />
+            <marker date="1531834699733" expanded="false" signature="1641:1688" ph="/// hpを減らす ... " />
+            <marker date="1531834699733" expanded="false" signature="1710:1736" ph="{...}" />
+            <marker date="1531834699733" expanded="false" signature="1742:1790" ph="/// 死んだかどうか ... " />
+            <marker date="1531834699733" expanded="false" signature="1808:1844" ph="{...}" />
+            <marker date="1531834699733" expanded="false" signature="1850:1902" ph="/// 死んだ時に呼ばれる関数 ... " />
+            <marker date="1531834699733" expanded="false" signature="1937:2032" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyRowController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="59" column="26" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
+          <folding>
+            <marker date="1531632888505" expanded="false" signature="6:139" ph="..." />
+            <marker date="1531632888505" expanded="false" signature="141:189" ph="/// Enemyの行を管理するクラス ... " />
+            <marker date="1531632888505" expanded="true" signature="238:4046" ph="{...}" />
+            <marker date="1531632888505" expanded="false" signature="244:306" ph="/// 隣の敵の位置に移動するのに、何回移動するか ... " />
+            <marker date="1531632888505" expanded="false" signature="372:430" ph="/// 行のenemyのゲームオブジェクト ... " />
+            <marker date="1531632888505" expanded="false" signature="474:522" ph="/// 行に関する情報 ... " />
+            <marker date="1531632888505" expanded="false" signature="579:633" ph="/// 行に対してのEnemy作成 ... " />
+            <marker date="1531632888505" expanded="true" signature="769:2358" ph="{...}" />
+            <marker date="1531632888505" expanded="true" signature="1327:2352" ph="{...}" />
+            <marker date="1531632888505" expanded="true" signature="2150:2231" ph="{...}" />
+            <marker date="1531632888505" expanded="false" signature="2364:2411" ph="/// 前に移動する ... " />
+            <marker date="1531632888505" expanded="false" signature="2440:2655" ph="{...}" />
+            <marker date="1531632888505" expanded="true" signature="2493:2649" ph="{...}" />
+            <marker date="1531632888505" expanded="true" signature="2540:2639" ph="{...}" />
+            <marker date="1531632888505" expanded="false" signature="2661:2709" ph="/// 左右に移動する ... " />
+            <marker date="1531632888505" expanded="false" signature="2736:2949" ph="{...}" />
+            <marker date="1531632888505" expanded="true" signature="2789:2943" ph="{...}" />
+            <marker date="1531632888505" expanded="true" signature="2836:2933" ph="{...}" />
+            <marker date="1531632888505" expanded="false" signature="2955:3010" ph="/// 次の移動で左右に移動できるか ... " />
+            <marker date="1531632888505" expanded="false" signature="3040:3294" ph="{...}" />
+            <marker date="1531632888505" expanded="true" signature="3093:3267" ph="{...}" />
+            <marker date="1531632888505" expanded="true" signature="3199:3257" ph="{...}" />
+            <marker date="1531632888505" expanded="false" signature="3300:3362" ph="/// 引数で指定した列のenemyが生きているか ... " />
+            <marker date="1531632888505" expanded="false" signature="3394:3443" ph="{...}" />
+            <marker date="1531632888505" expanded="false" signature="3449:3511" ph="/// 引数で指定した列のenemyに弾を撃たせる ... " />
+            <marker date="1531632888505" expanded="false" signature="3565:3876" ph="{...}" />
+            <marker date="1531632888505" expanded="true" signature="3635:3675" ph="{...}" />
+            <marker date="1531632888505" expanded="true" signature="3751:3791" ph="{...}" />
+            <marker date="1531632888505" expanded="false" signature="3886:3936" ph="/// 列idが正常な値か ... " />
+            <marker date="1531632888505" expanded="false" signature="3975:4044" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyCrowdController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="117" column="17" selection-start-line="117" selection-start-column="17" selection-end-line="117" selection-end-column="17" />
+          <folding>
+            <marker date="1531632826341" expanded="false" signature="6:207" ph="..." />
+            <marker date="1531632826341" expanded="false" signature="209:260" ph="/// Enemy全体のController ... " />
+            <marker date="1531632826341" expanded="true" signature="311:9405" ph="{...}" />
+            <marker date="1531632826341" expanded="false" signature="364:413" ph="/// Enemyの列数 ... " />
+            <marker date="1531632826341" expanded="false" signature="471:520" ph="/// Enemyの段数 ... " />
+            <marker date="1531632826341" expanded="false" signature="578:636" ph="/// Enemyの列ごとのプレファブ情報 ... " />
+            <marker date="1531632826341" expanded="false" signature="708:773" ph="/// ufoを出現させるのに必要なEnemyの最低の数 ... " />
+            <marker date="1531632826341" expanded="false" signature="834:885" ph="/// スタート前の停止時間 ... " />
+            <marker date="1531632826341" expanded="false" signature="947:998" ph="/// Enemyの攻撃間隔 ... " />
+            <marker date="1531632826341" expanded="false" signature="1056:1122" ph="/// Enemyの一番上の段のy座標と画面上のy座標の差 ... " />
+            <marker date="1531632826341" expanded="false" signature="1183:1249" ph="/// Enemyの一番下の段のy座標と画面下のy座標の差 ... " />
+            <marker date="1531632826341" expanded="false" signature="1314:1380" ph="/// Enemyの横の間隔(基本、8移動でそこまで移動) ... " />
+            <marker date="1531632826341" expanded="false" signature="1444:1489" ph="/// 段数の数 ... " />
+            <marker date="1531632826341" expanded="false" signature="1533:1586" ph="/// １行移動するのに待つ時間 ... " />
+            <marker date="1531632826341" expanded="false" signature="1650:1704" ph="/// bulletのPrefab ... " />
+            <marker date="1531632826341" expanded="false" signature="1771:1849" ph="/// 列ごとのController(EnemyRowController)の参照 ... " />
+            <marker date="1531632826341" expanded="false" signature="1905:1971" ph="/// Enemyを倒した時のスコア加算デリゲートメソッド ... " />
+            <marker date="1531632826341" expanded="false" signature="2024:2089" ph="/// Enemy全体が死んだ際に呼ぶデリゲートメソッド ... " />
+            <marker date="1531632826341" expanded="false" signature="2137:2194" ph="/// Enemyの可動領域の左下の座標 ... " />
+            <marker date="1531632826341" expanded="false" signature="2242:2299" ph="/// Enemyの可動領域の右上の座標 ... " />
+            <marker date="1531632826341" expanded="false" signature="2347:2400" ph="/// 列ごとの残りEnemy数 ... " />
+            <marker date="1531632826341" expanded="false" signature="2448:2509" ph="/// 前の移動の際に、方向転換を行ったかどうか ... " />
+            <marker date="1531632826341" expanded="false" signature="2548:2611" ph="/// Enemyが生きている列idを保存したリスト ... " />
+            <marker date="1531632826341" expanded="false" signature="2667:2717" ph="/// 敵の弾のプレファブ ... " />
+            <marker date="1531632826341" expanded="false" signature="2778:3056" ph="{...}" />
+            <marker date="1531632826341" expanded="false" signature="3066:3114" ph="/// 初期設定を行う ... " />
+            <marker date="1531632826341" expanded="true" signature="3223:3460" ph="{...}" />
+            <marker date="1531632826341" expanded="false" signature="3466:3533" ph="/// enemyLineInfoを行idの順にソートし直す ... " />
+            <marker date="1531632826341" expanded="false" signature="3560:3879" ph="{...}" />
+            <marker date="1531632826341" expanded="true" signature="3741:3873" ph="{...}" />
+            <marker date="1531632826341" expanded="false" signature="3885:3934" ph="/// Enemyの生成 ... " />
+            <marker date="1531632826341" expanded="false" signature="3960:6013" ph="{...}" />
+            <marker date="1531632826341" expanded="true" signature="4248:4309" ph="{...}" />
+            <marker date="1531632826341" expanded="true" signature="4454:6007" ph="{...}" />
+            <marker date="1531632826341" expanded="true" signature="5652:5995" ph="{...}" />
+            <marker date="1531632826341" expanded="true" signature="5773:5843" ph="{...}" />
+            <marker date="1531632826341" expanded="true" signature="5917:5981" ph="{...}" />
+            <marker date="1531632826341" expanded="false" signature="6019:6074" ph="/// Enemyの移動・攻撃を行う ... " />
+            <marker date="1531632826341" expanded="false" signature="6104:6236" ph="{...}" />
+            <marker date="1531632826341" expanded="false" signature="6242:6294" ph="/// enemyの移動を行う ... " />
+            <marker date="1531632826341" expanded="false" signature="6325:7213" ph="{...}" />
+            <marker date="1531632826341" expanded="true" signature="6429:7207" ph="{...}" />
+            <marker date="1531632826341" expanded="true" signature="6509:6724" ph="/* 各行で前方に進むかの処理をしようとすると、端の敵が倒された時に前進するタイミングが行によってずれる ... */" />
+            <marker date="1531632826341" expanded="true" signature="6823:7197" ph="{...}" />
+            <marker date="1531632826341" expanded="true" signature="6889:6970" ph="{...}" />
+            <marker date="1531632826341" expanded="true" signature="6991:7097" ph="{...}" />
+            <marker date="1531632826341" expanded="false" signature="7219:7278" ph="/// 次の移動で全て行が左右に移動できるか ... " />
+            <marker date="1531632826341" expanded="false" signature="7301:7575" ph="{...}" />
+            <marker date="1531632826341" expanded="true" signature="7356:7523" ph="{...}" />
+            <marker date="1531632826341" expanded="true" signature="7423:7513" ph="{...}" />
+            <marker date="1531632826341" expanded="false" signature="7581:7626" ph="/// 攻撃する ... " />
+            <marker date="1531632826341" expanded="false" signature="7649:8415" ph="{...}" />
+            <marker date="1531632826341" expanded="true" signature="7724:8409" ph="{...}" />
+            <marker date="1531632826341" expanded="true" signature="8058:8174" ph="{...}" />
+            <marker date="1531632826341" expanded="true" signature="8191:8399" ph="{...}" />
+            <marker date="1531632826341" expanded="false" signature="8425:8496" ph="/// 引数で渡した行idに該当する行を生成するのに必要な情報を返す ... " />
+            <marker date="1531632826341" expanded="false" signature="8538:8869" ph="{...}" />
+            <marker date="1531632826341" expanded="true" signature="8599:8842" ph="{...}" />
+            <marker date="1531632826341" expanded="true" signature="8762:8832" ph="{...}" />
+            <marker date="1531632826341" expanded="false" signature="8875:8979" ph="/// 行と列のidのEnemyが生存しているかどうかを返す ... " />
+            <marker date="1531632826341" expanded="false" signature="9026:9089" ph="{...}" />
+            <marker date="1531632826341" expanded="false" signature="9095:9167" ph="/// 列を示すcolumnIdに対して、生きている最小の行Idを返す ... " />
+            <marker date="1531632826341" expanded="false" signature="9206:9403" ph="{...}" />
+            <marker date="1531632826341" expanded="true" signature="9261:9378" ph="{...}" />
+            <marker date="1531632826341" expanded="true" signature="9314:9368" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemysController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="25" column="108" selection-start-line="25" selection-start-column="108" selection-end-line="25" selection-end-column="108" />
+          <folding>
+            <marker date="1531634453103" expanded="false" signature="6:147" ph="..." />
+            <marker date="1531634453103" expanded="false" signature="149:200" ph="/// Enemy全体のController ... " />
+            <marker date="1531634453103" expanded="true" signature="246:923" ph="{...}" />
+            <marker date="1531634453103" expanded="false" signature="253:318" ph="/// EnemyCrowdControllerへの参照 ... " />
+            <marker date="1531634453103" expanded="false" signature="403:461" ph="/// UFOControllerへの参照 ... " />
+            <marker date="1531634453103" expanded="false" signature="532:577" ph="/// 初期設定 ... " />
+            <marker date="1531634453103" expanded="true" signature="686:921" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/UIController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+          <folding>
+            <marker date="1531835648393" expanded="true" signature="6:100" ph="..." />
+            <marker date="1531835648393" expanded="true" signature="143:468" ph="{...}" />
+            <marker date="1531835648393" expanded="true" signature="150:205" ph="/// スコアの数字のテキストの参照 ... " />
+            <marker date="1531835648393" expanded="true" signature="260:315" ph="/// scoreの表示フォーマット ... " />
+            <marker date="1531835648393" expanded="true" signature="400:466" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="56" column="10" lean-forward="true" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
+          <folding>
+            <marker date="1531835818425" expanded="false" signature="6:104" ph="..." />
+            <marker date="1531835818425" expanded="false" signature="106:156" ph="/// Gameの全体的な処理や連携を行う ... " />
+            <marker date="1531835818425" expanded="true" signature="200:2152" ph="{...}" />
+            <marker date="1531835818425" expanded="false" signature="207:267" ph="/// PlayerControllerの参照 ... " />
+            <marker date="1531835818425" expanded="false" signature="343:402" ph="/// EnemyControllerの参照 ... " />
+            <marker date="1531835818425" expanded="false" signature="478:525" ph="/// 移動制限の幅 ... " />
+            <marker date="1531835818425" expanded="true" signature="581:637" ph="/// UIControllerの参照 ... " />
+            <marker date="1531835818425" expanded="true" signature="706:753" ph="/// 現在のスコア ... " />
+            <marker date="1531835818425" expanded="true" signature="897:1514" ph="{...}" />
+            <marker date="1531835818425" expanded="true" signature="1540:2150" ph="{...}" />
+            <marker date="1531835818425" expanded="true" signature="1619:1719" ph="{...}" />
+            <marker date="1531835818425" expanded="true" signature="1784:1859" ph="{...}" />
+            <marker date="1531835818425" expanded="true" signature="1807:1849" ph="/* TODO Sceneの切り替え ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
+          <folding>
+            <marker date="1531637984557" expanded="false" signature="6:78" ph="..." />
+            <marker date="1531637984557" expanded="true" signature="126:1418" ph="{...}" />
+            <marker date="1531637984557" expanded="false" signature="129:176" ph="/// Playerのプレファブ ... " />
+            <marker date="1531637984557" expanded="false" signature="227:296" ph="/// 画面左下の座標からどれだけ離れた位置からPlayerの移動を解するか ... " />
+            <marker date="1531637984557" expanded="false" signature="358:413" ph="/// プレファブから生成したPlayerの参照 ... " />
+            <marker date="1531637984557" expanded="false" signature="450:520" ph="/// PlayerにアタッチされたPlayerMoverコンポーネントの参照 ... " />
+            <marker date="1531637984557" expanded="false" signature="564:635" ph="/// PlayerにアタッチされたPlayerHealthコンポーネントの参照 ... " />
+            <marker date="1531637984557" expanded="false" signature="680:749" ph="/// PlayerにアタッチされたPlayerShotコンポーネントの参照 ... " />
+            <marker date="1531637984557" expanded="false" signature="791:835" ph="/// playerの生成 ... " />
+            <marker date="1531637984557" expanded="true" signature="889:1275" ph="{...}" />
+            <marker date="1531637984557" expanded="true" signature="1179:1191" ph="{...}" />
+            <marker date="1531637984557" expanded="false" signature="1291:1415" ph="{...}" />
+            <marker date="1531637984557" expanded="true" signature="1382:1412" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <marker date="1531834593765" expanded="true" signature="6:104" ph="..." />
+            <marker date="1531834593765" expanded="true" signature="147:913" ph="{...}" />
+            <marker date="1531834593765" expanded="true" signature="151:190" ph="/// 初期残機 ... " />
+            <marker date="1531834593765" expanded="true" signature="231:280" ph="/// Playerが死んだ時の処理 ... " />
+            <marker date="1531834593765" expanded="true" signature="311:350" ph="/// 残り残機 ... " />
+            <marker date="1531834593765" expanded="true" signature="392:420" ph="{...}" />
+            <marker date="1531834593765" expanded="true" signature="423:477" ph="/// Playerが死んだ時の処理を登録する ... " />
+            <marker date="1531834593765" expanded="true" signature="527:559" ph="{...}" />
+            <marker date="1531834593765" expanded="true" signature="600:762" ph="{...}" />
+            <marker date="1531834593765" expanded="true" signature="659:759" ph="{...}" />
+            <marker date="1531834593765" expanded="true" signature="765:806" ph="/// HPを減らす ... " />
+            <marker date="1531834593765" expanded="true" signature="832:911" ph="{...}" />
+            <marker date="1531834593765" expanded="true" signature="870:908" ph="{...}" />
           </folding>
         </state>
       </provider>

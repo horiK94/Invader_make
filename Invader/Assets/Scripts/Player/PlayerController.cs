@@ -40,6 +40,11 @@ public class PlayerController : MonoBehaviour {
 		playerHealth = player.GetComponent<PlayerHealth>();
 		playerShot = player.GetComponent<PlayerShot>();
 		
+		playerHealth.SetDeathAction(() =>
+		{
+			
+		});
+		
 		//playerのx座標方向の移動可能範囲を設定
 		playerMover.SetLimitPos(_maxPos.x, _minPos.x);
 	}

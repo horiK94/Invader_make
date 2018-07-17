@@ -20,6 +20,15 @@ public class GameController : MonoBehaviour
     /// 移動制限の幅
     /// </summary>
     [SerializeField] private float limitWidth = 0;
+    /// <summary>
+    /// UIControllerの参照
+    /// </summary>
+    [SerializeField] private UIController uiController = null;
+
+    /// <summary>
+    /// 現在のスコア
+    /// </summary>
+    private int score = 0;
     
     // TODO UIControllerの追加
     private Vector3 minPos = Vector3.zero, maxPos = Vector3.zero;
@@ -32,6 +41,10 @@ public class GameController : MonoBehaviour
         //Player, Enemyの移動可能範囲を設定
         maxPos = rightUpPos - new Vector3(limitWidth, 0, 0);        //移動可能範囲の右上の座標
         minPos = leftDownPos + new Vector3(limitWidth, 0, 0);        //移動可能範囲の左下の座標
+        
+        //scoreの初期化
+        score = 0;
+        uiController.SetScore(score);
     }
 
     private void Start()
@@ -39,17 +52,20 @@ public class GameController : MonoBehaviour
         //Enemyを倒した時の処理
         UnityAction<int> OnAddScore = (score) =>
         {
-            Debug.Log("Score is " + score);
+            this.score += score;
+            uiController.SetScore(this.score);
         };
         //Enemyが全滅した時の処理
-        UnityAction OnDeath = () =>
+        UnityAction OnDeathAll = () =>
         {
             //TODO Sceneの切り替え
             //TODO UIの表示
         };
+
+        UnityAction OnDeathPlayer = () => { };
         
         //PlayerとEnemyを初期化
-        enemysController.BootUp(OnAddScore, OnDeath, maxPos, minPos);
+        enemysController.BootUp(OnAddScore, OnDeathAll, maxPos, minPos);
         playerController.BootUp(maxPos, minPos);
         
         //Playerを移動できるようにする
