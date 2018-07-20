@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour {
 
 	void Update()
 	{
-		playerMover.Move(Input.GetAxis("Horizontal"));
+		playerMover.Move(Input.GetAxis(Dictionary.InputText.HORIZONTAL));
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
 			playerShot.Shot();

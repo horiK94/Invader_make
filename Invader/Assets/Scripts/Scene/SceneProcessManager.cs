@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 /// <summary>
 /// シーンの進行に関するクラス
 /// </summary>
-public class SceneProcessManager : MonoBehaviour {
+public class SceneProcessManager : SingletonMonoBehaviour<SceneProcessManager> {
 	/// <summary>
 	/// 最初にロードするシーン
 	/// </summary>

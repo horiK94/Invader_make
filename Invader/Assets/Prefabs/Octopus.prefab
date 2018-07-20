@@ -171,7 +171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d18c620eeab6d477e9a3bab3a8daf6ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!114 &114208538896085396
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -205,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eeb787a2ab694f248fe12fc7ec9a3a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotPos: {x: 0, y: -3, z: 0}
+  shotPos: {x: 0, y: -1, z: 0}
   enemyHealth: {fileID: 114909167191730210}
   enemyMesh: {fileID: 114860927201928664}
   enemyMove: {fileID: 114431099131688170}

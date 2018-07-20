@@ -23,6 +23,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Bullet.cs" t="Include" />
+          <e p="Dictionary.cs" t="Include" />
           <e p="Enemy" t="Include">
             <e p="EnemyController.cs" t="Include" />
             <e p="EnemyCrowdController.cs" t="Include" />

@@ -22,6 +22,7 @@ public class PlayerHealth : MonoBehaviour
 	void Awake()
 	{
 		resultHp = startHp;
+		this.onDeath += () => { gameObject.SetActive(false); };
 	}
 
 	/// <summary>

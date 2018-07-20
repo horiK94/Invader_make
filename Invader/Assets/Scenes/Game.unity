@@ -606,7 +606,7 @@ MonoBehaviour:
   ufoPopMinEnemyNum: 10
   startWaitTime: 2.5
   shotInterval: 1
-  enemyTopPosYDiff: 4
+  enemyTopPosYDiff: 6
   enemyBottomPosYDiff: 0
   enemyWidthInterval: 1.8
   stageNum: 19
@@ -1006,7 +1006,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ufoPrefab: {fileID: 1795739305026786, guid: e6e9cf000248944e6807bb44b1b9e58f, type: 2}
   ufoWidth: 1
-  ufoStartPosY: 2
+  ufoPosYDiff: 5
   interval: 5
 --- !u!1 &1908278082
 GameObject:
