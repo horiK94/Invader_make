@@ -15,7 +15,7 @@ public class EnemyShot : MonoBehaviour
         if (!bullet.activeSelf)
         {
             bullet.SetActive(true);
-            bullet.transform.position = transform.position + pos;
+            bullet.transform.position = pos;
         }
     }
 }
