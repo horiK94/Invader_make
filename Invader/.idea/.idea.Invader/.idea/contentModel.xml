@@ -56,6 +56,7 @@
             <e p="TitleController.cs" t="Include" />
             <e p="TitleSceneState.cs" t="Include" />
           </e>
+          <e p="SingletonMonoBehaviour.cs" t="Include" />
         </e>
         <e p="Test" t="Include">
           <e p="Test.cs" t="Include" />

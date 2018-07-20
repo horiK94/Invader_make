@@ -61,12 +61,14 @@ public class GameController : MonoBehaviour
             //TODO Sceneの切り替え
             //TODO UIの表示
         };
-
-        UnityAction OnDeathPlayer = () => { };
         
         //PlayerとEnemyを初期化
         enemysController.BootUp(OnAddScore, OnDeathAll, maxPos, minPos);
-        playerController.BootUp(maxPos, minPos);
+        playerController.BootUp(maxPos, minPos, () =>
+        {
+            //TODO GAMEOVERと表示
+            
+        });
         
         //Playerを移動できるようにする
         playerController.enabled = true;

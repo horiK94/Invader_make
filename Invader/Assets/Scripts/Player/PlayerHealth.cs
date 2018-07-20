@@ -17,6 +17,7 @@ public class PlayerHealth : MonoBehaviour
 	/// 残り残機
 	/// </summary>
 	private int resultHp = 0;
+	public int ResultHp => resultHp;
 
 	void Awake()
 	{
