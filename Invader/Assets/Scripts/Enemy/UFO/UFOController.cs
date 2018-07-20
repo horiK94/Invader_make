@@ -31,9 +31,9 @@ public class UFOController : MonoBehaviour
     /// </summary>
     [SerializeField] private float ufoWidth = 0;
     /// <summary>
-    /// UFOが生成される位置y
+    /// UFOが生成される位置yは画面上端からどのくらい離れているか
     /// </summary>
-    [SerializeField] private float ufoStartPosY = 0;
+    [SerializeField] private float ufoPosYDiff = 0;
     /// <summary>
     /// UFOが出現する時間感覚
     /// </summary>
@@ -117,7 +117,7 @@ public class UFOController : MonoBehaviour
         bool isRight = Random.Range(0, 2) == 0 ? true : false;
         float sign = isRight ? 1 : -1;
         
-        ufo.transform.position = new Vector3(sign * (cornerPosX + ufoWidth), this.maxPos.y - ufoStartPosY, 0);
+        ufo.transform.position = new Vector3(sign * (cornerPosX + ufoWidth), this.maxPos.y - ufoPosYDiff, 0);
         float otherCornerPosX = -sign * (cornerPosX + ufoWidth);
 
         ufoMover.PrepareToMove(-sign, otherCornerPosX, () =>
