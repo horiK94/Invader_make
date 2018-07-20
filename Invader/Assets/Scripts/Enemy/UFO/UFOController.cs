@@ -13,7 +13,7 @@ public class UFOController : MonoBehaviour
     /// <summary>
     /// UFOのプレファブ
     /// </summary>
-    [SerializeField] private GameObject ufoPrefab;
+    [SerializeField] private GameObject ufoPrefab = null;
     /// <summary>
     /// UFOのインスタンス
     /// </summary>
@@ -21,19 +21,19 @@ public class UFOController : MonoBehaviour
     /// <summary>
     /// UFOのインスタンスにアタッチされたUFOMoverの参照
     /// </summary>
-    private UFOMover ufoMover;
+    private UFOMover ufoMover = null;
     /// <summary>
     /// UFOのインスタンスにアタッチされたUFOHealthの参照
     /// </summary>
-    private UFOHealth ufoHelath;
+    private UFOHealth ufoHelath = null;
     /// <summary>
     /// UFOの幅
     /// </summary>
-    [SerializeField] private float ufoWidth;
+    [SerializeField] private float ufoWidth = 0;
     /// <summary>
     /// UFOが生成される位置y
     /// </summary>
-    [SerializeField] private float ufoStartPosY;
+    [SerializeField] private float ufoStartPosY = 0;
     /// <summary>
     /// UFOが出現する時間感覚
     /// </summary>
@@ -41,15 +41,15 @@ public class UFOController : MonoBehaviour
     /// <summary>
     /// 画面端の位置x
     /// </summary>
-    private float cornerPosX;
+    private float cornerPosX = 0;
     /// <summary>
     /// 倒した時にポイント加算をするメソッド
     /// </summary>
-    private UnityAction<int> onAddScore;
+    private UnityAction<int> onAddScore = null;
     /// <summary>
     /// 画面右上端の位置
     /// </summary>
-    private Vector3 maxPos;
+    private Vector3 maxPos = Vector3.zero;
 
     public UnityAction<int> OnAddScore
     {
@@ -60,7 +60,7 @@ public class UFOController : MonoBehaviour
     /// <summary>
     /// UFOが死んだ時に呼ばれるメソッド
     /// </summary>
-    private UnityAction onDeath;
+    private UnityAction onDeath = null;
 
     public UnityAction OnDeath
     {
