@@ -29,6 +29,11 @@ public class GameController : MonoBehaviour
     /// 現在のスコア
     /// </summary>
     private int score = 0;
+
+    /// <summary>
+    /// ステージ番号
+    /// </summary>
+    private int stage = 1;
     
     // TODO UIControllerの追加
     private Vector3 minPos = Vector3.zero, maxPos = Vector3.zero;
@@ -58,6 +63,7 @@ public class GameController : MonoBehaviour
         //Enemyが全滅した時の処理
         UnityAction OnDeathAll = () =>
         {
+            stage++;
             //TODO Sceneの切り替え
             //TODO UIの表示
         };
