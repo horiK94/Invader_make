@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 114063285985840820}
   - component: {fileID: 114949245153204366}
   - component: {fileID: 114140136469370126}
+  - component: {fileID: 65911318837379260}
+  - component: {fileID: 65983700522158530}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -38,7 +40,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4141603291601602}
   - component: {fileID: 33199716096743892}
-  - component: {fileID: 65139790113759062}
   - component: {fileID: 23189842328153860}
   m_Layer: 8
   m_Name: Player_top
@@ -71,7 +72,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4250494346879146}
   - component: {fileID: 33724131431465784}
-  - component: {fileID: 65325884840916482}
   - component: {fileID: 23273697631772690}
   m_Layer: 8
   m_Name: Player_bottom
@@ -126,7 +126,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1209003290138326}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4250494346879146}
@@ -219,30 +219,30 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1752907540000548}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65139790113759062
+--- !u!65 &65911318837379260
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1262261172870450}
+  m_GameObject: {fileID: 1209003290138326}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65325884840916482
+  m_Size: {x: 0.4, y: 0.8, z: 1}
+  m_Center: {x: 0, y: -0.1, z: 0}
+--- !u!65 &65983700522158530
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1752907540000548}
+  m_GameObject: {fileID: 1209003290138326}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 0.5, z: 1}
+  m_Center: {x: 0, y: -0.25, z: 0}
 --- !u!114 &114063285985840820
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -280,3 +280,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 969a2ac48067d4aacbd2846acb1fc734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startHp: 0

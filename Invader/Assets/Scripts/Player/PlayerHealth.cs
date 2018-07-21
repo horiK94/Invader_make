@@ -22,7 +22,6 @@ public class PlayerHealth : MonoBehaviour
 	void Awake()
 	{
 		resultHp = startHp;
-		this.onDeath += () => { gameObject.SetActive(false); };
 	}
 
 	/// <summary>
@@ -32,10 +31,10 @@ public class PlayerHealth : MonoBehaviour
 		this.onDeath += _onDeath;
 	}
 
-	void OnCollisionEnter(Collision other)
+	void OnTriggerEnter(Collider other)
 	{
-		if (other.gameObject.GetComponent<Bullet>() != null) {		//TODO 弾なら~といった実装をする
-			this.onDeath();
+		if (other.GetComponent<Bullet>() != null) {		//TODO 弾なら~といった実装をする
+			DecreaseHp();
 			//TODO 発散するアニメーション
 			gameObject.SetActive(false);
 		}
