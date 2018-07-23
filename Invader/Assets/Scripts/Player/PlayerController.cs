@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour {
 	/// </summary>
 	[SerializeField]GameObject playerPrefab = null;
 	/// <summary>
-	/// 画面左下の座標からどれだけ離れた位置からPlayerの移動を解するか
+	/// 画面左下の座標からどれだけ離れた位置からPlayerの移動を開始するか
 	/// </summary>
 	[SerializeField]Vector3 minPosDiffAtStart = Vector3.zero;
 	
@@ -46,6 +46,11 @@ public class PlayerController : MonoBehaviour {
 	private MeshRenderer playerMesh = null;
 	
 	/// <summary>
+	/// 左下の座標
+	/// </summary>
+	private Vector3 minPos = Vector3.zero;
+	
+	/// <summary>
 	/// 残り残機
 	/// </summary>
 	private int resultHp = 0;
@@ -61,7 +66,8 @@ public class PlayerController : MonoBehaviour {
 	/// </summary>
 	public void BootUp(Vector3 _maxPos, Vector3 _minPos, UnityAction onDeath)
 	{
-		player = Instantiate (playerPrefab, _minPos + minPosDiffAtStart, Quaternion.identity);
+		minPos = _minPos;
+		player = Instantiate (playerPrefab, minPos + minPosDiffAtStart, Quaternion.identity);
 		
 		playerMover = player.GetComponent<PlayerMover>();
 		playerHealth = player.GetComponent<PlayerHealth>();
@@ -117,7 +123,7 @@ public class PlayerController : MonoBehaviour {
 		{
 			if (ResultHp > 0)
 			{
-				player.gameObject.SetActive(true);
+				Restart();
 			}
 		}));
 	}
@@ -126,5 +132,11 @@ public class PlayerController : MonoBehaviour {
 	{
 		yield return new WaitForSeconds(waitTimeForRevival);
 		callback();
+	}
+
+	void Restart()
+	{
+		player.transform.position = minPos + minPosDiffAtStart;
+		player.gameObject.SetActive(true);
 	}
 }

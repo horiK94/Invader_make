@@ -4,13 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/Assets/EnemyCrowdController.cs" line="117" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2956f5a3-3e93-4b74-b8e6-f4eb5d81684d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Invader/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Invader/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" afterDir="false" />
-    </list>
+    <list default="true" id="2956f5a3-3e93-4b74-b8e6-f4eb5d81684d" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,36 +35,37 @@
       <file leaf-file-name="PlayerController.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="84" selection-start-line="84" selection-end-line="84" />
+            <state relative-caret-position="745">
+              <caret line="121" column="12" selection-start-line="121" selection-start-column="12" selection-end-line="121" selection-end-column="12" />
               <folding>
-                <marker date="1532351113581" expanded="true" signature="22:120" ph="..." />
-                <marker date="1532351113581" expanded="true" signature="168:2505" ph="{...}" />
-                <marker date="1532351113581" expanded="true" signature="171:210" ph="/// 初期残機 ... " />
-                <marker date="1532351113581" expanded="true" signature="253:300" ph="/// Playerのプレファブ ... " />
-                <marker date="1532351113581" expanded="true" signature="351:420" ph="/// 画面左下の座標からどれだけ離れた位置からPlayerの移動を解するか ... " />
-                <marker date="1532351113581" expanded="true" signature="483:535" ph="/// 死んだあとに復活するのにかかる時間 ... " />
-                <marker date="1532351113581" expanded="true" signature="597:652" ph="/// プレファブから生成したPlayerの参照 ... " />
-                <marker date="1532351113581" expanded="true" signature="689:759" ph="/// PlayerにアタッチされたPlayerMoverコンポーネントの参照 ... " />
-                <marker date="1532351113581" expanded="true" signature="803:874" ph="/// PlayerにアタッチされたPlayerHealthコンポーネントの参照 ... " />
-                <marker date="1532351113581" expanded="true" signature="919:988" ph="/// PlayerにアタッチされたPlayerShotコンポーネントの参照 ... " />
-                <marker date="1532351113581" expanded="true" signature="1029:1091" ph="/// playrにアタッチされたMeshコンポーネントの参照 ... " />
-                <marker date="1532351113581" expanded="true" signature="1136:1175" ph="/// 残り残機 ... " />
-                <marker date="1532351113581" expanded="true" signature="1252:1280" ph="{...}" />
-                <marker date="1532351113581" expanded="true" signature="1283:1327" ph="/// playerの生成 ... " />
-                <marker date="1532351113581" expanded="true" signature="1402:1844" ph="{...}" />
-                <marker date="1532351113581" expanded="true" signature="1692:1760" ph="{...}" />
-                <marker date="1532351113581" expanded="true" signature="1731:1756" ph="{...}" />
-                <marker date="1532351113581" expanded="true" signature="1860:2003" ph="{...}" />
-                <marker date="1532351113581" expanded="true" signature="1970:2000" ph="{...}" />
-                <marker date="1532351113581" expanded="true" signature="2007:2052" ph="/// 攻撃を受けた時の処理 ... " />
-                <marker date="1532351113581" expanded="true" signature="2067:2107" ph="{...}" />
-                <marker date="1532351113581" expanded="true" signature="2110:2151" ph="/// HPを減らす ... " />
-                <marker date="1532351113581" expanded="true" signature="2170:2190" ph="{...}" />
-                <marker date="1532351113581" expanded="true" signature="2194:2246" ph="/// 攻撃を受けた時の見た目に関する処理 ... " />
-                <marker date="1532351113581" expanded="true" signature="2267:2412" ph="{...}" />
-                <marker date="1532351113581" expanded="true" signature="2363:2409" ph="{...}" />
-                <marker date="1532351113581" expanded="true" signature="2442:2503" ph="{...}" />
+                <marker date="1532351344354" expanded="true" signature="22:120" ph="..." />
+                <marker date="1532351344354" expanded="true" signature="168:2579" ph="{...}" />
+                <marker date="1532351344354" expanded="true" signature="171:210" ph="/// 初期残機 ... " />
+                <marker date="1532351344354" expanded="true" signature="253:300" ph="/// Playerのプレファブ ... " />
+                <marker date="1532351344354" expanded="true" signature="351:420" ph="/// 画面左下の座標からどれだけ離れた位置からPlayerの移動を解するか ... " />
+                <marker date="1532351344354" expanded="true" signature="483:535" ph="/// 死んだあとに復活するのにかかる時間 ... " />
+                <marker date="1532351344354" expanded="true" signature="597:652" ph="/// プレファブから生成したPlayerの参照 ... " />
+                <marker date="1532351344354" expanded="true" signature="689:759" ph="/// PlayerにアタッチされたPlayerMoverコンポーネントの参照 ... " />
+                <marker date="1532351344354" expanded="true" signature="803:874" ph="/// PlayerにアタッチされたPlayerHealthコンポーネントの参照 ... " />
+                <marker date="1532351344354" expanded="true" signature="919:988" ph="/// PlayerにアタッチされたPlayerShotコンポーネントの参照 ... " />
+                <marker date="1532351344354" expanded="true" signature="1029:1091" ph="/// playrにアタッチされたMeshコンポーネントの参照 ... " />
+                <marker date="1532351344354" expanded="true" signature="1136:1175" ph="/// 残り残機 ... " />
+                <marker date="1532351344354" expanded="true" signature="1252:1280" ph="{...}" />
+                <marker date="1532351344354" expanded="true" signature="1283:1327" ph="/// playerの生成 ... " />
+                <marker date="1532351344354" expanded="true" signature="1402:1844" ph="{...}" />
+                <marker date="1532351344354" expanded="true" signature="1692:1760" ph="{...}" />
+                <marker date="1532351344354" expanded="true" signature="1731:1756" ph="{...}" />
+                <marker date="1532351344354" expanded="true" signature="1860:2003" ph="{...}" />
+                <marker date="1532351344354" expanded="true" signature="1970:2000" ph="{...}" />
+                <marker date="1532351344354" expanded="true" signature="2007:2052" ph="/// 攻撃を受けた時の処理 ... " />
+                <marker date="1532351344354" expanded="true" signature="2067:2107" ph="{...}" />
+                <marker date="1532351344354" expanded="true" signature="2110:2151" ph="/// HPを減らす ... " />
+                <marker date="1532351344354" expanded="true" signature="2170:2190" ph="{...}" />
+                <marker date="1532351344354" expanded="true" signature="2194:2246" ph="/// 攻撃を受けた時の見た目に関する処理 ... " />
+                <marker date="1532351344354" expanded="true" signature="2267:2452" ph="{...}" />
+                <marker date="1532351344354" expanded="true" signature="2368:2446" ph="{...}" />
+                <marker date="1532351344354" expanded="true" signature="2393:2442" ph="{...}" />
+                <marker date="1532351344354" expanded="true" signature="2502:2577" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -366,12 +361,12 @@
       <workItem from="1531834562143" duration="1538000" />
       <workItem from="1532005570208" duration="872000" />
       <workItem from="1532088523311" duration="3142000" />
-      <workItem from="1532148018384" duration="4982000" />
+      <workItem from="1532148018384" duration="5238000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130587000" />
+    <option name="totallyTimeSpent" value="130843000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -877,36 +872,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
+        <state relative-caret-position="745">
+          <caret line="121" column="12" selection-start-line="121" selection-start-column="12" selection-end-line="121" selection-end-column="12" />
           <folding>
-            <marker date="1532351113581" expanded="true" signature="22:120" ph="..." />
-            <marker date="1532351113581" expanded="true" signature="168:2505" ph="{...}" />
-            <marker date="1532351113581" expanded="true" signature="171:210" ph="/// 初期残機 ... " />
-            <marker date="1532351113581" expanded="true" signature="253:300" ph="/// Playerのプレファブ ... " />
-            <marker date="1532351113581" expanded="true" signature="351:420" ph="/// 画面左下の座標からどれだけ離れた位置からPlayerの移動を解するか ... " />
-            <marker date="1532351113581" expanded="true" signature="483:535" ph="/// 死んだあとに復活するのにかかる時間 ... " />
-            <marker date="1532351113581" expanded="true" signature="597:652" ph="/// プレファブから生成したPlayerの参照 ... " />
-            <marker date="1532351113581" expanded="true" signature="689:759" ph="/// PlayerにアタッチされたPlayerMoverコンポーネントの参照 ... " />
-            <marker date="1532351113581" expanded="true" signature="803:874" ph="/// PlayerにアタッチされたPlayerHealthコンポーネントの参照 ... " />
-            <marker date="1532351113581" expanded="true" signature="919:988" ph="/// PlayerにアタッチされたPlayerShotコンポーネントの参照 ... " />
-            <marker date="1532351113581" expanded="true" signature="1029:1091" ph="/// playrにアタッチされたMeshコンポーネントの参照 ... " />
-            <marker date="1532351113581" expanded="true" signature="1136:1175" ph="/// 残り残機 ... " />
-            <marker date="1532351113581" expanded="true" signature="1252:1280" ph="{...}" />
-            <marker date="1532351113581" expanded="true" signature="1283:1327" ph="/// playerの生成 ... " />
-            <marker date="1532351113581" expanded="true" signature="1402:1844" ph="{...}" />
-            <marker date="1532351113581" expanded="true" signature="1692:1760" ph="{...}" />
-            <marker date="1532351113581" expanded="true" signature="1731:1756" ph="{...}" />
-            <marker date="1532351113581" expanded="true" signature="1860:2003" ph="{...}" />
-            <marker date="1532351113581" expanded="true" signature="1970:2000" ph="{...}" />
-            <marker date="1532351113581" expanded="true" signature="2007:2052" ph="/// 攻撃を受けた時の処理 ... " />
-            <marker date="1532351113581" expanded="true" signature="2067:2107" ph="{...}" />
-            <marker date="1532351113581" expanded="true" signature="2110:2151" ph="/// HPを減らす ... " />
-            <marker date="1532351113581" expanded="true" signature="2170:2190" ph="{...}" />
-            <marker date="1532351113581" expanded="true" signature="2194:2246" ph="/// 攻撃を受けた時の見た目に関する処理 ... " />
-            <marker date="1532351113581" expanded="true" signature="2267:2412" ph="{...}" />
-            <marker date="1532351113581" expanded="true" signature="2363:2409" ph="{...}" />
-            <marker date="1532351113581" expanded="true" signature="2442:2503" ph="{...}" />
+            <marker date="1532351344354" expanded="true" signature="22:120" ph="..." />
+            <marker date="1532351344354" expanded="true" signature="168:2579" ph="{...}" />
+            <marker date="1532351344354" expanded="true" signature="171:210" ph="/// 初期残機 ... " />
+            <marker date="1532351344354" expanded="true" signature="253:300" ph="/// Playerのプレファブ ... " />
+            <marker date="1532351344354" expanded="true" signature="351:420" ph="/// 画面左下の座標からどれだけ離れた位置からPlayerの移動を解するか ... " />
+            <marker date="1532351344354" expanded="true" signature="483:535" ph="/// 死んだあとに復活するのにかかる時間 ... " />
+            <marker date="1532351344354" expanded="true" signature="597:652" ph="/// プレファブから生成したPlayerの参照 ... " />
+            <marker date="1532351344354" expanded="true" signature="689:759" ph="/// PlayerにアタッチされたPlayerMoverコンポーネントの参照 ... " />
+            <marker date="1532351344354" expanded="true" signature="803:874" ph="/// PlayerにアタッチされたPlayerHealthコンポーネントの参照 ... " />
+            <marker date="1532351344354" expanded="true" signature="919:988" ph="/// PlayerにアタッチされたPlayerShotコンポーネントの参照 ... " />
+            <marker date="1532351344354" expanded="true" signature="1029:1091" ph="/// playrにアタッチされたMeshコンポーネントの参照 ... " />
+            <marker date="1532351344354" expanded="true" signature="1136:1175" ph="/// 残り残機 ... " />
+            <marker date="1532351344354" expanded="true" signature="1252:1280" ph="{...}" />
+            <marker date="1532351344354" expanded="true" signature="1283:1327" ph="/// playerの生成 ... " />
+            <marker date="1532351344354" expanded="true" signature="1402:1844" ph="{...}" />
+            <marker date="1532351344354" expanded="true" signature="1692:1760" ph="{...}" />
+            <marker date="1532351344354" expanded="true" signature="1731:1756" ph="{...}" />
+            <marker date="1532351344354" expanded="true" signature="1860:2003" ph="{...}" />
+            <marker date="1532351344354" expanded="true" signature="1970:2000" ph="{...}" />
+            <marker date="1532351344354" expanded="true" signature="2007:2052" ph="/// 攻撃を受けた時の処理 ... " />
+            <marker date="1532351344354" expanded="true" signature="2067:2107" ph="{...}" />
+            <marker date="1532351344354" expanded="true" signature="2110:2151" ph="/// HPを減らす ... " />
+            <marker date="1532351344354" expanded="true" signature="2170:2190" ph="{...}" />
+            <marker date="1532351344354" expanded="true" signature="2194:2246" ph="/// 攻撃を受けた時の見た目に関する処理 ... " />
+            <marker date="1532351344354" expanded="true" signature="2267:2452" ph="{...}" />
+            <marker date="1532351344354" expanded="true" signature="2368:2446" ph="{...}" />
+            <marker date="1532351344354" expanded="true" signature="2393:2442" ph="{...}" />
+            <marker date="1532351344354" expanded="true" signature="2502:2577" ph="{...}" />
           </folding>
         </state>
       </provider>
