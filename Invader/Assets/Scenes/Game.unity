@@ -591,18 +591,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd6b909782d2b4f68b77fb80e6e4b9f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyWidthNum: 11
-  enemyHeightNum: 5
+  enemyWidthNum: 1
+  enemyHeightNum: 1
   enemyLineInfo:
   - prefab: {fileID: 1093514475067512, guid: c5685850db0084cbbb477e83d8e36ad5, type: 2}
-    highestLine: 1
+    highestLine: 0
     point: 50
-  - prefab: {fileID: 1318664489645212, guid: 21ad24998700047638f017b1810fd9c0, type: 2}
-    highestLine: 3
-    point: 100
-  - prefab: {fileID: 1377135177113106, guid: 9b0cbcc4f9f724e1a865332f21da1d49, type: 2}
-    highestLine: 4
-    point: 150
   ufoPopMinEnemyNum: 10
   startWaitTime: 2.5
   shotInterval: 1
@@ -1048,9 +1042,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c454c1be4f1640d69442be19462b37a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startHp: 2
   playerPrefab: {fileID: 1209003290138326, guid: 135dfc2dc5236460f930c5e6c57b5da2,
     type: 2}
   minPosDiffAtStart: {x: 0, y: 2, z: 0}
+  waitTimeForRevival: 3
 --- !u!1 &2035592098
 GameObject:
   m_ObjectHideFlags: 0
