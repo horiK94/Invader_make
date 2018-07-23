@@ -18,11 +18,6 @@ public class PlayerController : MonoBehaviour {
 	/// 画面左下の座標からどれだけ離れた位置からPlayerの移動を開始するか
 	/// </summary>
 	[SerializeField]Vector3 minPosDiffAtStart = Vector3.zero;
-	
-	/// <summary>
-	/// 死んだあとに復活するのにかかる時間
-	/// </summary>
-	[SerializeField] private float waitTimeForRevival = 3.0f;
 
 	/// <summary>
 	/// プレファブから生成したPlayerの参照
@@ -56,6 +51,16 @@ public class PlayerController : MonoBehaviour {
 	private int resultHp = 0;
 	public int ResultHp => resultHp;
 	
+	/// <summary>
+	/// 死んだあとに復活するのにかかる時間
+	/// </summary>
+	private float waitTimeForRevival = 0f;
+
+	/// <summary>
+	/// 死んだ時に呼ぶデリゲートメソッド
+	/// </summary>
+	private UnityAction onDeath = null;
+	
 	void Awake()
 	{
 		resultHp = startHp;
@@ -64,9 +69,12 @@ public class PlayerController : MonoBehaviour {
 	/// <summary>
 	/// playerの生成
 	/// </summary>
-	public void BootUp(Vector3 _maxPos, Vector3 _minPos, UnityAction onDeath)
+	public void BootUp(Vector3 _maxPos, Vector3 _minPos, float waitTime, UnityAction onDeath, UnityAction onGameover)
 	{
 		minPos = _minPos;
+		waitTimeForRevival = waitTime;
+		this.onDeath = onDeath;
+		
 		player = Instantiate (playerPrefab, minPos + minPosDiffAtStart, Quaternion.identity);
 		
 		playerMover = player.GetComponent<PlayerMover>();
@@ -78,7 +86,7 @@ public class PlayerController : MonoBehaviour {
 			Damage();
 			if (resultHp <= 0)
 			{
-				onDeath();
+				onGameover();
 			}
 		});
 		
@@ -100,6 +108,7 @@ public class PlayerController : MonoBehaviour {
 	/// </summary>
 	void Damage()
 	{
+		onDeath();
 		DecreaseHp();
 		DamageEffect();
 	}
@@ -117,7 +126,6 @@ public class PlayerController : MonoBehaviour {
 	/// </summary>
 	void DamageEffect()
 	{
-		Debug.Log("Damage");
 		player.gameObject.SetActive(false);
 		StartCoroutine(WaitToRevival(() =>
 		{

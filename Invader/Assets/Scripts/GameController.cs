@@ -24,6 +24,11 @@ public class GameController : MonoBehaviour
     /// UIControllerの参照
     /// </summary>
     [SerializeField] private UIController uiController = null;
+    
+    /// <summary>
+    /// 死んだあとに復活するのにかかる時間
+    /// </summary>
+    [SerializeField] private float waitTimeForRevival = 3.0f;
 
     /// <summary>
     /// 現在のスコア
@@ -70,13 +75,25 @@ public class GameController : MonoBehaviour
         
         //PlayerとEnemyを初期化
         enemysController.BootUp(OnAddScore, OnDeathAll, maxPos, minPos);
-        playerController.BootUp(maxPos, minPos, () =>
+        playerController.BootUp(maxPos, minPos, waitTimeForRevival, () =>
         {
-            //TODO GAMEOVERと表示
-            
+            enemysController.Stop();
+            StartCoroutine(WaitTime(() =>
+            {
+                enemysController.Restart();
+            }));
+        }, () =>
+        {
+            //TODO GAMEOVERと表示する
         });
         
         //Playerを移動できるようにする
         playerController.enabled = true;
+    }
+
+    IEnumerator WaitTime(UnityAction callback = null)
+    {
+        yield return new WaitForSeconds(waitTimeForRevival);
+        callback();
     }
 }

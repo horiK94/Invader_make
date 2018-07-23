@@ -98,6 +98,10 @@ public class EnemyCrowdController : MonoBehaviour {
     /// 敵の弾のプレファブ
     /// </summary>
     private GameObject enemyBullet = null;
+    /// <summary>
+    /// 停止状態か
+    /// </summary>
+    private bool isStop = false;
 
     void Awake()
     {
@@ -216,6 +220,12 @@ public class EnemyCrowdController : MonoBehaviour {
              * また、for文の外で判定しないと、ある行が移動する前に、前方へ移動した行があった時に前方に移動した行の判定が前方へ移動した後に左右に移動できるに変わるため、
              * 前方に移動すべきかの判定がうまくとれなくなる
              */
+            if (isStop)
+            {
+                //停止状態の時
+                yield return null;
+                continue;
+            }
             bool canMoveSide = CanMoveSide();
             for (int i = 0; i < enemyHeightNum; i++)
             {
@@ -256,6 +266,13 @@ public class EnemyCrowdController : MonoBehaviour {
     {
         while (columnEnemyAliveCash.Count != 0)        //全列で敵が死んでいる時
         {
+            if (isStop)
+            {
+                //停止状態の時
+                yield return null;
+                continue;
+            }
+            
             int r = Random.Range(0, columnEnemyAliveCash.Count);        //発射する列のidが入ったリストの要素番号をランダムで決定
             int randomId = columnEnemyAliveCash[r];        //列のidを取得
 
@@ -313,5 +330,21 @@ public class EnemyCrowdController : MonoBehaviour {
             }
         }
         return -1;
+    }
+
+    /// <summary>
+    /// 動きを止める
+    /// </summary>
+    public void StopAct()
+    {
+        isStop = true;
+    }
+
+    /// <summary>
+    /// 動きを再開する
+    /// </summary>
+    public void RestartAct()
+    {
+        isStop = false;
     }
 }

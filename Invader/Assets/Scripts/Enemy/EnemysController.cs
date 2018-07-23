@@ -30,4 +30,20 @@ public class EnemysController : MonoBehaviour
         ufoController.enabled = true;
         enemyCrowdController.enabled = true;
     }
+
+    /// <summary>
+    /// 敵の動きを止める
+    /// </summary>
+    public void Stop()
+    {
+        enemyCrowdController.StopAct();
+    }
+
+    /// <summary>
+    /// 敵の動きを再開する
+    /// </summary>
+    public void Restart()
+    {
+        enemyCrowdController.RestartAct();
+    }
 }
