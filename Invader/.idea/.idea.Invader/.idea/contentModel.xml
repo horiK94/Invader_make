@@ -21,6 +21,7 @@
             <e p="IFade.cs" t="Include" />
           </e>
         </e>
+        <e p="ScoreViewer.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Bullet.cs" t="Include" />
           <e p="Dictionary.cs" t="Include" />

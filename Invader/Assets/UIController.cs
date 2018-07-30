@@ -6,17 +6,13 @@ using UnityEngine.UI;
 public class UIController : MonoBehaviour
 {
     /// <summary>
-    /// スコアの数字のテキストの参照
+    /// スコア表示のクラスへの参照
     /// </summary>
-    [SerializeField] private Text scoreText;
-    
-    /// <summary>
-    /// scoreの表示フォーマット
-    /// </summary>
-    private readonly string scoreFormat = "D5";
+    [SerializeField]
+    private ScoreViewer scoreViewer = null;
 
     public void SetScore(int score)
     {
-        scoreText.text = score.ToString(scoreFormat);
+        scoreViewer.SetScore(score);
     }
 }
