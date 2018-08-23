@@ -20,7 +20,6 @@ public class SingletonMonoBehaviour<T> : MonoBehaviour where T: MonoBehaviour
                     Debug.LogError(typeof(T) + "をアタッチしているオブジェクトはありません");
                 }
             }
-
             return instance;
         }
     }

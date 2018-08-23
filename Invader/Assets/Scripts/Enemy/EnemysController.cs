@@ -13,12 +13,14 @@ public class EnemysController : MonoBehaviour
     /// <summary>
     /// EnemyCrowdControllerへの参照
     /// </summary>
-    [SerializeField] private EnemyCrowdController enemyCrowdController = null;
+    [SerializeField] 
+    private EnemyCrowdController enemyCrowdController = null;
 
     /// <summary>
     /// UFOControllerへの参照
     /// </summary>
-    [SerializeField] private UFOController ufoController = null;
+    [SerializeField]
+    private UFOController ufoController = null;
 
     /// <summary>
     /// 初期設定

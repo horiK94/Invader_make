@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
-public class SceneState : MonoBehaviour, ISceneState {
+public abstract class SceneState : MonoBehaviour, ISceneState {
 	/// <summary>
 	/// シーン名
 	/// </summary>
@@ -20,7 +20,8 @@ public class SceneState : MonoBehaviour, ISceneState {
 	/// <summary>
 	/// 次のシーンの参照
 	/// </summary>
-	[SerializeField]protected SceneState nextScene;
+	[SerializeField]
+    protected SceneState nextScene;
 	/// <summary>
 	/// 次のシーンの参照(readonly)
 	/// </summary>
@@ -30,21 +31,15 @@ public class SceneState : MonoBehaviour, ISceneState {
 			return nextScene;
 		}
 	}
-	/// <summary>
-	/// シーンがロード後呼ばれるメソッド
-	/// </summary>
-	public virtual void LoadedScene()
-	{
+    /// <summary>
+    /// シーンがロード後呼ばれるメソッド
+    /// </summary>
+    public abstract void LoadedScene();
 
-	}
-
-	/// <summary>
-	/// シーンが破棄される前に呼ばれるメソッド
-	/// </summary>
-	public virtual void RemoveSceneBefore()
-	{
-
-	}
+    /// <summary>
+    /// シーンが破棄される前に呼ばれるメソッド
+    /// </summary>
+    public abstract void RemoveSceneBefore();
 		
 	/// <summary>
 	/// シーンをロードする

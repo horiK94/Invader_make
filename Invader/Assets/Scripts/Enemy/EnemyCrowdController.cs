@@ -16,51 +16,63 @@ public class EnemyCrowdController : MonoBehaviour {
     /// <summary>
     /// Enemyの列数
     /// </summary>
-    [SerializeField] private int enemyWidthNum = 11;
+    [SerializeField] 
+    private int enemyWidthNum = 11;
     /// <summary>
     /// Enemyの段数
     /// </summary>
-    [SerializeField] private int enemyHeightNum = 5;
+    [SerializeField] 
+    private int enemyHeightNum = 5;
     /// <summary>
     /// Enemyの列ごとのプレファブ情報
     /// </summary>
-    [SerializeField] private EnemyLineInfo[] enemyLineInfo = null;
+    [SerializeField] 
+    private EnemyLineInfo[] enemyLineInfo = null;
     /// <summary>
     /// ufoを出現させるのに必要なEnemyの最低の数
     /// </summary>
-    [SerializeField] private int ufoPopMinEnemyNum = 8;
+    [SerializeField] 
+    private int ufoPopMinEnemyNum = 8;
     /// <summary>
     /// スタート前の停止時間
     /// </summary>
-    [SerializeField] private float startWaitTime = 2.5f;
+    [SerializeField] 
+    private float startWaitTime = 2.5f;
     /// <summary>
     /// Enemyの攻撃間隔
     /// </summary>
-    [SerializeField] private float shotInterval = 1;
+    [SerializeField]
+    private float shotInterval = 1;
     /// <summary>
     /// Enemyの一番上の段のy座標と画面上のy座標の差
     /// </summary>
-    [SerializeField]private float enemyTopPosYDiff = 0;
+    [SerializeField]
+    private float enemyTopPosYDiff = 0;
     /// <summary>
     /// Enemyの一番下の段のy座標と画面下のy座標の差
     /// </summary>
-    [SerializeField] private float enemyBottomPosYDiff = 0;
+    [SerializeField] 
+    private float enemyBottomPosYDiff = 0;
     /// <summary>
     /// Enemyの横の間隔(基本、8移動でそこまで移動)
     /// </summary>
-    [SerializeField] private float enemyWidthInterval = 0;
+    [SerializeField]
+    private float enemyWidthInterval = 0;
     /// <summary>
     /// 段数の数
     /// </summary>
-    [SerializeField]int stageNum = 19;
+    [SerializeField]
+    int stageNum = 19;
     /// <summary>
     /// １行移動するのに待つ時間
     /// </summary>
-    [SerializeField] private float moveRowWaitTime = 1.0f;
+    [SerializeField] 
+    private float moveRowWaitTime = 1.0f;
     /// <summary>
     /// bulletのPrefab
     /// </summary>
-    [SerializeField] private GameObject bulletPrefab = null;
+    [SerializeField]
+    private GameObject bulletPrefab = null;
 
     /// <summary>
     /// 列ごとのController(EnemyRowController)の参照

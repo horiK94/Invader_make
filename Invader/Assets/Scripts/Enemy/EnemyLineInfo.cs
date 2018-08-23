@@ -12,16 +12,21 @@ public class EnemyLineInfo
     /// <summary>
     /// enemyのプレファブ
     /// </summary>
-    [SerializeField] private GameObject prefab = null;
+    [SerializeField]
+    private GameObject prefab = null;
     public GameObject Prefab => prefab;
+
     /// <summary>
     /// プレファブのenemyがいる最高段
     /// </summary>
-    [SerializeField] private int highestLine = 0;
+    [SerializeField] 
+    private int highestLine = 0;
     public int HighestLine => highestLine;
+
     /// <summary>
     /// enemyを倒した時の点数
     /// </summary>
-    [SerializeField] private int point = 0;
+    [SerializeField]
+    private int point = 0;
     public int Point => point;
 }

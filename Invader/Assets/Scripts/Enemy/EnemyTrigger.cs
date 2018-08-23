@@ -11,7 +11,7 @@ public class EnemyTrigger : MonoBehaviour
     /// <summary>
     /// 当たった際に呼ばれるデリゲートメソッド
     /// </summary>
-    private UnityAction<Collider> myTriggerEnter;
+    private UnityAction<Collider> myTriggerEnter = null;
     
     /// <summary>
     /// デリゲートメソッドの設定

@@ -11,24 +11,29 @@ public class GameController : MonoBehaviour
     /// <summary>
     /// PlayerControllerの参照
     /// </summary>
-    [SerializeField] private PlayerController playerController = null;
+    [SerializeField] 
+    private PlayerController playerController = null;
     /// <summary>
     /// EnemyControllerの参照
     /// </summary>
-    [SerializeField] private EnemysController enemysController = null;
+    [SerializeField] 
+    private EnemysController enemysController = null;
     /// <summary>
     /// 移動制限の幅
     /// </summary>
-    [SerializeField] private float limitWidth = 0;
+    [SerializeField] 
+    private float limitWidth = 0;
     /// <summary>
     /// UIControllerの参照
     /// </summary>
-    [SerializeField] private UIController uiController = null;
+    [SerializeField] 
+    private UIController uiController = null;
     
     /// <summary>
     /// 死んだあとに復活するのにかかる時間
     /// </summary>
-    [SerializeField] private float waitTimeForRevival = 3.0f;
+    [SerializeField]
+    private float waitTimeForRevival = 3.0f;
 
     /// <summary>
     /// 現在のスコア
@@ -39,9 +44,16 @@ public class GameController : MonoBehaviour
     /// ステージ番号
     /// </summary>
     private int stage = 1;
-    
-    // TODO UIControllerの追加
-    private Vector3 minPos = Vector3.zero, maxPos = Vector3.zero;
+
+    /// <summary>
+    /// 移動可能範囲の左下の座標
+    /// </summary>
+    private Vector3 minPos = Vector3.zero;
+
+    /// <summary>
+    /// 移動可能範囲の右上の座標
+    /// </summary>
+    private Vector3 maxPos = Vector3.zero;
 
     void Awake()
     {
@@ -49,8 +61,8 @@ public class GameController : MonoBehaviour
         Vector3 rightUpPos = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, transform.position.z - Camera.main.transform.position.z));        //右上の座標
         
         //Player, Enemyの移動可能範囲を設定
-        maxPos = rightUpPos - new Vector3(limitWidth, 0, 0);        //移動可能範囲の右上の座標
-        minPos = leftDownPos + new Vector3(limitWidth, 0, 0);        //移動可能範囲の左下の座標
+        maxPos = rightUpPos - new Vector3(limitWidth, 0, 0);
+        minPos = leftDownPos + new Vector3(limitWidth, 0, 0);
         
         //scoreの初期化
         score = 0;
@@ -82,7 +94,6 @@ public class GameController : MonoBehaviour
             StartCoroutine(WaitTime(() =>
             {
                 enemysController.Restart();
-
             }));
         }, () =>
         {

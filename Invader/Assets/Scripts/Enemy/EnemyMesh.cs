@@ -7,11 +7,12 @@ public class EnemyMesh : MonoBehaviour
     /// <summary>
     /// Enemyが動いているように見せるMesh
     /// </summary>
-    [SerializeField] private Mesh[] mesh = null;
+    [SerializeField]
+    private Mesh[] mesh = null;
     /// <summary>
     /// enemyのMeshFilter
     /// </summary>
-    private MeshFilter meshFilter;
+    private MeshFilter meshFilter = null;
     /// <summary>
     /// 設定したMeshの数
     /// </summary>

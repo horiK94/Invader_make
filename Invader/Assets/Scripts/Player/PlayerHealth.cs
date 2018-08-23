@@ -20,7 +20,8 @@ public class PlayerHealth : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.GetComponent<Bullet>() != null) {		//TODO 弾なら~といった実装をする
+		if (other.GetComponent<Bullet>() != null) {
+            //弾が当たったら死ぬ
 			onDeath();
 		}
 	}

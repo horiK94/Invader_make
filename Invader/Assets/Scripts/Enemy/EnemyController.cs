@@ -12,7 +12,8 @@ public class EnemyController : MonoBehaviour
 	/// <summary>
 	/// 発射してすぐの弾の位置と敵の位置との差
 	/// </summary>
-	[SerializeField] private Vector3 shotPos = Vector3.zero;
+	[SerializeField] 
+    private Vector3 shotPos = Vector3.zero;
 	
 	/// <summary>
 	/// EnemyHelathの参照
@@ -34,6 +35,7 @@ public class EnemyController : MonoBehaviour
 	/// </summary>
 	[SerializeField]
 	private EnemyShot enemyShot = null;
+
 	private int id = -1;
 	public int Id => id;
 	//横移動量

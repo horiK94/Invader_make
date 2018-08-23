@@ -10,11 +10,13 @@ public class Bullet : MonoBehaviour
     /// <summary>
     /// 弾の高さ
     /// </summary>
-    [SerializeField] private float bulletHeight;
+    [SerializeField]
+    private float bulletHeight = 0;
     /// <summary>
     /// 移動速度
     /// </summary>
-    [SerializeField] private float speed;
+    [SerializeField]
+    private float speed = 0;
     /// <summary>
     /// 弾の移動する座標yの最大値
     /// </summary>

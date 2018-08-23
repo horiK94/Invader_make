@@ -11,11 +11,13 @@ public class EnemyHealth : MonoBehaviour
     /// <summary>
     /// 初期HP
     /// </summary>
-    [SerializeField] private int startHp = 1;
+    [SerializeField]
+    private int startHp = 1;
     /// <summary>
     /// Enemyの当たり判定コンポーネントの参照
     /// </summary>
-    [SerializeField] private EnemyTrigger enemyTrigger = null;
+    [SerializeField] 
+    private EnemyTrigger enemyTrigger = null;
     /// <summary>
     /// 現在のHP
     /// </summary>
@@ -28,7 +30,7 @@ public class EnemyHealth : MonoBehaviour
     /// <summary>
     /// 倒した時にスコア加算をするデリゲートメソッド
     /// </summary>
-    protected UnityAction<int> onAddScore;
+    protected UnityAction<int> onAddScore = null;
     public UnityAction<int> OnAddScore
     {
         get { return onAddScore; }
@@ -38,7 +40,7 @@ public class EnemyHealth : MonoBehaviour
     /// <summary>
     /// 倒した時に呼ぶデリゲートメソッド
     /// </summary>
-    protected UnityAction onDeath;
+    protected UnityAction onDeath = null;
     public UnityAction OnDeath
     {
         get { return onDeath; }

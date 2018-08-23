@@ -13,7 +13,8 @@ public class UFOController : MonoBehaviour
     /// <summary>
     /// UFOのプレファブ
     /// </summary>
-    [SerializeField] private GameObject ufoPrefab = null;
+    [SerializeField]
+    private GameObject ufoPrefab = null;
     /// <summary>
     /// UFOのインスタンス
     /// </summary>
@@ -29,15 +30,18 @@ public class UFOController : MonoBehaviour
     /// <summary>
     /// UFOの幅
     /// </summary>
-    [SerializeField] private float ufoWidth = 0;
+    [SerializeField]
+    private float ufoWidth = 0;
     /// <summary>
     /// UFOが生成される位置yは画面上端からどのくらい離れているか
     /// </summary>
-    [SerializeField] private float ufoPosYDiff = 0;
+    [SerializeField] 
+    private float ufoPosYDiff = 0;
     /// <summary>
     /// UFOが出現する時間感覚
     /// </summary>
-    [SerializeField] private float interval = 25;
+    [SerializeField]
+    private float interval = 25;
     /// <summary>
     /// 画面端の位置x
     /// </summary>

@@ -8,16 +8,19 @@ public class PlayerController : MonoBehaviour {
 	/// <summary>
 	/// 初期残機
 	/// </summary>
-	[SerializeField] private int startHp;
+	[SerializeField] 
+    private int startHp = 0;
 	
 	/// <summary>
 	/// Playerのプレファブ
 	/// </summary>
-	[SerializeField]GameObject playerPrefab = null;
+	[SerializeField]
+    GameObject playerPrefab = null;
 	/// <summary>
 	/// 画面左下の座標からどれだけ離れた位置からPlayerの移動を開始するか
 	/// </summary>
-	[SerializeField]Vector3 minPosDiffAtStart = Vector3.zero;
+	[SerializeField]
+    Vector3 minPosDiffAtStart = Vector3.zero;
 
 	/// <summary>
 	/// プレファブから生成したPlayerの参照

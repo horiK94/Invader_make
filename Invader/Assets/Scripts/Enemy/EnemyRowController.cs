@@ -11,7 +11,8 @@ public class EnemyRowController : MonoBehaviour {
     /// <summary>
     /// 隣の敵の位置に移動するのに、何回移動するか
     /// </summary>
-    [SerializeField] private int moveNextEnemyActionNum = 8;
+    [SerializeField]
+    private int moveNextEnemyActionNum = 8;
     /// <summary>
     /// 行のenemyのゲームオブジェクト
     /// </summary>

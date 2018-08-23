@@ -6,11 +6,13 @@ public class PlayerShot : MonoBehaviour {
 	/// <summary>
 	/// 弾のプレファブ
 	/// </summary>
-	[SerializeField]GameObject bulletPrefab = null;
+	[SerializeField]
+    GameObject bulletPrefab = null;
 	/// <summary>
 	/// 発射口の位置
 	/// </summary>
-	[SerializeField] private Transform muzzleTransform = null;
+	[SerializeField]
+    private Transform muzzleTransform = null;
 	/// <summary>
 	/// 生成した弾の参照
 	/// </summary>

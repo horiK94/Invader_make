@@ -11,7 +11,8 @@ public class UFOMover : MonoBehaviour
     /// <summary>
     /// UFOの移動速度
     /// </summary>
-    [SerializeField] private float speed;
+    [SerializeField]
+    private float speed = 0;
     /// <summary>
     /// 端まで到着した時に呼ぶデリゲートメソッド
     /// </summary>

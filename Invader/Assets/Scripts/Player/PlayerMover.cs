@@ -6,7 +6,8 @@ public class PlayerMover : MonoBehaviour {
 	/// <summary>
 	/// 移動スピード
 	/// </summary>
-	[SerializeField] float speed = 10;
+	[SerializeField] 
+    float speed = 10;
 	/// <summary>
 	/// 移動可能なx座標の最小値
 	/// </summary>
