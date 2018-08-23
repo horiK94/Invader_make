@@ -6,13 +6,21 @@ using UnityEngine.UI;
 public class UIController : MonoBehaviour
 {
     /// <summary>
-    /// スコア表示のクラスへの参照
+    /// UIのViewへの参照
     /// </summary>
     [SerializeField]
     private ScoreViewer scoreViewer = null;
 
+    [SerializeField]
+    private RemainPlayerViewer remainPlayaerViewer = null;
+
     public void SetScore(int score)
     {
         scoreViewer.SetScore(score);
+    }
+
+    public void SetHeart(int heart)
+    {
+        remainPlayaerViewer.SetRemain(heart);
     }
 }

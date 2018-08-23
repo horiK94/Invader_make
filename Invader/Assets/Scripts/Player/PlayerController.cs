@@ -48,8 +48,8 @@ public class PlayerController : MonoBehaviour {
 	/// <summary>
 	/// 残り残機
 	/// </summary>
-	private int resultHp = 0;
-	public int ResultHp => resultHp;
+	private int remainHp = 0;
+	public int RemainHp => remainHp;
 	
 	/// <summary>
 	/// 死んだあとに復活するのにかかる時間
@@ -59,17 +59,17 @@ public class PlayerController : MonoBehaviour {
 	/// <summary>
 	/// 死んだ時に呼ぶデリゲートメソッド
 	/// </summary>
-	private UnityAction onDeath = null;
+	private UnityAction<int> onDeath = null;
 	
 	void Awake()
 	{
-		resultHp = startHp;
+		remainHp = startHp;
 	}
 
 	/// <summary>
 	/// playerの生成
 	/// </summary>
-	public void BootUp(Vector3 _maxPos, Vector3 _minPos, float waitTime, UnityAction onDeath, UnityAction onGameover)
+	public void BootUp(Vector3 _maxPos, Vector3 _minPos, float waitTime, UnityAction<int> onDeath, UnityAction onGameover)
 	{
 		minPos = _minPos;
 		waitTimeForRevival = waitTime;
@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour {
 		playerHealth.SetDeathAction(() =>
 		{
 			Damage();
-			if (resultHp <= 0)
+			if (remainHp <= 0)
 			{
 				onGameover();
 			}
@@ -108,8 +108,8 @@ public class PlayerController : MonoBehaviour {
 	/// </summary>
 	void Damage()
 	{
-		onDeath();
 		DecreaseHp();
+        this.onDeath(RemainHp);     //HPを減らした後に呼ばないとずれる
 		DamageEffect();
 	}
 
@@ -118,7 +118,7 @@ public class PlayerController : MonoBehaviour {
 	/// </summary>
 	void DecreaseHp()
 	{
-		resultHp--;
+		remainHp--;
 	}
 	
 	/// <summary>
@@ -129,7 +129,7 @@ public class PlayerController : MonoBehaviour {
 		player.gameObject.SetActive(false);
 		StartCoroutine(WaitToRevival(() =>
 		{
-			if (ResultHp > 0)
+			if (remainHp > 0)
 			{
 				Restart();
 			}

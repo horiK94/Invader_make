@@ -75,12 +75,14 @@ public class GameController : MonoBehaviour
         
         //PlayerとEnemyを初期化
         enemysController.BootUp(OnAddScore, OnDeathAll, maxPos, minPos);
-        playerController.BootUp(maxPos, minPos, waitTimeForRevival, () =>
+        playerController.BootUp(maxPos, minPos, waitTimeForRevival, (hp) =>
         {
+            uiController.SetHeart(hp);
             enemysController.Stop();
             StartCoroutine(WaitTime(() =>
             {
                 enemysController.Restart();
+
             }));
         }, () =>
         {
