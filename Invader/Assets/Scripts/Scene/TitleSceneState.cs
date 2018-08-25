@@ -13,14 +13,16 @@ public class TitleSceneState : SceneState {
 
 	void Awake()
 	{
-		sceneTitle = "Title";
+        sceneName = "Title";
 	}
 
 	public override void LoadedScene()
 	{
 		GameObject gb = Instantiate (title) as GameObject;
 		TitleController t = gb.AddComponent<TitleController> ();
-		t.OnEnterKeyDown = this.LoadNextScene;
+        t.OnEnterKeyDown = () => {
+            SceneProcessManager.Instance.LoadNextScene();
+        };
 	}
 
 	public override void RemoveSceneBefore()

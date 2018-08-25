@@ -4,16 +4,17 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 /// <summary>
-/// シーンの進行に関するクラス
+/// SceneStateを元に、シーン管理を行うクラス
 /// </summary>
 public class SceneProcessManager : SingletonMonoBehaviour<SceneProcessManager> {
-	/// <summary>
-	/// 最初にロードするシーン
-	/// </summary>
-	[SerializeField]SceneState  startScene = null;
-	/// <summary>
-	/// 現在のシーン
-	/// </summary>
+    /// <summary>
+    /// 初期シーン
+    /// </summary>
+    [SerializeField]
+    SceneState startScene = null;
+    /// <summary>
+    /// 現在のシーン
+    /// </summary>
 	SceneState nowScene = null;
 	/// <summary>
 	/// フェードイン, フェードアウトを行うオブジェクトの参照
@@ -27,20 +28,72 @@ public class SceneProcessManager : SingletonMonoBehaviour<SceneProcessManager> {
 	void Awake()
 	{
 		DontDestroyOnLoad (gameObject);
+
+        nowScene = startScene;
 	}
 
-	void Start()
-	{
-		LoadStart ();
-	}
+    private void Start()
+    {
+        LoadScene(true);
+    }
 
-	/// <summary>
-	/// 最初のシーンをロード
-	/// </summary>
-	void LoadStart()
-	{
-		//最初のシーンをロード
-		nowScene = startScene;
-		nowScene.LoadScene ();
-	}
+    /// <summary>
+    /// 非同期で次のシーンをロードする
+    /// </summary>
+    IEnumerator Load(bool isStart = false)
+    {
+        if(!isStart)
+        {
+            yield return fade.FadeIn(fadeTime);
+        }
+        AsyncOperation ope = SceneManager.LoadSceneAsync(isStart ? nowScene.SceneName : nowScene.NextScene.SceneName);
+        while (true)
+        {
+            if (ope.isDone)
+            {   
+                //シーンのロード完了
+                nowScene.LoadedScene();
+                if(!isStart)
+                {
+                    yield return fade.FadeOut(fadeTime);
+                }
+                yield break;
+            }
+            yield return null;
+        }
+    }
+
+    /// <summary>
+    /// 現在のシーンを破棄、nextSceneをロードする
+    /// </summary>
+    public void LoadNextScene()
+    {
+        LoadScene();
+        RemoveScene();
+        nowScene = nowScene.NextScene;
+    }
+
+    /// <summary>
+    /// シーンを破棄する前に呼ばれる
+    /// </summary>
+    void RemoveScene()
+    {
+        StartCoroutine(Remove());
+    }
+
+    /// <summary>
+    /// 非同期でシーンを破棄する
+    /// </summary>
+    IEnumerator Remove()
+    {
+        yield return SceneManager.UnloadSceneAsync(nowScene.SceneName);
+    }
+
+    /// <summary>
+    /// シーンをロードする
+    /// </summary>
+    public void LoadScene(bool isStart = false)
+    {
+        StartCoroutine(Load(isStart));
+    }
 }

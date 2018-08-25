@@ -3,25 +3,28 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
+/// <summary>
+/// シーンのロードやアンロード時の処理に関するクラス
+/// </summary>
 public abstract class SceneState : MonoBehaviour, ISceneState {
 	/// <summary>
 	/// シーン名
 	/// </summary>
-	protected string sceneTitle = "";
+    protected string sceneName = "";
 	/// <summary>
 	/// シーン名(readonly)
 	/// </summary>
-	public string SceneTitle
+	public string SceneName
 	{
 		get{
-			return sceneTitle;
+			return sceneName;
 		}
 	}
 	/// <summary>
 	/// 次のシーンの参照
 	/// </summary>
 	[SerializeField]
-    protected SceneState nextScene;
+    protected SceneState nextScene = null;
 	/// <summary>
 	/// 次のシーンの参照(readonly)
 	/// </summary>
@@ -40,52 +43,4 @@ public abstract class SceneState : MonoBehaviour, ISceneState {
     /// シーンが破棄される前に呼ばれるメソッド
     /// </summary>
     public abstract void RemoveSceneBefore();
-		
-	/// <summary>
-	/// シーンをロードする
-	/// </summary>
-	public void LoadScene()
-	{
-		StartCoroutine (Load());
-	}
-
-	/// <summary>
-	/// 非同期でシーンをロードする
-	/// </summary>
-	IEnumerator Load()
-	{
-		AsyncOperation ope = SceneManager.LoadSceneAsync (sceneTitle);
-		while (true) {
-			if (ope.isDone) {		//シーンのロード完了
-				this.LoadedScene ();
-				yield break;
-			}
-			yield return null;
-		}
-	}
-
-	/// <summary>
-	/// 現在のシーンを破棄、nextSceneをロードする
-	/// </summary>
-	public void LoadNextScene()
-	{
-		NextScene.LoadScene ();
-		RemoveScene ();
-	}
-
-	/// <summary>
-	/// シーンを破棄する前に呼ばれる
-	/// </summary>
-	void RemoveScene()
-	{
-		StartCoroutine (Remove ());
-	}
-
-	/// <summary>
-	/// 非同期でシーンを破棄する
-	/// </summary>
-	IEnumerator Remove()
-	{
-		yield return SceneManager.UnloadSceneAsync (sceneTitle);
-	}
 }

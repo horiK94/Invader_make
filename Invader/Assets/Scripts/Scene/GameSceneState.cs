@@ -8,7 +8,7 @@ using UnityEngine;
 public class GameSceneState : SceneState {
 	void Awake()
 	{
-		sceneTitle = "Game";
+        sceneName = "Game";
 	}
 
 	public override void LoadedScene()
