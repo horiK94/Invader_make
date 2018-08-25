@@ -36,6 +36,7 @@ public class EnemyController : MonoBehaviour
 	[SerializeField]
 	private EnemyShot enemyShot = null;
 
+    //列id
 	private int id = -1;
 	public int Id => id;
 	//横移動量
@@ -122,6 +123,6 @@ public class EnemyController : MonoBehaviour
 	/// <param name="bullet"></param>
 	public void Shot(GameObject bullet)
 	{
-		enemyShot.Shot(transform.position + shotPos,　bullet);
+		enemyShot.Shot(transform.position + shotPos, bullet);
 	}
 }

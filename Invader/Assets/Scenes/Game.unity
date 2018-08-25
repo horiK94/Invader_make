@@ -1114,7 +1114,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1908278082}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c454c1be4f1640d69442be19462b37a, type: 3}
   m_Name: 
@@ -1123,6 +1123,7 @@ MonoBehaviour:
   playerPrefab: {fileID: 1209003290138326, guid: 135dfc2dc5236460f930c5e6c57b5da2,
     type: 2}
   minPosDiffAtStart: {x: 0, y: 3, z: 0}
+  startWaitTime: 3.5
 --- !u!1 &1986096518
 GameObject:
   m_ObjectHideFlags: 0

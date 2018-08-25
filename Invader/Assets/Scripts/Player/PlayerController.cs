@@ -15,12 +15,18 @@ public class PlayerController : MonoBehaviour {
 	/// Playerのプレファブ
 	/// </summary>
 	[SerializeField]
-    GameObject playerPrefab = null;
+    private GameObject playerPrefab = null;
 	/// <summary>
 	/// 画面左下の座標からどれだけ離れた位置からPlayerの移動を開始するか
 	/// </summary>
 	[SerializeField]
-    Vector3 minPosDiffAtStart = Vector3.zero;
+    private Vector3 minPosDiffAtStart = Vector3.zero;
+
+    /// <summary>
+    /// 最初に動き出せるのにかかる時間
+    /// </summary>
+    [SerializeField]
+    private float startWaitTime = 0f;
 
 	/// <summary>
 	/// プレファブから生成したPlayerの参照
@@ -97,8 +103,15 @@ public class PlayerController : MonoBehaviour {
 		playerMover.SetLimitPos(_maxPos.x, _minPos.x);
 	}
 
+    public void MoveStart()
+    {
+        //一定時間待ったら動きを開始
+        StartCoroutine(WaitTime(Restart));
+    }
+
 	void Update()
 	{
+        Debug.Log(playerMover);
 		playerMover.Move(Input.GetAxis(Dictionary.InputText.HORIZONTAL));
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
@@ -150,4 +163,10 @@ public class PlayerController : MonoBehaviour {
 		player.transform.position = minPos + minPosDiffAtStart;
 		player.gameObject.SetActive(true);
 	}
+
+    IEnumerator WaitTime(UnityAction callback)
+    {
+        yield return new WaitForSeconds(startWaitTime);
+        callback();
+    }
 }

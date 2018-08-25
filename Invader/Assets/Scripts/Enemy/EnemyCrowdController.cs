@@ -135,7 +135,13 @@ public class EnemyCrowdController : MonoBehaviour {
         this.onDeathAll = _onDeath;
         this.maxPos = _maxPos;
         this.minPos = _minPos;
-        
+    }
+
+    /// <summary>
+    /// 移動開始
+    /// </summary>
+    public void MoveStart()
+    {
         SortEnemyPrefab();
         Create();
         StartCoroutine(Act());

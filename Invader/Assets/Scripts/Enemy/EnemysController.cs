@@ -34,6 +34,14 @@ public class EnemysController : MonoBehaviour
     }
 
     /// <summary>
+    /// 敵の動きを開始させる
+    /// </summary>
+    public void MoveStart()
+    {
+        enemyCrowdController.MoveStart();
+    }
+
+    /// <summary>
     /// 敵の動きを止める
     /// </summary>
     public void Stop()

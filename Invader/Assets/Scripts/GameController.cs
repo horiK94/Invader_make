@@ -71,12 +71,13 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
-        //Enemyを倒した時の処理
-        UnityAction<int> OnAddScore = (score) =>
-        {
-            this.score += score;
-            uiController.SetScore(this.score);
-        };
+        Initialize();
+        AppearAtStart();
+    }
+
+    //初期化設定
+    void Initialize()
+    {
         //Enemyが全滅した時の処理
         UnityAction OnDeathAll = () =>
         {
@@ -84,13 +85,20 @@ public class GameController : MonoBehaviour
             //TODO Sceneの切り替え
             //TODO UIの表示
         };
-        
+
         //PlayerとEnemyを初期化
-        enemysController.BootUp(OnAddScore, OnDeathAll, maxPos, minPos);
+        enemysController.BootUp((score) =>
+        {
+            this.score += score;
+            uiController.SetScore(this.score);
+        }, OnDeathAll, maxPos, minPos);
         playerController.BootUp(maxPos, minPos, waitTimeForRevival, (hp) =>
         {
+            //hpを設定する
             uiController.SetHeart(hp);
+            //enemyの動きを止める
             enemysController.Stop();
+            //一定時間たったら、動きを再開する
             StartCoroutine(WaitTime(() =>
             {
                 enemysController.Restart();
@@ -99,11 +107,22 @@ public class GameController : MonoBehaviour
         {
             //TODO GAMEOVERと表示する
         });
-        
-        //Playerを移動できるようにする
-        playerController.enabled = true;
     }
 
+    /// <summary>
+    /// スタート後に表示すべきオブジェクトをactiveにする
+    /// </summary>
+    void AppearAtStart()
+    {
+        enemysController.MoveStart();
+        playerController.MoveStart();
+    }
+
+    /// <summary>
+    /// waitTimeForRevivalの時間だけ待つ
+    /// </summary>
+    /// <returns>The time.</returns>
+    /// <param name="callback">Callback.</param>
     IEnumerator WaitTime(UnityAction callback = null)
     {
         yield return new WaitForSeconds(waitTimeForRevival);
