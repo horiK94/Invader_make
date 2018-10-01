@@ -20,10 +20,19 @@ public class TitleController : MonoBehaviour {
 			onEnterKeyDown = value;
 		}
 	}
-	
-	void Update()
+
+    //2回以上処理が行われないためのフラグ
+    private bool canPush = false;
+
+    private void Awake()
+    {
+        canPush = true;
+    }
+
+    void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Space)) {
+        if (Input.GetKeyDown(KeyCode.Space) && canPush) {
+            canPush = false;
 			OnEnterKeyDown ();
 		}
 	}
