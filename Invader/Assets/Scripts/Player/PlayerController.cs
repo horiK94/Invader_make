@@ -59,6 +59,11 @@ public class PlayerController : MonoBehaviour {
 	/// </summary>
 	private int remainHp = 0;
 	public int RemainHp => remainHp;
+
+    /// <summary>
+    /// 弾を打って良いかどうか
+    /// </summary>
+    private bool canShot = false;
 	
 	/// <summary>
 	/// 死んだあとに復活するのにかかる時間
@@ -111,12 +116,11 @@ public class PlayerController : MonoBehaviour {
 
 	void Update()
 	{
-        Debug.Log(playerMover);
 		playerMover.Move(Input.GetAxis(Dictionary.InputText.HORIZONTAL));
-		if (Input.GetKeyDown(KeyCode.Space))
-		{
-			playerShot.Shot();
-		}
+        if (Input.GetKeyDown(KeyCode.Space) && canShot)
+        {
+            playerShot.Shot();
+        }
 	}	
 
 	/// <summary>
@@ -143,6 +147,7 @@ public class PlayerController : MonoBehaviour {
 	void DamageEffect()
 	{
 		player.gameObject.SetActive(false);
+        canShot = false;
 		StartCoroutine(WaitToRevival(() =>
 		{
 			if (remainHp > 0)
@@ -162,6 +167,7 @@ public class PlayerController : MonoBehaviour {
 	{
 		player.transform.position = minPos + minPosDiffAtStart;
 		player.gameObject.SetActive(true);
+        canShot = true;
 	}
 
     IEnumerator WaitTime(UnityAction callback)
