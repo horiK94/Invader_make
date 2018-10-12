@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class PlayerHealth : MonoBehaviour
 {
+    [SerializeField]
+    private bool isInvalidation = false;
 
 	/// <summary>
 	/// Playerが死んだ時の処理
@@ -20,6 +22,12 @@ public class PlayerHealth : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
+        if(isInvalidation)
+        {
+            //無効化中は当たっても処理を行わない
+            return;
+        }
+
 		if (other.GetComponent<Bullet>() != null) {
             //弾が当たったら死ぬ
 			onDeath();

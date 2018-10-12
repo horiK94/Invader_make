@@ -256,7 +256,6 @@ public class EnemyCrowdController : MonoBehaviour {
             }
             bool canMoveSide = CanMoveSide();
             int enemyNum = rowAliveEnemyNum.Sum();
-            Debug.Log("enemyNum" + enemyNum);
             if (enemyNum <= speedUpStartNum)
             {
                 //敵の速度を早くする
