@@ -92,6 +92,21 @@ public class EnemyRowController : MonoBehaviour {
     }
 
     /// <summary>
+    /// スピードを指定して左右に移動する
+    /// </summary>
+    /// <param name="speed">Speed.</param>
+    public void MoveSide(float speed)
+    {
+        for (int i = 0; i < enemy.Length; i++)
+        {
+            if(enemy[i].activeSelf)
+            {
+                enemy[i].GetComponent<EnemyController>().MoveSide(speed);
+            }
+        }
+    }
+
+    /// <summary>
     /// 次の移動で左右に移動できるか
     /// </summary>
     public bool CanMoveSide()

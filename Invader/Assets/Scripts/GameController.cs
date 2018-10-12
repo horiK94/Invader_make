@@ -35,6 +35,7 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private float waitTimeForRevival = 3.0f;
 
+
     /// <summary>
     /// 現在のスコア
     /// </summary>
@@ -82,8 +83,7 @@ public class GameController : MonoBehaviour
         UnityAction OnDeathAll = () =>
         {
             stage++;
-            //TODO Sceneの切り替え
-            //TODO UIの表示
+            SceneProcessManager.Instance.LoadNextScene();
         };
 
         //PlayerとEnemyを初期化
@@ -96,16 +96,21 @@ public class GameController : MonoBehaviour
         {
             //hpを設定する
             uiController.SetHeart(hp);
-            //enemyの動きを止める
-            enemysController.Stop();
-            //一定時間たったら、動きを再開する
-            StartCoroutine(WaitTime(() =>
+
+            if(playerController.RemainHp > 0)
             {
-                enemysController.Restart();
-            }));
+                //enemyの動きを止める
+                enemysController.Stop();
+                //一定時間たったら、動きを再開する
+                StartCoroutine(WaitTime(waitTimeForRevival, () =>
+                {
+                    enemysController.Restart();
+                }));
+            }
         }, () =>
         {
-            //TODO GAMEOVERと表示する
+            enemysController.Stop();
+            uiController.AppearGameOver();
         });
     }
 
@@ -123,9 +128,9 @@ public class GameController : MonoBehaviour
     /// </summary>
     /// <returns>The time.</returns>
     /// <param name="callback">Callback.</param>
-    IEnumerator WaitTime(UnityAction callback = null)
+    IEnumerator WaitTime(float waitTime, UnityAction callback = null)
     {
-        yield return new WaitForSeconds(waitTimeForRevival);
+        yield return new WaitForSeconds(waitTime);
         callback();
     }
 }

@@ -9,10 +9,10 @@ using UnityEngine.Events;
 public class UFOMover : MonoBehaviour
 {
     /// <summary>
-    /// UFOの移動速度
+    /// UFOの初期移動設定速度
     /// </summary>
     [SerializeField]
-    private float speed = 0;
+    private float initSpeed = 0;
     /// <summary>
     /// 端まで到着した時に呼ぶデリゲートメソッド
     /// </summary>
@@ -25,7 +25,16 @@ public class UFOMover : MonoBehaviour
     /// 画面端の位置
     /// </summary>
     private float cornerPosX = 0;
-    
+    /// <summary>
+    /// ufoの移動速度
+    /// </summary>
+    private float speed = 0;
+
+    private void Awake()
+    {
+        speed = initSpeed;
+    }
+
     /// <summary>
     /// 移動のための値設定
     /// </summary>
@@ -50,5 +59,10 @@ public class UFOMover : MonoBehaviour
         {
             onArriveCorner();
         }
+    }
+
+    public void Stop()
+    {
+        speed = 0;
     }
 }

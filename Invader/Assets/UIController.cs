@@ -14,6 +14,9 @@ public class UIController : MonoBehaviour
     [SerializeField]
     private RemainPlayerViewer remainPlayaerViewer = null;
 
+    [SerializeField]
+    private GameOverViewer gameOverText = null;
+
     public void SetScore(int score)
     {
         scoreViewer.SetScore(score);
@@ -22,5 +25,10 @@ public class UIController : MonoBehaviour
     public void SetHeart(int heart)
     {
         remainPlayaerViewer.SetRemain(heart);
+    }
+
+    public void AppearGameOver()
+    {
+        gameOverText.ShowGameOver();
     }
 }

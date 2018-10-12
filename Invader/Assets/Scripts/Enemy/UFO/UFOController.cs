@@ -61,17 +61,6 @@ public class UFOController : MonoBehaviour
         set { onAddScore = value; }
     }
 
-    /// <summary>
-    /// UFOが死んだ時に呼ばれるメソッド
-    /// </summary>
-    private UnityAction onDeath = null;
-
-    public UnityAction OnDeath
-    {
-        get { return onDeath; }
-        set { onDeath = value; }
-    }
-
     void Awake()
     {
         if (ufo == null)
@@ -87,11 +76,10 @@ public class UFOController : MonoBehaviour
     /// <summary>
     /// 初期設定
     /// </summary>
-    public void BootUp(Vector3 _maxPos, UnityAction<int> _onAddScore, UnityAction _onDeath)
+    public void BootUp(UnityAction<int> _onAddScore, Vector3 _maxPos)
     {
         this.maxPos = _maxPos;
-        ufoHelath.OnAddScore　=　_onAddScore;
-        ufoHelath.OnDeath += _onDeath;
+        ufoHelath.OnAddScore = _onAddScore;
         StartCoroutine(Move());
     }
 

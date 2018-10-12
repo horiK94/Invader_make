@@ -36,17 +36,35 @@ public class EnemyController : MonoBehaviour
 	[SerializeField]
 	private EnemyShot enemyShot = null;
 
-    //列id
+    /// <summary>
+    /// 列Id
+    /// </summary>
 	private int id = -1;
 	public int Id => id;
-	//横移動量
+	/// <summary>
+    /// 横移動量
+    /// </summary>
 	private float moveHorizontalAmount = 0;
+    /// <summary>
+    /// 縦移動量
+    /// </summary>
 	private float moveVerticalAmount = 0;
+    /// <summary>
+    /// 右に移動しているか
+    /// </summary>
 	private bool isFacingRight = true;
-
+    /// <summary>
+    /// Enemyの移動可能領域の左下の位置
+    /// </summary>
 	private Vector3 minPos = Vector3.zero;
+    /// <summary>
+    /// Enemyの移動可能領域の右上の位置
+    /// </summary>
 	private Vector3 maxPos = Vector3.zero;
 
+    /// <summary>
+    /// 死んでいるか
+    /// </summary>
 	private bool isDead = false;
 	public bool IsDead => isDead;
 
@@ -106,6 +124,17 @@ public class EnemyController : MonoBehaviour
 		enemyMove.Move(moveSign * new Vector3(moveHorizontalAmount, 0, 0));
 		enemyMesh.ChangeMesh();
 	}
+
+    /// <summary>
+    /// 速度上昇中の横移動
+    /// </summary>
+    /// <param name="speed">Speed.</param>
+    public void MoveSide(float speed)
+    {
+        float moveSign = isFacingRight ? 1 : -1;
+        enemyMove.Move(moveSign * speed * new Vector3(moveHorizontalAmount, 0, 0));
+        enemyMesh.ChangeMesh();
+    }
 
 	/// <summary>
 	/// 前に移動する

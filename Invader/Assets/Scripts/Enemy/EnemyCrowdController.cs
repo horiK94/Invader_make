@@ -34,6 +34,16 @@ public class EnemyCrowdController : MonoBehaviour {
     [SerializeField] 
     private int ufoPopMinEnemyNum = 8;
     /// <summary>
+    /// 移動速度を上げ始めるEnemyの数
+    /// </summary>
+    [SerializeField]
+    private int speedUpStartNum = 10;
+    /// <summary>
+    /// 敵の最大速度比(初期移動速度は1)
+    /// </summary>
+    [SerializeField]
+    private float enemyMaxSpeed = 8;
+    /// <summary>
     /// スタート前の停止時間
     /// </summary>
     [SerializeField] 
@@ -245,17 +255,39 @@ public class EnemyCrowdController : MonoBehaviour {
                 continue;
             }
             bool canMoveSide = CanMoveSide();
-            for (int i = 0; i < enemyHeightNum; i++)
+            int enemyNum = rowAliveEnemyNum.Sum();
+            Debug.Log("enemyNum" + enemyNum);
+            if (enemyNum <= speedUpStartNum)
             {
-                if (canMoveSide)        //左右に移動できるか
+                //敵の速度を早くする
+                for (int i = 0; i < enemyHeightNum; i++)
                 {
-                    enemyRows[i].MoveSide();
+                    if(canMoveSide)
+                    {
+                        float enemySpeed = enemyMaxSpeed / enemyNum;
+                        enemyRows[i].MoveSide(enemySpeed);
+                    }
+                    else
+                    {
+                        enemyRows[i].MoveBefore();
+                    }
                 }
-                else
+                yield return null;
+            }
+            else
+            {
+                for (int i = 0; i < enemyHeightNum; i++)
                 {
-                    enemyRows[i].MoveBefore();        //移動できない場合は前に進む
+                    if (canMoveSide)        //左右に移動できるか
+                    {
+                        enemyRows[i].MoveSide();
+                    }
+                    else
+                    {
+                        enemyRows[i].MoveBefore();        //移動できない場合は前に進む
+                    }
+                    yield return new WaitForSeconds(moveRowWaitTime);        //移動後のインターバル
                 }
-                yield return new WaitForSeconds(moveRowWaitTime);        //移動後のインターバル
             }
         }
     }
