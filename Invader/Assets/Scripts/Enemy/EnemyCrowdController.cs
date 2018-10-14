@@ -10,28 +10,29 @@ using Random = UnityEngine.Random;
 /// <summary>
 /// Enemy全体のController
 /// </summary>
-public class EnemyCrowdController : MonoBehaviour {
+public class EnemyCrowdController : MonoBehaviour
+{
     private Transform enemyParent = null;
-    
+
     /// <summary>
     /// Enemyの列数
     /// </summary>
-    [SerializeField] 
+    [SerializeField]
     private int enemyWidthNum = 11;
     /// <summary>
     /// Enemyの段数
     /// </summary>
-    [SerializeField] 
+    [SerializeField]
     private int enemyHeightNum = 5;
     /// <summary>
     /// Enemyの列ごとのプレファブ情報
     /// </summary>
-    [SerializeField] 
+    [SerializeField]
     private EnemyLineInfo[] enemyLineInfo = null;
     /// <summary>
     /// ufoを出現させるのに必要なEnemyの最低の数
     /// </summary>
-    [SerializeField] 
+    [SerializeField]
     private int ufoPopMinEnemyNum = 8;
     /// <summary>
     /// 移動速度を上げ始めるEnemyの数
@@ -46,7 +47,7 @@ public class EnemyCrowdController : MonoBehaviour {
     /// <summary>
     /// スタート前の停止時間
     /// </summary>
-    [SerializeField] 
+    [SerializeField]
     private float startWaitTime = 2.5f;
     /// <summary>
     /// Enemyの攻撃間隔
@@ -61,7 +62,7 @@ public class EnemyCrowdController : MonoBehaviour {
     /// <summary>
     /// Enemyの一番下の段のy座標と画面下のy座標の差
     /// </summary>
-    [SerializeField] 
+    [SerializeField]
     private float enemyBottomPosYDiff = 0;
     /// <summary>
     /// Enemyの横の間隔(基本、8移動でそこまで移動)
@@ -76,7 +77,7 @@ public class EnemyCrowdController : MonoBehaviour {
     /// <summary>
     /// １行移動するのに待つ時間
     /// </summary>
-    [SerializeField] 
+    [SerializeField]
     private float moveRowWaitTime = 1.0f;
     /// <summary>
     /// bulletのPrefab
@@ -130,17 +131,17 @@ public class EnemyCrowdController : MonoBehaviour {
         //メモリの確保
         columnEnemyAliveCash = new List<int>(enemyWidthNum);
         rowAliveEnemyNum = new int[enemyHeightNum];
-        
+
         // enemyBulletの作成
         enemyBullet = Instantiate(bulletPrefab) as GameObject;
         enemyBullet.SetActive(false);
     }
-    
+
     /// <summary>
     /// 初期設定を行う
     /// </summary>
     public void BootUp(UnityAction<int> _onAddScore, UnityAction _onDeath, Vector3 _maxPos, Vector3 _minPos)
-    {   
+    {
         this.onAddScore = _onAddScore;
         this.onDeathAll = _onDeath;
         this.maxPos = _maxPos;
@@ -183,7 +184,7 @@ public class EnemyCrowdController : MonoBehaviour {
         {
             columnEnemyAliveCash.Add(i);
         }
-        
+
         //行ごとにContollerを作成
         enemyRows = new EnemyRowController[enemyHeightNum];
         for (int i = 0; i < enemyHeightNum; i++)
@@ -194,9 +195,9 @@ public class EnemyCrowdController : MonoBehaviour {
             GameObject column = new GameObject(rowControllerPrefabName);        //行のControllerとなるオブジェクトを生成
             EnemyRowController controller = column.AddComponent<EnemyRowController>();
             enemyRows[i] = controller;
-            
+
             column.transform.parent = transform;
-            
+
             //列に対して与える情報を設定
             EnemyRowCreateInfo rowInfo = new EnemyRowCreateInfo();
             rowInfo.rowId = i;
@@ -208,7 +209,7 @@ public class EnemyCrowdController : MonoBehaviour {
             rowInfo.stageNum = stageNum;
             rowInfo.enemyMinPos = new Vector3(minPos.x, minPos.y + enemyBottomPosYDiff, 0);
             rowInfo.enemyMaxPos = new Vector3(maxPos.x, maxPos.y - enemyTopPosYDiff, 0);
-            
+
             controller.Create(rowInfo, enemyParent, onAddScore, (id) =>
             {
                 rowAliveEnemyNum[id]--;
@@ -257,7 +258,7 @@ public class EnemyCrowdController : MonoBehaviour {
             bool canMoveSide = CanMoveSide();
             int enemyNum = rowAliveEnemyNum.Sum();
 
-            if(enemyNum <= 0)
+            if (enemyNum <= 0)
             {
                 onDeathAll();
             }
@@ -267,7 +268,7 @@ public class EnemyCrowdController : MonoBehaviour {
                 //敵の速度を早くする
                 for (int i = 0; i < enemyHeightNum; i++)
                 {
-                    if(canMoveSide)
+                    if (canMoveSide)
                     {
                         float enemySpeed = enemyMaxSpeed / enemyNum;
                         enemyRows[i].MoveSide(enemySpeed);
@@ -327,7 +328,7 @@ public class EnemyCrowdController : MonoBehaviour {
                 yield return null;
                 continue;
             }
-            
+
             int r = Random.Range(0, columnEnemyAliveCash.Count);        //発射する列のidが入ったリストの要素番号をランダムで決定
             int randomId = columnEnemyAliveCash[r];        //列のidを取得
 
@@ -346,7 +347,7 @@ public class EnemyCrowdController : MonoBehaviour {
             }
         }
     }
-    
+
     /// <summary>
     /// 引数で渡した行idに該当する行を生成するのに必要な情報を返す
     /// </summary>
@@ -354,10 +355,10 @@ public class EnemyCrowdController : MonoBehaviour {
     {
         for (int j = 0; j < enemyLineInfo.Length; j++)
         {
-            int lowerLine = j == 0 ? 0: enemyLineInfo[j - 1].HighestLine + 1;
+            int lowerLine = j == 0 ? 0 : enemyLineInfo[j - 1].HighestLine + 1;
             if (line >= lowerLine && line <= enemyLineInfo[j].HighestLine)
             {
-                return  enemyLineInfo[j];
+                return enemyLineInfo[j];
             }
         }
         return null;
@@ -402,4 +403,14 @@ public class EnemyCrowdController : MonoBehaviour {
     {
         isStop = false;
     }
+
+#if UNITY_EDITOR
+    public void KillAllEnemy()
+    {
+        for (int i = 0; i < enemyRows.Length; i++)
+        {
+            enemyRows[i].KillAllEnemy();
+        }
+    }
+#endif
 }

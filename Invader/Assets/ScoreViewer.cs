@@ -7,7 +7,7 @@ public class ScoreViewer : MonoBehaviour {
     /// <summary>
     /// スコアの数字のテキストの参照
     /// </summary>
-    [SerializeField] private Text scoreText;
+    [SerializeField] private Text scoreText = null;
     
     /// <summary>
     /// scoreの表示フォーマット

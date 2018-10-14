@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Test : MonoBehaviour {
-	[SerializeField]Fade fade;
+    [SerializeField] Fade fade = null;
 
 	// Use this for initialization
 	void Start () {
 		fade.FadeIn (10);
-		Debug.Log ("hgoehoge");
 	}
 	
 	// Update is called once per frame

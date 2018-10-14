@@ -45,10 +45,6 @@ public class PlayerController : MonoBehaviour
     /// PlayerにアタッチされたPlayerShotコンポーネントの参照
     /// </summary>
     private PlayerShot playerShot = null;
-    /// <summary>
-    /// playrにアタッチされたMeshコンポーネントの参照
-    /// </summary>
-    private MeshRenderer playerMesh = null;
 
     /// <summary>
     /// 左下の座標

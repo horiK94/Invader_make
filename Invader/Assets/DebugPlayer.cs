@@ -13,9 +13,9 @@ public class DebugPlayer : DebugManager
     [SerializeField]
     Button playerInvincibleButton = null;
 
-    protected void Awake()
+    protected void Start()
     {
-        base.Awake();
+        base.Start();
     }
 
     protected void Update()

@@ -6,10 +6,13 @@ public class DebugManager : MonoBehaviour {
 
     int enterTapNum = 0;        //エンターキーのタップ回数
 
-    protected void Awake()
+    private void Awake()
     {
         enterTapNum = 0;
+    }
 
+    protected void Start()
+    {
         Init();
     }
 

@@ -9,7 +9,7 @@ public class RemainPlayerViewer : MonoBehaviour
     /// Playerの残機を表すSpriteの表示
     /// </summary>
     [SerializeField]
-    private Image[] remainHearts;
+    private Image[] remainHearts = null;
 
 	public void SetRemain(int remain)
 	{

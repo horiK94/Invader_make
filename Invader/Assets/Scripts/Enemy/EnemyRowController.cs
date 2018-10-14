@@ -7,7 +7,8 @@ using UnityEngine.Events;
 /// <summary>
 /// Enemyの行を管理するクラス
 /// </summary>
-public class EnemyRowController : MonoBehaviour {
+public class EnemyRowController : MonoBehaviour
+{
     /// <summary>
     /// 隣の敵の位置に移動するのに、何回移動するか
     /// </summary>
@@ -21,7 +22,7 @@ public class EnemyRowController : MonoBehaviour {
     /// 行に関する情報
     /// </summary>
     private EnemyRowCreateInfo rowInfo = null;
-    
+
     /// <summary>
     /// 行に対してのEnemy作成
     /// </summary>
@@ -36,7 +37,7 @@ public class EnemyRowController : MonoBehaviour {
 
         // 前に移動する際の移動量
         float verticalDiff = (rowInfo.enemyMaxPos.y - rowInfo.enemyMinPos.y) / (rowInfo.stageNum - 1);
-        
+
         enemy = new GameObject[enemyWidthNum];        //メモリの確保
 
         //enemyの生成
@@ -45,16 +46,16 @@ public class EnemyRowController : MonoBehaviour {
             // enemyの生成・登録
             GameObject obj = Instantiate(rowInfo.rowInfo.Prefab);
             enemy[i] = obj;
-            
+
             //親オブジェクトに登録していく
             obj.transform.parent = enemyRowParent;
 
             int upperNumber = rowInfo.enemyHeightNum - rowInfo.rowId - 1;        //Enemy全体で上から数えて何番目の行か(一番上の行は0)
             int stageNumber = rowInfo.startUpStageId - 2 * upperNumber;        //前から何行目か
             Vector3 enemyPos = new Vector3(rowInfo.enemyMinPos.x + rowInfo.enemyWidthInterval * i, rowInfo.enemyMinPos.y + stageNumber * verticalDiff, 0);        //位置の確定
-            
+
             obj.transform.position = enemyPos;
-            
+
             EnemyController controller = obj.GetComponent<EnemyController>();
             controller.BootUp(i, rowInfo.rowInfo.Point, _onAddScore, () =>
                 {
@@ -99,7 +100,7 @@ public class EnemyRowController : MonoBehaviour {
     {
         for (int i = 0; i < enemy.Length; i++)
         {
-            if(enemy[i].activeSelf)
+            if (enemy[i].activeSelf)
             {
                 enemy[i].GetComponent<EnemyController>().MoveSide(speed);
             }
@@ -144,10 +145,10 @@ public class EnemyRowController : MonoBehaviour {
         {
             return;
         }
-        
+
         enemy[columnId].GetComponent<EnemyController>().Shot(bullet);
     }
-    
+
     /// <summary>
     /// 列idが正常な値か
     /// </summary>
@@ -155,4 +156,14 @@ public class EnemyRowController : MonoBehaviour {
     {
         return columnId >= 0 && columnId < enemy.Length;
     }
+
+#if UNITY_EDITOR
+    public void KillAllEnemy()
+    {
+        for (int i = 0; i < enemy.Length; i++)
+        {
+            enemy[i].GetComponent<EnemyController>().Kill();
+        }
+    }
+#endif
 }

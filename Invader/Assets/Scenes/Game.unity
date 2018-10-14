@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 140726434}
   - component: {fileID: 140726433}
   m_Layer: 5
-  m_Name: PlayerInvincibleButton
+  m_Name: EnemyAnihilationButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,7 +147,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 80, y: 15}
+  m_AnchoredPosition: {x: 240, y: 15}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &140726433
@@ -1138,11 +1138,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 958973621}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e29e25a05b9644592b698e50b84813a2, type: 3}
+  m_Script: {fileID: 11500000, guid: a1a0096f68f4a43bba655a0b3a864da8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 1908278084}
-  playerInvincibleButton: {fileID: 140726433}
+  enemyAnhilitionButton: {fileID: 140726433}
+  enemyCrowdController: {fileID: 1151573611}
 --- !u!1 &1151573609
 GameObject:
   m_ObjectHideFlags: 0
@@ -1209,7 +1209,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1180465428}
-  - component: {fileID: 1180465429}
   m_Layer: 0
   m_Name: DebugManager
   m_TagString: Untagged
@@ -1232,18 +1231,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1180465429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1180465427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ede21c8caeab4dd5ac3a16bb18da65a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debugPlayer: {fileID: 2003797988}
 --- !u!1 &1303059278
 GameObject:
   m_ObjectHideFlags: 0
@@ -1466,7 +1453,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Player\u7121\u6575"
+  m_Text: "Enemy\u5168\u6EC5\n"
 --- !u!222 &1483083300
 CanvasRenderer:
   m_ObjectHideFlags: 0

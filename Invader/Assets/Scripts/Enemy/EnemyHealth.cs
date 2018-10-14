@@ -16,7 +16,7 @@ public class EnemyHealth : MonoBehaviour
     /// <summary>
     /// Enemyの当たり判定コンポーネントの参照
     /// </summary>
-    [SerializeField] 
+    [SerializeField]
     private EnemyTrigger enemyTrigger = null;
     /// <summary>
     /// 現在のHP
@@ -102,4 +102,11 @@ public class EnemyHealth : MonoBehaviour
         OnDeath();
         gameObject.SetActive(false);
     }
+
+#if UNITY_EDITOR
+    public void Kill()
+    {
+        Death();
+    }
+#endif
 }
