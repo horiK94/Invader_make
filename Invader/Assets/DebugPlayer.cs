@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Assertions;
 
-public class DebugPlayer : MonoBehaviour
+public class DebugPlayer : DebugManager
 {
 #if UNITY_EDITOR
     [SerializeField]
@@ -13,10 +13,20 @@ public class DebugPlayer : MonoBehaviour
     [SerializeField]
     Button playerInvincibleButton = null;
 
+    protected void Awake()
+    {
+        base.Awake();
+    }
+
+    protected void Update()
+    {
+        base.Update();
+    }
+
     /// <summary>
     /// 初期化
     /// </summary>
-    public void Init()
+    protected override void Init()
     {
         playerInvincibleButton.gameObject.SetActive(false);
 
@@ -26,7 +36,7 @@ public class DebugPlayer : MonoBehaviour
     /// <summary>
     /// ボタンの表示
     /// </summary>
-    public void Appear()
+    protected override void Appear()
     {
         playerInvincibleButton.gameObject.SetActive(true);
     }

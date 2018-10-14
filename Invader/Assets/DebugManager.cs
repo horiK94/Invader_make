@@ -3,28 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DebugManager : MonoBehaviour {
-    [SerializeField]
-    private DebugPlayer debugPlayer = null;
 
     int enterTapNum = 0;        //エンターキーのタップ回数
 
-    private void Awake()
+    protected void Awake()
     {
         enterTapNum = 0;
 
-        debugPlayer.Init();
+        Init();
     }
 
-    private void Update()
+    protected void Update()
     {
         if(enterTapNum >= 5)
         {
-            debugPlayer.Appear();
+            Appear();
         }
        
-        if(Input.GetKey(KeyCode.Return))
+        if(Input.GetKeyDown(KeyCode.Return))
         {
             enterTapNum++;
         }
+    }
+
+    protected virtual void Init()
+    {
+
+    }
+
+    protected virtual void Appear()
+    {
+
     }
 }
