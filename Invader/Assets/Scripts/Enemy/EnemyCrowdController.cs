@@ -125,6 +125,10 @@ public class EnemyCrowdController : MonoBehaviour
     /// 停止状態か
     /// </summary>
     private bool isStop = false;
+    /// <summary>
+    /// 全敵が死んだ状態を伝えたか
+    /// </summary>
+    private bool isDeathCall = false;
 
     void Awake()
     {
@@ -258,8 +262,9 @@ public class EnemyCrowdController : MonoBehaviour
             bool canMoveSide = CanMoveSide();
             int enemyNum = rowAliveEnemyNum.Sum();
 
-            if (enemyNum <= 0)
+            if (enemyNum <= 0 && !isDeathCall)
             {
+                isDeathCall = true;
                 onDeathAll();
             }
 
