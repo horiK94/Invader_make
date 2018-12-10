@@ -24,7 +24,7 @@ public class SingletonMonoBehaviour<T> : MonoBehaviour where T: MonoBehaviour
         }
     }
 
-    private void Awake()
+    protected void Awake()
     {
         SetSingleton();
     }

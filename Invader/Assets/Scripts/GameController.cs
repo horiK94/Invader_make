@@ -35,12 +35,6 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private float waitTimeForRevival = 3.0f;
 
-
-    /// <summary>
-    /// 現在のスコア
-    /// </summary>
-    private int score = 0;
-
     /// <summary>
     /// ステージ番号
     /// </summary>
@@ -64,10 +58,10 @@ public class GameController : MonoBehaviour
         //Player, Enemyの移動可能範囲を設定
         maxPos = rightUpPos - new Vector3(limitWidth, 0, 0);
         minPos = leftDownPos + new Vector3(limitWidth, 0, 0);
-        
-        //scoreの初期化
-        score = 0;
-        uiController.SetScore(score);
+
+        ScoreManager scoreManager = ScoreManager.Instance;
+        uiController.SetScore(scoreManager.GetScore);
+        uiController.SetHighScore(scoreManager.GetHighScore);
     }
 
     private void Start()
@@ -87,10 +81,11 @@ public class GameController : MonoBehaviour
         };
 
         //PlayerとEnemyを初期化
-        enemysController.BootUp((score) =>
+        enemysController.BootUp((addScore) =>
         {
-            this.score += score;
-            uiController.SetScore(this.score);
+            ScoreManager scoreManager = ScoreManager.Instance;
+            scoreManager.AddScore(addScore);
+            uiController.SetScore(scoreManager.GetScore);
         }, OnDeathAll, maxPos, minPos);
         playerController.BootUp(maxPos, minPos, waitTimeForRevival, (hp) =>
         {
@@ -109,6 +104,7 @@ public class GameController : MonoBehaviour
             }
         }, () =>
         {
+            ScoreManager.Instance.SetHighScore();
             enemysController.Stop();
             uiController.AppearGameOver();
         });

@@ -12,6 +12,9 @@ public class UIController : MonoBehaviour
     private ScoreViewer scoreViewer = null;
 
     [SerializeField]
+    private ScoreViewer highScoreViewer = null;
+
+    [SerializeField]
     private RemainPlayerViewer remainPlayaerViewer = null;
 
     [SerializeField]
@@ -20,6 +23,11 @@ public class UIController : MonoBehaviour
     public void SetScore(int score)
     {
         scoreViewer.SetScore(score);
+    }
+
+    public void SetHighScore(int score)
+    {
+        highScoreViewer.SetScore(score);
     }
 
     public void SetHeart(int heart)
