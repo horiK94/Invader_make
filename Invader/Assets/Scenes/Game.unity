@@ -383,6 +383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreViewer: {fileID: 421469025}
+  highScoreViewer: {fileID: 1595401165}
   remainPlayaerViewer: {fileID: 163622942}
   gameOverText: {fileID: 1795012559}
 --- !u!1 &334915097
@@ -1547,7 +1548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63efbc69db0e42c58589350f4929063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 1595401163}
+  scoreText: {fileID: 1753354506}
 --- !u!1 &1646546798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1670,6 +1671,46 @@ MonoBehaviour:
   limitWidth: 1
   uiController: {fileID: 298008414}
   waitTimeForRevival: 3
+--- !u!1 &1735131933
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1735131934}
+  - component: {fileID: 1735131935}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1735131934
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1735131933}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1735131935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1735131933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dadc126b66ec4666840381f4c26a166, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1753354504
 GameObject:
   m_ObjectHideFlags: 0

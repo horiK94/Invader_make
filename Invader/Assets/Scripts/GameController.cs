@@ -58,10 +58,6 @@ public class GameController : MonoBehaviour
         //Player, Enemyの移動可能範囲を設定
         maxPos = rightUpPos - new Vector3(limitWidth, 0, 0);
         minPos = leftDownPos + new Vector3(limitWidth, 0, 0);
-
-        ScoreManager scoreManager = ScoreManager.Instance;
-        uiController.SetScore(scoreManager.GetScore);
-        uiController.SetHighScore(scoreManager.GetHighScore);
     }
 
     private void Start()
@@ -83,9 +79,9 @@ public class GameController : MonoBehaviour
         //PlayerとEnemyを初期化
         enemysController.BootUp((addScore) =>
         {
-            ScoreManager scoreManager = ScoreManager.Instance;
-            scoreManager.AddScore(addScore);
-            uiController.SetScore(scoreManager.GetScore);
+            ScoreManager scoreMgr = ScoreManager.Instance;
+            scoreMgr.AddScore(addScore);
+            uiController.SetScore(scoreMgr.GetScore);
         }, OnDeathAll, maxPos, minPos);
         playerController.BootUp(maxPos, minPos, waitTimeForRevival, (hp) =>
         {
@@ -108,6 +104,10 @@ public class GameController : MonoBehaviour
             enemysController.Stop();
             uiController.AppearGameOver();
         });
+
+        ScoreManager scoreManager = ScoreManager.Instance;
+        uiController.SetScore(scoreManager.GetScore);
+        uiController.SetHighScore(scoreManager.GetHighScore);
     }
 
     /// <summary>
